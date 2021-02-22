@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "857119203866",
+    "project_id": "protrainner2021",
+    "storage_bucket": "protrainner2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857119203866:android:fc02729f02cb598af0e7a3",
+        "android_client_info": {
+          "package_name": "com.example.protrainner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "857119203866-il7qcqgi8ad7lsv00osb75o5da3c81bo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4dpGcaLro85o5wvTIVpohgFbj57MI5oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "857119203866-il7qcqgi8ad7lsv00osb75o5da3c81bo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
