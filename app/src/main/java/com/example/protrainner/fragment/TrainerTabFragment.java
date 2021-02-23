@@ -1,4 +1,4 @@
-package com.example.protrainner;
+package com.example.protrainner.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+
+import com.example.protrainner.R;
 
 public class TrainerTabFragment extends Fragment {
 

@@ -1,10 +1,13 @@
-package com.example.protrainner;
+package com.example.protrainner.adapter;
 
 import android.content.Context;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.example.protrainner.fragment.MemberTabFragment;
+import com.example.protrainner.fragment.TrainerTabFragment;
 
 public class MemberAdapter extends FragmentPagerAdapter {
         private Context context;

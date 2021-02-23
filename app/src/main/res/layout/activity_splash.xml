@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MainActivity">
+    tools:context=".activity.MainActivity$SplashActivity">
 
-    <Button
-        android:id="@+id/cobo"
+    <TextView
+        android:id="@+id/jdl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="KLIK NGGO LOGIN"
-        android:textSize="16sp"
+        android:text="INI PEMBUKA"
+        android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

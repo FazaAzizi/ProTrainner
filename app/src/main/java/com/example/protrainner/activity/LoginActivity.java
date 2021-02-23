@@ -1,10 +1,12 @@
-package com.example.protrainner;
+package com.example.protrainner.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
+import com.example.protrainner.adapter.MemberAdapter;
+import com.example.protrainner.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
