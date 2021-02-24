@@ -11,36 +11,54 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_bg"
         android:backgroundTint="@null"
-        app:layout_constraintWidth_percent=".8"
-        app:layout_constraintVertical_bias=".3"
-        app:layout_constraintHorizontal_bias=".5"
         android:hint="Email"
         android:paddingLeft="20dp"
         android:paddingTop="5dp"
         android:paddingBottom="10dp"
+        android:textColorHint="?android:attr/textColorHint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".3"
+        app:layout_constraintWidth_percent=".8" />
 
-    <android.widget.EditText
-        android:id="@+id/pass"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passlyt"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:hint="Password"
-        android:paddingLeft="20dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="10dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edit_text_bg"
-        android:backgroundTint="@null"
+        app:hintEnabled="false"
+        android:textColorHint="@color/grey"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintAnimationEnabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintWidth_percent=".8" />
+        app:layout_constraintVertical_bias=".0"
+        app:layout_constraintWidth_percent=".8"
+        app:passwordToggleEnabled="true">
+
+        <android.widget.EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_bg"
+            android:backgroundTint="@null"
+            android:hint="Password"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="?android:attr/textColorHint" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <android.widget.Button
         android:id="@+id/button"
@@ -69,8 +87,8 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/pass"
+        app:layout_constraintEnd_toEndOf="@+id/passlyt"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass" />
+        app:layout_constraintTop_toBottomOf="@+id/passlyt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

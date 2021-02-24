@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.protrainner.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -22,6 +23,7 @@ public class RegisterMemberActivity extends AppCompatActivity {
     EditText inpt_email, inpt_name, inpt_pass, inpt_conf_pass;
     Button button;
     TextView textView;
+    TextInputLayout lyttext1,lyttext2;
     FirebaseAuth mAuth;
 
     @Override
@@ -31,6 +33,8 @@ public class RegisterMemberActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        lyttext1 = findViewById(R.id.passlyt1);
+        lyttext2 = findViewById(R.id.passlyt2);
         inpt_email= findViewById(R.id.input_email);
         inpt_name= findViewById(R.id.input_name);
         inpt_pass= findViewById(R.id.input_pass);

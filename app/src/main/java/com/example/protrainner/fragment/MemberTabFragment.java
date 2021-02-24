@@ -18,13 +18,17 @@ import com.example.protrainner.activity.MainActivity;
 import com.example.protrainner.activity.RegisterMemberActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MemberTabFragment extends Fragment {
 
-    EditText inp_email, inp_password;
+    EditText inp_email;
+    TextInputLayout lyttext;
+    EditText inp_password;
     TextView forgetpass;
     Button button;
     float v=0;
@@ -39,23 +43,24 @@ public class MemberTabFragment extends Fragment {
 
         inp_email = root.findViewById(R.id.email);
         inp_password = root.findViewById(R.id.pass);
+        lyttext = root.findViewById(R.id.passlyt);
         forgetpass = root.findViewById(R.id.forgetpass);
         button = root.findViewById(R.id.button);
 
 
         inp_email.setTranslationX(800);
-        inp_password.setTranslationX(800);
+        lyttext.setTranslationX(800);
         forgetpass.setTranslationX(800);
         button.setTranslationX(800);
 
         inp_email.setAlpha(v);
-        inp_password.setAlpha(v);
+        lyttext.setAlpha(v);
         forgetpass.setAlpha(v);
         button.setAlpha(v);
 
         inp_email.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(300).start();
-        inp_password.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(500).start();
-        forgetpass.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(500).start();
+        lyttext.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(500).start();
+        forgetpass.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(600).start();
         button.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(700).start();
 
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
