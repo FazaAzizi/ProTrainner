@@ -29,20 +29,20 @@ public class MemberTabFragment extends Fragment {
         button = root.findViewById(R.id.button);
 
 
-        email.setTranslationY(800);
-        password.setTranslationY(800);
-        forgetpass.setTranslationY(800);
-        button.setTranslationY(800);
+        email.setTranslationX(800);
+        password.setTranslationX(800);
+        forgetpass.setTranslationX(800);
+        button.setTranslationX(800);
 
         email.setAlpha(v);
         password.setAlpha(v);
         forgetpass.setAlpha(v);
         button.setAlpha(v);
 
-        email.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(300).start();
-        password.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(500).start();
-        forgetpass.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(500).start();
-        button.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(700).start();
+        email.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(300).start();
+        password.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(500).start();
+        forgetpass.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(500).start();
+        button.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(700).start();
 
 
         return root;
