@@ -12,6 +12,7 @@ import com.example.protrainner.adapter.LoginAdapter;
 import com.example.protrainner.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -20,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView textView;
     FloatingActionButton google;
     float v=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,4 +62,6 @@ public class LoginActivity extends AppCompatActivity {
         textView.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(300).start();
         tabLayout.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
     }
+
+
 }
