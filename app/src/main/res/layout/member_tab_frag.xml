@@ -31,7 +31,7 @@
         android:layout_height="55dp"
         android:hint="Password"
         app:hintEnabled="false"
-        android:textColorHint="@color/grey"
+        android:textColorHint="?android:attr/textColorHint"
         app:boxBackgroundMode="filled"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"

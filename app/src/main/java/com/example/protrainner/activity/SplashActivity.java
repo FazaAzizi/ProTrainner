@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,17 +17,23 @@ import com.example.protrainner.R;
 
 public class SplashActivity extends AppCompatActivity {
 
-    TextView textView;
+    TextView textView1,textView2;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        textView = findViewById(R.id.jdl);
+        textView1 = findViewById(R.id.jdl);
+        textView2 = findViewById(R.id.jdl2);
 
-        textView.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fade));
+        imageView = findViewById(R.id.gmbrdepan);
 
+
+        textView1.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fade));
+        textView2.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fade));
+        imageView.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fade));
 
         Window window = getWindow();
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE |

@@ -4,19 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MainActivity$SplashActivity">
+    tools:context=".activity.SplashActivity">
+
+    <ImageView
+        android:id="@+id/gmbrdepan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/barbel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/jdl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="INI PEMBUKA"
+        android:text="ProTrainer"
         android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintVertical_bias=".1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gmbrdepan" />
+
+    <TextView
+        android:id="@+id/jdl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DQ.Corp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/jdl"
+        app:layout_constraintVertical_bias=".9" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
