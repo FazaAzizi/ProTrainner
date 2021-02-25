@@ -52,7 +52,6 @@ public class RegisterActivity extends AppCompatActivity{
         inpt_conf_pass= findViewById(R.id.input_conf_pass);
         button= findViewById(R.id.button_acc);
         textView= findViewById(R.id.have_acc);
-        textView2= findViewById(R.id.register_trainer);
         cb1 = findViewById(R.id.checkBox);
         cb2 = findViewById(R.id.checkBox2);
 
