@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ProTrainner</string>
+    <string-array name="spinner_item">
+        <item>Daftar sebagai member</item>
+        <item>Daftar sebagai trainer</item>
+    </string-array>
 </resources>

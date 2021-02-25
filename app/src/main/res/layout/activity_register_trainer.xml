@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.RegisterMemberActivity">
+    tools:context=".activity.RegisterTrainerActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -22,7 +22,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sebagi Member"
+        android:text="Sebagi Personal Trainer"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/input_email"
@@ -166,18 +166,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_acc"
         app:layout_constraintVertical_bias=".5" />
-
-    <TextView
-        android:id="@+id/register_trainer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="35dp"
-        android:text="Daftar menjadi personal trainer"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/have_acc"
-        app:layout_constraintVertical_bias=".1" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

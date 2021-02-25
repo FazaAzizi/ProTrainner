@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.protrainner.R;
+import com.example.protrainner.activity.LoginActivity;
 import com.example.protrainner.activity.MainActivity;
 import com.example.protrainner.activity.RegisterMemberActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,7 +30,7 @@ public class MemberTabFragment extends Fragment {
     EditText inp_email;
     TextInputLayout lyttext;
     EditText inp_password;
-    TextView forgetpass;
+    TextView forgetpass, textView;
     Button button;
     float v=0;
     FirebaseAuth mAuth;
@@ -47,6 +48,13 @@ public class MemberTabFragment extends Fragment {
         forgetpass = root.findViewById(R.id.forgetpass);
         button = root.findViewById(R.id.button);
 
+        textView = root.findViewById(R.id.create_acc_member);
+
+        textView.setTranslationX(800);
+        textView.setAlpha(v);
+        textView.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(800).start();
+
+
 
         inp_email.setTranslationX(800);
         lyttext.setTranslationX(800);
@@ -62,6 +70,14 @@ public class MemberTabFragment extends Fragment {
         lyttext.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(500).start();
         forgetpass.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(600).start();
         button.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(700).start();
+
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(getActivity(), RegisterMemberActivity.class);
+                startActivity(myIntent);
+            }
+        });
 
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override

@@ -6,11 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,11 +24,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RegisterMemberActivity extends AppCompatActivity{
+public class RegisterTrainerActivity extends AppCompatActivity {
 
     EditText inpt_email, inpt_name, inpt_pass, inpt_conf_pass;
     Button button;
-    TextView textView,textView2;
+    TextView textView;
     TextInputLayout lyttext1,lyttext2;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
@@ -39,7 +36,7 @@ public class RegisterMemberActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_member);
+        setContentView(R.layout.activity_register_trainer);
 
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -52,20 +49,11 @@ public class RegisterMemberActivity extends AppCompatActivity{
         inpt_conf_pass= findViewById(R.id.input_conf_pass);
         button= findViewById(R.id.button_acc);
         textView= findViewById(R.id.have_acc);
-        textView2= findViewById(R.id.register_trainer);
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(RegisterMemberActivity.this, LoginActivity.class);
-                startActivity(myIntent);
-            }
-        });
-
-        textView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(RegisterMemberActivity.this, RegisterTrainerActivity.class);
+                Intent myIntent = new Intent(RegisterTrainerActivity.this, LoginActivity.class);
                 startActivity(myIntent);
             }
         });
@@ -97,11 +85,11 @@ public class RegisterMemberActivity extends AppCompatActivity{
                     inpt_conf_pass.setError("Password not match!");
                 }
                 else if(!(email.isEmpty() && name.isEmpty() && pass.isEmpty() && conf_pass.isEmpty() )){
-                    mAuth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(RegisterMemberActivity.this, new OnCompleteListener<AuthResult>() {
+                    mAuth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(RegisterTrainerActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()){
-                                Toast.makeText(RegisterMemberActivity.this,"Daftar member gagal! Coba lagi",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegisterTrainerActivity.this,"Daftar member gagal! Coba lagi",Toast.LENGTH_SHORT).show();
                             }
                             else{
                                 FirebaseUser user = mAuth.getCurrentUser();
@@ -109,12 +97,10 @@ public class RegisterMemberActivity extends AppCompatActivity{
                                 Map<String,Object> userinfo = new HashMap<>();
                                 userinfo.put("Full name",name);
                                 userinfo.put("Email",email);
-                                userinfo.put("isUser", "1");
+                                userinfo.put("isUser", "0");
                                 df.set(userinfo);
-
-
-                                startActivity(new Intent(RegisterMemberActivity.this,MainActivity.class));
-                                Toast.makeText(RegisterMemberActivity.this,"Create Account Succesfull",Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(RegisterTrainerActivity.this,MainActivity.class));
+                                Toast.makeText(RegisterTrainerActivity.this,"Create Account Succesfull",Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -122,7 +108,4 @@ public class RegisterMemberActivity extends AppCompatActivity{
             }
         });
     }
-
-
-
 }

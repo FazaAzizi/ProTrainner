@@ -99,4 +99,16 @@
         app:layout_constraintVertical_bias=".1"
         app:layout_constraintWidth_percent=".8" />
 
+    <TextView
+        android:id="@+id/create_acc_trainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="35dp"
+        android:text="Create trainer account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias=".2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
