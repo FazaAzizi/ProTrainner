@@ -4,20 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/c"
     tools:context=".activity.LoginActivity">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="69dp"
+        android:layout_height="68dp"
+        android:background="@drawable/barbel"
         android:scaleType="centerCrop"
-        android:src="@drawable/login_bkg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".27"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0" />
+        app:layout_constraintVertical_bias="0.073" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -26,49 +28,124 @@
         android:background="@drawable/vie_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent=".78"
+        app:layout_constraintHeight_percent=".75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1">
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/view_pager"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent=".7"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tab_layout"
-            app:layout_constraintVertical_bias="0" />
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
+        <android.widget.EditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="#00FFFFFF"
+            android:background="@drawable/edit_text_bg"
+            android:backgroundTint="@null"
+            android:hint="Email"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="?android:attr/textColorHint"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0" />
+            app:layout_constraintVertical_bias="0.226"
+            app:layout_constraintWidth_percent=".8" />
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passlyt"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:hint="Password"
+            app:hintEnabled="false"
+            android:textColorHint="?android:attr/textColorHint"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintAnimationEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            app:layout_constraintVertical_bias=".0"
+            app:layout_constraintWidth_percent=".8"
+            app:passwordToggleEnabled="true">
+
+            <android.widget.EditText
+                android:id="@+id/pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_bg"
+                android:backgroundTint="@null"
+                android:hint="Password"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="?android:attr/textColorHint" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <android.widget.Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@null"
+            android:text="Login"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.623"
+            app:layout_constraintWidth_percent=".8" />
+
+        <TextView
+            android:id="@+id/create_acc_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="35dp"
+            android:text="Create account"
+            app:layout_constraintBottom_toBottomOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintVertical_bias=".8" />
+
+        <TextView
+            android:id="@+id/forgetpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHorizontal_bias="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/passlyt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passlyt" />
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_google"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:elevation="35dp"
-            android:scaleType="centerCrop"
+            android:elevation="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/google"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view_pager" />
+            app:layout_constraintTop_toBottomOf="@+id/create_acc_member" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,7 +157,7 @@
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

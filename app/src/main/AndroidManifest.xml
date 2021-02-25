@@ -10,8 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProTrainner">
         <activity android:name=".activity.HomeTrainerActivity"></activity>
-        <activity android:name=".activity.RegisterTrainerActivity" />
-        <activity android:name=".activity.RegisterMemberActivity" />
+        <activity android:name=".activity.RegisterActivity" />
         <activity
             android:name=".activity.SplashActivity"
             android:noHistory="true"
