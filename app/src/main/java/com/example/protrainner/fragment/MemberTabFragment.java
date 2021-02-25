@@ -2,6 +2,7 @@ package com.example.protrainner.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,16 +15,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.protrainner.R;
+import com.example.protrainner.activity.HomeTrainerActivity;
 import com.example.protrainner.activity.LoginActivity;
 import com.example.protrainner.activity.MainActivity;
 import com.example.protrainner.activity.RegisterMemberActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MemberTabFragment extends Fragment {
 
@@ -34,6 +41,7 @@ public class MemberTabFragment extends Fragment {
     Button button;
     float v=0;
     FirebaseAuth mAuth;
+    FirebaseFirestore fStore;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     @Override
@@ -41,6 +49,7 @@ public class MemberTabFragment extends Fragment {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.member_tab_frag, container, false);
 
         mAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
 
         inp_email = root.findViewById(R.id.email);
         inp_password = root.findViewById(R.id.pass);
@@ -103,24 +112,57 @@ public class MemberTabFragment extends Fragment {
                 }
 
                 else if(!(email.isEmpty() &&  pass.isEmpty() )){
-                    mAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
+                    mAuth.signInWithEmailAndPassword(email,pass).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(!task.isSuccessful()){
-                                Toast.makeText(getActivity(),"Login error! coba lagi",Toast.LENGTH_SHORT).show();
-                            }
-                            else {
-                                Intent inthome =new Intent(getActivity(),MainActivity.class);
-                                startActivity(inthome);
-                                Toast.makeText(getActivity(),"Login Succesfull",Toast.LENGTH_SHORT).show();
-                            }
+                        public void onSuccess(AuthResult authResult) {
+                            Toast.makeText(getActivity(),"Login Succesfull",Toast.LENGTH_SHORT).show();
+                            checkIfMember(authResult.getUser().getUid());
+
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+
                         }
                     });
+
+                    //mAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<AuthResult> task) {
+//                            if(!task.isSuccessful()){
+//                                Toast.makeText(getActivity(),"Login error! coba lagi",Toast.LENGTH_SHORT).show();
+//                            }
+//                            else {
+//                                Toast.makeText(getActivity(),"Login Succesfull",Toast.LENGTH_SHORT).show();
+//                                checkIfMember(task.getUser().getUid());
+//                                Intent inthome =new Intent(getActivity(),MainActivity.class);
+//                                startActivity(inthome);
+//                            }
+//                        }
+//                    });
                 }
             }
         });
 
         return root;
+    }
+
+    private void checkIfMember(String uid) {
+        DocumentReference df = fStore.collection("Member").document(uid);
+        df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                Log.d("TAG","onSucces : "+ documentSnapshot.getData());
+                if(documentSnapshot.getString("isUser").equals("1")){
+                    Intent inthome =new Intent(getActivity(), HomeTrainerActivity.class);
+                    startActivity(inthome);
+                }
+                if(documentSnapshot.getString("isUser").equals("0")){
+                    Intent inthome =new Intent(getActivity(), MainActivity.class);
+                    startActivity(inthome);
+                }
+            }
+        });
     }
 
     @Override
