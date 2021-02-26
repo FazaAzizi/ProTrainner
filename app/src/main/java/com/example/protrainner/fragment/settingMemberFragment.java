@@ -10,17 +10,16 @@ import android.widget.Button;
 import androidx.fragment.app.Fragment;
 
 import com.example.protrainner.R;
-import com.example.protrainner.activity.HomeTrainerActivity;
 import com.example.protrainner.activity.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class settingTrainerFragment extends Fragment {
+public class settingMemberFragment extends Fragment {
     Button logout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_setting_trainer, container, false);
+        View view = inflater.inflate(R.layout.fragment_setting_member, container, false);
         Button logout = (Button) view.findViewById(R.id.logout);
 
                 logout.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +30,14 @@ public class settingTrainerFragment extends Fragment {
                 startActivity(i);
             }
         });
+
+
+
+
+
         return view;
+
+
+
     }
 }

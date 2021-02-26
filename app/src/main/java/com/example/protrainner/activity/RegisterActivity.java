@@ -129,14 +129,14 @@ public class RegisterActivity extends AppCompatActivity{
                                 userinfo.put("Full name",name);
                                 userinfo.put("Email",email);
                                 if(cb1.isChecked()){
-                                    userinfo.put("isMember","0");
+                                    userinfo.put("isMember","1");
                                 }
                                 if(cb2.isChecked()){
-                                    userinfo.put("isMember","1");
+                                    userinfo.put("isMember","0");
                                 }
                                 df.set(userinfo);
                                 if(cb1.isChecked()){
-                                    Intent inthome =new Intent(RegisterActivity.this, MainActivity.class);
+                                    Intent inthome =new Intent(RegisterActivity.this, FormMemberActivity.class);
                                     startActivity(inthome);
                                 }
                                 if(cb2.isChecked()){
