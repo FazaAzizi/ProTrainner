@@ -18,6 +18,8 @@
         android:padding="8dp"
         android:layout_margin="16dp"
         app:cnb_menuResource="@menu/menu_navbot_member"
+
+
         app:cnb_unselectedColor="#FAF8F8" />
 
 

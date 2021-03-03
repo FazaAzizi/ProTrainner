@@ -98,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        android:text="Mail"/>
+                        android:text="E-Mail"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -133,7 +133,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        android:text="Gender"/>
+                        android:text="Jenis Kelamin"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -168,7 +168,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        android:text="Address"/>
+                        android:text="Alamat"/>
 
                     <TextView
                         android:layout_width="match_parent"
