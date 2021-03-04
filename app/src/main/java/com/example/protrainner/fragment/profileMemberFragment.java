@@ -47,8 +47,8 @@ public class profileMemberFragment extends Fragment {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if(task.getResult().exists()){
-                    String nL1 = task.getResult().getString("Full name");
-                    String mail1 = task.getResult().getString("Email");
+                    String nL1 = task.getResult().getString("fullname");
+                    String mail1 = task.getResult().getString("email");
                     nL.setText(nL1);
                     mail.setText(mail1);
                 }

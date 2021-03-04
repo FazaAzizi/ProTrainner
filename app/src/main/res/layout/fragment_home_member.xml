@@ -103,7 +103,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Price List"
+                        android:text="Price List\n"
                         android:layout_marginBottom="16dp"
                         android:textSize="18dp"/>
 
@@ -138,7 +138,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="18dp"
                         android:layout_marginBottom="16dp"
-                        android:text="Jadwal Latihan"/>
+                        android:text="Jadwal \nLatihan"/>
 
                 </LinearLayout>
 
@@ -205,7 +205,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="18dp"
                         android:layout_marginBottom="16dp"
-                        android:text="FTL"/>
+                        android:text="FTL\n"/>
 
                 </LinearLayout>
 

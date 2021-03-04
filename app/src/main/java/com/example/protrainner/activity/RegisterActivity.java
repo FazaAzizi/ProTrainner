@@ -14,12 +14,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.protrainner.R;
+import com.example.protrainner.model.Akun;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -91,11 +93,11 @@ public class RegisterActivity extends AppCompatActivity{
                     return;
                 }
 
-
                 String email = inpt_email.getText().toString();
                 String name = inpt_name.getText().toString();
                 String pass = inpt_pass.getText().toString();
                 String conf_pass = inpt_conf_pass.getText().toString();
+                final String[] member = new String[1];
 
                 if(email.isEmpty()){
                     inpt_email.setError("Please enter your email");
@@ -126,8 +128,8 @@ public class RegisterActivity extends AppCompatActivity{
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 DocumentReference df = fStore.collection("Akun").document(user.getUid());
                                 Map<String,Object> userinfo = new HashMap<>();
-                                userinfo.put("Full name",name);
-                                userinfo.put("Email",email);
+                                userinfo.put("fullname",name);
+                                userinfo.put("email",email);
                                 if(cb1.isChecked()){
                                     userinfo.put("isMember","1");
                                 }

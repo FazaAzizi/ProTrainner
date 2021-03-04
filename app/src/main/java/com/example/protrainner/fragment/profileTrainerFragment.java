@@ -44,8 +44,8 @@ public class profileTrainerFragment extends Fragment {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if(task.getResult().exists()){
-                    String namal1 = task.getResult().getString("Full name");
-                    String mail1 = task.getResult().getString("Email");
+                    String namal1 = task.getResult().getString("fullname");
+                    String mail1 = task.getResult().getString("email");
                     namal.setText(namal1);
                     mail.setText(mail1);
                 }

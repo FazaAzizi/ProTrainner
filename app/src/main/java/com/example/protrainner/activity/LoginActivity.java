@@ -163,6 +163,7 @@ public class LoginActivity extends AppCompatActivity {
                         Intent inthome =new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(inthome);
                     }
+
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
