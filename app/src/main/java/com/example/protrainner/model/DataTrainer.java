@@ -1,4 +1,4 @@
 package com.example.protrainner.model;
 
-public class Member {
+public class DataTrainer {
 }
