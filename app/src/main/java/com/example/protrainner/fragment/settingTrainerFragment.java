@@ -10,7 +10,6 @@ import android.widget.Button;
 import androidx.fragment.app.Fragment;
 
 import com.example.protrainner.R;
-import com.example.protrainner.activity.HomeTrainerActivity;
 import com.example.protrainner.activity.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 

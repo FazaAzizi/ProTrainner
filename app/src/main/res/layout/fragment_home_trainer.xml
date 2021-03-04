@@ -137,7 +137,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="18dp"
                         android:layout_marginBottom="16dp"
-                        android:text="AAAAAA"/>
+                        android:text="Jadwal Latihan"/>
 
                 </LinearLayout>
 
@@ -168,7 +168,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="AAAAAA"
+                        android:gravity="center"
+                        android:text="Formulir \nPengukuran"
                         android:layout_marginBottom="16dp"
                         android:textSize="18dp" />
 
@@ -202,7 +203,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="18dp"
                         android:layout_marginBottom="16dp"
-                        android:text="AAAAAA"/>
+                        android:text="FTL"/>
 
                 </LinearLayout>
 
