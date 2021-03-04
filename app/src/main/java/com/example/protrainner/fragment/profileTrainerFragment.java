@@ -57,8 +57,8 @@ public class profileTrainerFragment extends Fragment {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.getResult().exists()){
-                    String ttl1 = task.getResult().getString("ttl");
-                    String gender1 = task.getResult().getString("Jenis Kelamin");
+                    String ttl1 = task.getResult().getString("Ttl");
+                    String gender1 = task.getResult().getString("Jenis kelamin");
                     String addrs1 = task.getResult().getString("Alamat jogja");
                     ttl.setText(ttl1);
                     gender.setText(gender1);
