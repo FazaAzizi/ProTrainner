@@ -140,7 +140,7 @@ public class RegisterActivity extends AppCompatActivity{
                                     startActivity(inthome);
                                 }
                                 if(cb2.isChecked()){
-                                    Intent inthome =new Intent(RegisterActivity.this, HomeTrainerActivity.class);
+                                    Intent inthome =new Intent(RegisterActivity.this1qa, FormTrainerActivity.class);
                                     startActivity(inthome);
                                 }
 
