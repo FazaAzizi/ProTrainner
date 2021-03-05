@@ -168,9 +168,10 @@
                         android:layout_height="80dp"/>
 
                     <TextView
+                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Data Pengukuran"
+                        android:text="Data \nPengukuran"
                         android:layout_marginBottom="16dp"
                         android:textSize="18dp" />
 

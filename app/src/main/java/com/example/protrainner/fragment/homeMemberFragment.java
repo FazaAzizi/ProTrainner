@@ -23,13 +23,16 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class homeMemberFragment extends Fragment {
 
-    CardView cvPriceList;
+    CardView cvPriceList,cvWs,cvFTL,cvDataPengukuran;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                          Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home_member, container, false);
         cvPriceList = (CardView) view.findViewById(R.id.kr1);
+        cvWs= (CardView) view.findViewById(R.id.knn1);
+        cvFTL= (CardView) view.findViewById(R.id.knn2);
+        cvDataPengukuran= (CardView) view.findViewById(R.id.kr2);
 
         cvPriceList.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +41,7 @@ public class homeMemberFragment extends Fragment {
                 startActivity(i);
             }
         });
+
 
 
 

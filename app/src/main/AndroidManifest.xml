@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProTrainner">
-        <activity android:name=".activity.WelcomeActivity"></activity>
+        <activity android:name=".activity.TrainerListActivity"></activity>
+        <activity android:name=".activity.WsMemberActivity" />
+        <activity android:name=".activity.WsTrainerActivity" />
+        <activity android:name=".activity.BusinessPlanActivity" />
+        <activity android:name=".activity.MemberListActivity" />
+        <activity android:name=".activity.WelcomeActivity" />
         <activity android:name=".activity.DetailPriceListMemberActivity" />
         <activity android:name=".activity.PriceListMemberActivity" />
         <activity android:name=".activity.FormTrainerActivity" />
