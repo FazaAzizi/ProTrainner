@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/c"
+    android:background="@color/white"
     tools:context=".activity.LoginActivity">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="69dp"
-        android:layout_height="68dp"
-        android:background="@drawable/barbel"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+       android:src="@drawable/newlogo"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
             android:paddingLeft="20dp"
             android:paddingTop="5dp"
             android:paddingBottom="10dp"
-            android:textColorHint="?android:attr/textColorHint"
+            android:textColorHint="@color/pt1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +83,7 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="10dp"
-                android:textColorHint="?android:attr/textColorHint" />
+                android:textColorHint="@color/pt1" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,7 +94,7 @@
             android:background="@drawable/button_bg"
             android:backgroundTint="@null"
             android:text="Login"
-            android:textColor="@color/d"
+            android:textColor="@color/pt1"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="32dp"
@@ -110,6 +110,8 @@
             android:layout_height="wrap_content"
             android:elevation="35dp"
             android:text="Create account"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -120,23 +122,25 @@
             android:id="@+id/forgetpass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Forgot password?"
-            app:layout_constraintVertical_bias="0"
-            app:layout_constraintHorizontal_bias="1"
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:text="Lupa password?"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/passlyt"
+            app:layout_constraintHorizontal_bias="1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/passlyt" />
+            app:layout_constraintTop_toBottomOf="@+id/passlyt"
+            app:layout_constraintVertical_bias="0" />
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_google"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:elevation="20dp"
-            android:scaleType="fitCenter"
+            android:backgroundTint="@color/white"
+            android:elevation="10dp"
             android:src="@drawable/google"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -144,20 +148,9 @@
             app:layout_constraintTop_toBottomOf="@+id/create_acc_member" />
 
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to Pro Trainner"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,13 +25,10 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        textView1 = findViewById(R.id.jdl);
         textView2 = findViewById(R.id.jdl2);
 
         imageView = findViewById(R.id.gmbrdepan);
 
-
-        textView1.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fade));
         textView2.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fade));
         imageView.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fade));
 
@@ -50,7 +47,7 @@ public class SplashActivity extends AppCompatActivity {
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }finally {
-                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                    startActivity(new Intent(SplashActivity.this, WelcomeActivity.class));
                     finish();
                 }
             }

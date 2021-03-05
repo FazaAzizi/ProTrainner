@@ -4,4 +4,7 @@
         <item>Daftar sebagai member</item>
         <item>Daftar sebagai trainer</item>
     </string-array>
+
+    <string name="start">Start</string>
+    <string name="next">Next</string>
 </resources>

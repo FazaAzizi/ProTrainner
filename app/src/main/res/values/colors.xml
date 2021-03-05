@@ -12,5 +12,22 @@
     <color name="c">#a4ebf3</color>
     <color name="d">#aaaaaa</color>
 
+    <color name="pt1" >#FF6600</color>
+    <color name="pt2" >#999999</color>
+    <color name="pt3" >#CCCCCC</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark">#FF6600</color>
+    <!-- dots active colors -->
+    <color name="dot_light">#CCCCCC</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark</item>
+    </array>
+
 
 </resources>
