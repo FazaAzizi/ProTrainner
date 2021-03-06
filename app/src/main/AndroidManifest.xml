@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProTrainner">
-        <activity android:name=".activity.DetailMemberListActivity"></activity>
+        <activity android:name=".activity.FtlTrainerActivity"></activity>
+        <activity android:name=".activity.DetailMemberListActivity" />
         <activity android:name=".activity.DetailTrainerListActivity" />
         <activity android:name=".activity.DetailPriceMemberActivity" />
         <activity android:name=".activity.TrainerListActivity" />

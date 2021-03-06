@@ -55,11 +55,11 @@ public class MemberListActivity extends AppCompatActivity implements  ListTraine
 
                 Bundle b = new Bundle();
                 b.putString("UID",id);
-                Intent intent = new Intent(MemberListActivity.this, DetailPriceMemberActivity.class);
+                Intent intent = new Intent(MemberListActivity.this, DetailMemberListActivity.class);
                 intent.putExtras(b);
                 startActivity(intent);
 
-                Toast.makeText(MemberListActivity.this, "id = " + id,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MemberListActivity.this, "id = " + id,Toast.LENGTH_SHORT).show();
             }
         });
     }
