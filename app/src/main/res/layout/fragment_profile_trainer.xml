@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.3"
-            android:background="@color/b"
+            android:background="@color/pt1"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -26,9 +26,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:id="@+id/out_nama"
-                android:text="Nama Lengkap" />
+                android:text="" />
 
         </LinearLayout>
 
@@ -38,7 +39,7 @@
             android:layout_weight="0.7"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:background="@color/a"
+            android:background="@color/white"
             android:orientation="vertical">
 
             <ScrollView
@@ -78,7 +79,7 @@
                                 android:id="@+id/out_ttl"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="user"/>
+                                android:text=""/>
 
                         </LinearLayout>
 
@@ -111,7 +112,7 @@
 
                             <TextView
                                 android:layout_width="match_parent"
-                                android:text="user"
+                                android:text=""
                                 android:id="@+id/out_mail"
                                 android:layout_height="wrap_content"/>
 
@@ -148,7 +149,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/out_gender"
-                                android:text="user" />
+                                android:text="" />
 
                         </LinearLayout>
 
@@ -181,7 +182,7 @@
 
                             <TextView
                                 android:layout_width="match_parent"
-                                android:text="user"
+                                android:text=""
                                 android:id="@+id/out_address"
                                 android:layout_height="wrap_content"/>
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/homefrgmnt"
-    android:background="@color/a">
+    android:background="@color/white">
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -18,7 +18,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:background="@drawable/blue_bkg"
+            android:background="@color/pt1"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -33,6 +33,7 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginLeft="32dp"
                     android:text="My Dashboard"
+                    android:textColor="@color/black"
                     android:textSize="24sp" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -59,8 +60,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:id="@+id/namaHome"
                     android:layout_marginRight="32dp"
                     android:text="Nama Lengkap"
+                    android:textColor="@color/black"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -79,6 +82,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/kr1"
+                app:cardBackgroundColor="@color/pt3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -97,13 +101,15 @@
 
                     <ImageView
                         android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_marginTop="16dp"
-                        android:src="@drawable/checklist"
-                        android:layout_height="80dp"/>
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/iconpricelist" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Price List\n"
+                        android:text="Price List"
+                        android:textColor="@color/black"
                         android:layout_marginBottom="16dp"
                         android:textSize="18dp"/>
 
@@ -112,6 +118,7 @@
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/knn1"
+                app:cardBackgroundColor="@color/pt3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -131,12 +138,13 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_marginTop="16dp"
-                        android:src="@drawable/checklist"
+                        android:src="@drawable/iconws"
                         android:layout_height="80dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="18dp"
+                        android:textColor="@color/black"
                         android:layout_marginBottom="16dp"
                         android:text="Jadwal \nLatihan"/>
 
@@ -145,6 +153,7 @@
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/kr2"
+                app:cardBackgroundColor="@color/pt3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -164,7 +173,7 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_marginTop="16dp"
-                        android:src="@drawable/checklist"
+                        android:src="@drawable/iconprogress"
                         android:layout_height="80dp"/>
 
                     <TextView
@@ -172,6 +181,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Data \nPengukuran"
+                        android:textColor="@color/black"
                         android:layout_marginBottom="16dp"
                         android:textSize="18dp" />
 
@@ -180,6 +190,7 @@
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/knn2"
+                app:cardBackgroundColor="@color/pt3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -199,14 +210,15 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_marginTop="16dp"
-                        android:src="@drawable/checklist"
+                        android:src="@drawable/iconftl"
                         android:layout_height="80dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="18dp"
+                        android:textColor="@color/black"
                         android:layout_marginBottom="16dp"
-                        android:text="FTL\n"/>
+                        android:text="FTL"/>
 
                 </LinearLayout>
 

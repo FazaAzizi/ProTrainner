@@ -10,7 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:background="@color/b"
+        android:background="@color/white"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="10dp"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,6 +27,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="32sp"
                 android:text="dwwfwfwfwfwf"
+                android:textColor="@color/black"
                 android:id="@+id/listnama"/>
         </LinearLayout>
 
