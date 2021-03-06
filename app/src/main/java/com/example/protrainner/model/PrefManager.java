@@ -1,4 +1,4 @@
-package com.example.protrainner;
+package com.example.protrainner.model;
 
 import android.content.Context;
 import android.content.SharedPreferences;

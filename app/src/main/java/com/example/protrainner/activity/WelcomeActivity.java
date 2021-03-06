@@ -19,7 +19,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.protrainner.PrefManager;
+import com.example.protrainner.model.PrefManager;
 import com.example.protrainner.R;
 
 public class WelcomeActivity extends AppCompatActivity {

@@ -25,8 +25,8 @@ public class homeTrainerFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home_trainer, container, false);
         cvBp = (CardView) view.findViewById(R.id.kr1);
         cvWs= (CardView) view.findViewById(R.id.knn1);
-        cvPtl= (CardView) view.findViewById(R.id.knn2);
-        cvMl= (CardView) view.findViewById(R.id.kr2);
+        cvMl= (CardView) view.findViewById(R.id.knn2);
+        cvPtl= (CardView) view.findViewById(R.id.kr2);
 
         cvBp.setOnClickListener(new View.OnClickListener() {
             @Override

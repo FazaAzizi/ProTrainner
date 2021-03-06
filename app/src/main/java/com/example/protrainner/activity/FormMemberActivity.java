@@ -75,53 +75,53 @@ import java.util.Map;
                     DocumentReference df = fStore.collection("Akun").document(user.getUid())
                             .collection("Data").document(user.getUid());
                     Map<String,Object> userinfo = new HashMap<>();
-                    userinfo.put("Nama lengkap",namaLengkap);
-                    userinfo.put("Jenis kelamin",jenisKelamin);
-                    userinfo.put("Ttl",ttl);
-                    userinfo.put("Alamat asal",alamatAsal);
-                    userinfo.put("Alamat jogja",alamatJogja);
+                    userinfo.put("namalengkap",namaLengkap);
+                    userinfo.put("jeniskelamin",jenisKelamin);
+                    userinfo.put("ttl",ttl);
+                    userinfo.put("alamatasal",alamatAsal);
+                    userinfo.put("alamatjogja",alamatJogja);
 
                     if (ya1.isChecked()){
-                        userinfo.put("Dada","1");
+                        userinfo.put("dada","1");
                     }
                     if (td1.isChecked()){
-                        userinfo.put("Dada","0");
+                        userinfo.put("dada","0");
                     }
                     if (ya2.isChecked()){
-                        userinfo.put("Batuk","1");
+                        userinfo.put("batuk","1");
                     }
                     if (td2.isChecked()){
-                        userinfo.put("Batuk","0");
+                        userinfo.put("batuk","0");
                     }
                     if (ya3.isChecked()){
-                        userinfo.put("Sendi","1");
+                        userinfo.put("sendi","1");
                     }
                     if (td3.isChecked()){
-                        userinfo.put("Sendi","0");
+                        userinfo.put("sendi","0");
                     }
                     if (ya4.isChecked()){
-                        userinfo.put("Cedera","1");
+                        userinfo.put("cedera","1");
                     }
                     if (td4.isChecked()){
-                        userinfo.put("Cedera","0");
+                        userinfo.put("cedera","0");
                     }
                     if (ya5.isChecked()){
-                        userinfo.put("Cacat","1");
+                        userinfo.put("cacat","1");
                     }
                     if (td5.isChecked()){
-                        userinfo.put("Cacat","0");
+                        userinfo.put("cacat","0");
                     }
                     if (ya6.isChecked()){
-                        userinfo.put("Rokok","1");
+                        userinfo.put("rokok","1");
                     }
                     if (td6.isChecked()){
-                        userinfo.put("Rokok","0");
+                        userinfo.put("rokok","0");
                     }
                     if (ya7.isChecked()){
-                        userinfo.put("Tidur","1");
+                        userinfo.put("tidur","1");
                     }
                     if (td7.isChecked()){
-                        userinfo.put("Tidur","0");
+                        userinfo.put("tidur","0");
                     }
                     
                     df.set(userinfo);

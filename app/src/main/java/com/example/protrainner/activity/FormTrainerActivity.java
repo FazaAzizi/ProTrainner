@@ -54,11 +54,11 @@ public class FormTrainerActivity extends AppCompatActivity {
                     DocumentReference df = fStore.collection("Akun").document(user.getUid())
                             .collection("Data").document(user.getUid());
                     Map<String,Object> userinfo = new HashMap<>();
-                    userinfo.put("Nama lengkap",namaLengkap);
-                    userinfo.put("Jenis kelamin",jenisKelamin);
-                    userinfo.put("Ttl",ttl);
-                    userinfo.put("Alamat asal",alamatAsal);
-                    userinfo.put("Alamat jogja",alamatJogja);
+                    userinfo.put("namalengkap",namaLengkap);
+                    userinfo.put("jeniskelamin",jenisKelamin);
+                    userinfo.put("ttl",ttl);
+                    userinfo.put("alamatasal",alamatAsal);
+                    userinfo.put("alamatjogja",alamatJogja);
 
                     df.set(userinfo);
                     Intent inthome =new Intent(FormTrainerActivity.this, HomeTrainerActivity.class);
