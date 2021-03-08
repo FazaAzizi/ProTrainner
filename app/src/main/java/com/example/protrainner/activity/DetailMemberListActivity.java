@@ -76,7 +76,7 @@ public class DetailMemberListActivity extends AppCompatActivity {
                 Bundle c = new Bundle();
                 c.putString("nama",nm);
                 c.putString("id",uid);
-                Intent intent = new Intent(DetailMemberListActivity.this, FtlTrainerActivity.class);
+                Intent intent = new Intent(DetailMemberListActivity.this, FtlTrainer1Activity.class);
                 intent.putExtras(c);
                 startActivity(intent);
             }

@@ -17,8 +17,8 @@
         <LinearLayout
 
             android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:background="@color/pt1"
+            android:layout_height="200dp"
+            android:background="@color/white"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -93,6 +93,8 @@
 
                 <LinearLayout
                     android:id="@+id/PriceList"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="16dp"
@@ -129,6 +131,8 @@
 
                 <LinearLayout
                     android:id="@+id/JadwalLatihan"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="16dp"
@@ -166,6 +170,8 @@
                     android:id="@+id/FormulirPengukuran"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
                     android:padding="16dp"
                     android:orientation="vertical"
                     android:gravity="center">
@@ -201,6 +207,8 @@
 
                 <LinearLayout
                     android:id="@+id/FTL"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="20dp"
