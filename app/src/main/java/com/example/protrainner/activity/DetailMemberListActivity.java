@@ -21,7 +21,7 @@ public class DetailMemberListActivity extends AppCompatActivity {
 
     String uid,nm;
     TextView nL,tTL,gndr,addrsJgj,addrsAsal;
-    Button btFtl,btUkur;
+    Button btFtl,btUkur, btFtlCek, btUkurCek;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
 
@@ -40,7 +40,8 @@ public class DetailMemberListActivity extends AppCompatActivity {
 
         btFtl = findViewById(R.id.inp_ftl);
         btUkur = findViewById(R.id.inp_dataukur);
-
+        btFtlCek = findViewById(R.id.cek_ftl);
+        btUkurCek = findViewById(R.id.cek_dataukur);
 
 
         Bundle b = getIntent().getExtras();
@@ -58,7 +59,6 @@ public class DetailMemberListActivity extends AppCompatActivity {
                     String addrsAsal1 = task.getResult().getString("alamatjogja");
 
                     nm = nL1;
-
                     nL.setText(nL1);
                     tTL.setText(tTl1);
                     gndr.setText(gndr1);
@@ -77,6 +77,18 @@ public class DetailMemberListActivity extends AppCompatActivity {
                 c.putString("nama",nm);
                 c.putString("id",uid);
                 Intent intent = new Intent(DetailMemberListActivity.this, FtlTrainer1Activity.class);
+                intent.putExtras(c);
+                startActivity(intent);
+            }
+        });
+
+        btFtlCek.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle c = new Bundle();
+                c.putString("nama",nm);
+                c.putString("id",uid);
+                Intent intent = new Intent(DetailMemberListActivity.this, OutFtlActivity.class);
                 intent.putExtras(c);
                 startActivity(intent);
             }

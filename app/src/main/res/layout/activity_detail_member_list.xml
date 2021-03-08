@@ -66,12 +66,28 @@
                 android:text="Isi data FTL" />
 
             <android.widget.Button
+                android:id="@+id/cek_ftl"
+                android:layout_marginTop="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:text="Cek data FTL" />
+
+            <android.widget.Button
                 android:id="@+id/inp_dataukur"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Isi data Pengukuran"
                 android:background="@drawable/button_bg"
                 android:layout_marginTop="16dp" />
+
+            <android.widget.Button
+                android:id="@+id/cek_dataukur"
+                android:layout_marginTop="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:text="Cek Data Pengukuran" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

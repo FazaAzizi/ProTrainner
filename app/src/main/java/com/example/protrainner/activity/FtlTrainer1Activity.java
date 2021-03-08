@@ -146,7 +146,6 @@ public class FtlTrainer1Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Sesi = etSesi.getText().toString();
-                noSesi = Integer.parseInt(etSesi.getText().toString());
                 Gt= etGt.getText().toString();
                 Mg= etMg.getText().toString();
                 Note= etNote.getText().toString();
@@ -154,7 +153,7 @@ public class FtlTrainer1Activity extends AppCompatActivity {
                 DocumentReference df = fStore.collection("Akun").document(id).
                         collection("FTL").document(Sesi);
                 Map<String,Object> userinfo = new HashMap<>();
-                userinfo.put("noSesi", noSesi);
+                userinfo.put("noSesi", Sesi);
                 userinfo.put("goalTraining", Gt);
                 userinfo.put("muscleGroup", Mg);
                 userinfo.put("notes", Note);

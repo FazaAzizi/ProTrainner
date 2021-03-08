@@ -27,7 +27,7 @@ public class FtlTrainer4Activity extends AppCompatActivity {
 
     String id, sesi,noPendinginan;
     TextView tv1,etPendinginanOutNo,etPemanasanOutJp,etPemansanOutReps
-            ,etPemanasanOutDurasi;;
+            ,etPemanasanOutDurasi;
     EditText etPendinginanNo,etPendinginanJp,etPendinginanReps
             ,etPendinginanDurasi;
 

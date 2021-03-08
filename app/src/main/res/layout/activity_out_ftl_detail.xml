@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pt1"
+    tools:context=".activity.OutFtlActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="32dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cek_ftl_nama"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nama"/>
+
+                    <TextView
+                        android:id="@+id/cek_ftl_sesi"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No Sesi"/>
+
+                    <TextView
+                        android:id="@+id/cek_ftl_gt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Goal Training"/>
+
+                    <TextView
+                        android:id="@+id/cek_ftl_mg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Muscle Group"/>
+
+                    <TextView
+                        android:id="@+id/cek_ftl_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Notes"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="40dp"
+
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_ftl_pemanasan"
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="40dp"
+
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_ftl_inti"
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="40dp"
+
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_ftl_pendinginan"
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
