@@ -4,15 +4,15 @@ import java.security.PublicKey;
 
 public class Harga {
     String noPaket;
-    String durasiLat;
+    String durasiLatihan;
     String harga;
 
     public Harga(){
     }
 
-    public Harga(String noPaket, String durasiLat, String harga){
+    public Harga(String noPaket, String durasiLatihan, String harga){
         this.noPaket = noPaket;
-        this.durasiLat = durasiLat;
+        this.durasiLatihan = durasiLatihan;
         this.harga = harga;
     }
 
@@ -20,9 +20,9 @@ public class Harga {
 
     public void setNoPaket(String noPaket) { this.noPaket = noPaket; }
 
-    public String getDurasiLat() { return durasiLat; }
+    public String getDurasiLatihan() { return durasiLatihan; }
 
-    public void setDurasiLat(String durasiLat) { this.durasiLat = durasiLat; }
+    public void setDurasiLat(String durasiLatihan) { this.durasiLatihan = durasiLatihan; }
 
     public String getHarga() { return harga; }
 

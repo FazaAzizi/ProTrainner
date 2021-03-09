@@ -41,9 +41,7 @@ public class FormTrainerActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
-        Bundle b = getIntent().getExtras();
-        id = b.getString("id");
-        harga = b.getString("harga");
+
 
         input_namaLengkap_trainer = findViewById(R.id.inp_nama_lengkap_trainer);
         input_jenisKelamin_trainer = findViewById(R.id.inp_jenis_kelamin_trainer);
@@ -62,6 +60,8 @@ public class FormTrainerActivity extends AppCompatActivity {
         btnCek_paket = findViewById(R.id.cek_paket);
         btnSelesai = findViewById(R.id.konfirmasi_trainer);
 
+        FirebaseUser user = mAuth.getCurrentUser();
+
         btnTambah_paket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,12 +69,13 @@ public class FormTrainerActivity extends AppCompatActivity {
                 hargaDurasiLat = input_durasi_latihan.getText().toString();
                 hargaHarga = input_harga_pt.getText().toString();
 
-                DocumentReference df = fStore.collection("Akun").document(id).
-                        collection("Harga").document(harga);
+                DocumentReference df = fStore.collection("Akun").document(user.getUid()).
+                        collection("Harga").document(hargaHarga);
                 Map<String,Object> userinfo = new HashMap<>();
                 userinfo.put("noPaket", hargaNoPaket);
                 userinfo.put("durasiLatihan", hargaDurasiLat);
                 userinfo.put("harga", hargaHarga);
+                df.set(userinfo);
 
                 input_nomor_paket.setText("");
                 input_durasi_latihan.setText("");
@@ -119,7 +120,8 @@ public class FormTrainerActivity extends AppCompatActivity {
     }
 
     public void loadHarga(View v) {
-        CollectionReference cr = fStore.collection("Akun").document(id).collection("Harga");
+        FirebaseUser user = mAuth.getCurrentUser();
+        CollectionReference cr = fStore.collection("Akun").document(user.getUid()).collection("Harga");
         cr.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             String data = "";
             @Override
@@ -128,10 +130,10 @@ public class FormTrainerActivity extends AppCompatActivity {
                     Harga harga = documentSnapshot.toObject(Harga.class);
 
                     String noPaket = harga.getNoPaket();
-                    String durasilat = harga.getDurasiLat();
+                    String durasiLatihan = harga.getDurasiLatihan();
                     String hargaPkt = harga.getHarga();
 
-                    data+= "No. Paket   : " +noPaket+ "\nDurasi    : " +durasilat+ "Harga Paket   : "  +hargaPkt+ "\n\n";
+                    data+= "No. Paket\t: " +noPaket+ "\nDurasi\t: " +durasiLatihan+ "\nHarga Paket\t: "  +hargaPkt+ "\n\n";
 
                 }
                 tvOutPaket.setText(data);

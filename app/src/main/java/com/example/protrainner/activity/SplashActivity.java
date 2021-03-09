@@ -17,6 +17,7 @@ import com.example.protrainner.R;
 
 public class SplashActivity extends AppCompatActivity {
 
+
     TextView textView1,textView2;
     ImageView imageView;
 

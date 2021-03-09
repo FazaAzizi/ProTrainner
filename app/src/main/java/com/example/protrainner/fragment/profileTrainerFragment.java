@@ -38,7 +38,6 @@ public class profileTrainerFragment extends Fragment {
         gender = (TextView) view.findViewById(R.id.out_gender);
         addrs = (TextView) view.findViewById(R.id.out_address);
         exp = (TextView) view.findViewById(R.id.out_experience);
-        price = (TextView) view.findViewById(R.id.out_price);
 
         userId = mAuth.getCurrentUser().getUid();
         DocumentReference df = fStore.collection("Akun").document(userId);
@@ -63,12 +62,10 @@ public class profileTrainerFragment extends Fragment {
                     String gender1 = task.getResult().getString("jeniskelamin");
                     String addrs1 = task.getResult().getString("alamatjogja");
                     String exp1 = task.getResult().getString("pengalaman");
-                    String price1 = task.getResult().getString("harga");
                     ttl.setText(ttl1);
                     gender.setText(gender1);
                     addrs.setText(addrs1);
                     exp.setText(exp1);
-                    price.setText(price1);
                 }
 
             }
