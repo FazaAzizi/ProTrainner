@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".activity.FormTrainerActivity">
 
@@ -11,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white">
-
 
         <TextView
             android:id="@+id/jdlForm"
@@ -25,12 +24,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias=".1" />
+            app:layout_constraintVertical_bias=".05" />
 
         <LinearLayout
             android:id="@+id/linear1"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:orientation="horizontal"
@@ -38,7 +37,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/jdlForm"
-            app:layout_constraintVertical_bias="0.106">
+            app:layout_constraintVertical_bias="0.05">
 
             <TextView
                 android:id="@+id/nama_lengkap_trainer"
@@ -56,7 +55,7 @@
         <LinearLayout
             android:id="@+id/linear2"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:orientation="horizontal"
@@ -83,7 +82,7 @@
         <LinearLayout
             android:id="@+id/linear3"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:orientation="horizontal"
@@ -109,7 +108,7 @@
         <LinearLayout
             android:id="@+id/linear4"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:orientation="horizontal"
@@ -121,26 +120,27 @@
             app:layout_constraintVertical_bias="0.0">
 
             <TextView
-                android:id="@+id/asal_alamat_trainer"
+                android:id="@+id/usia_trainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Asal Alamat =" />
+                android:text="Usia =" />
 
             <EditText
-                android:id="@+id/inp_asal_alamat_trainer"
+                android:id="@+id/inp_usia_trainer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
         </LinearLayout>
 
+
+
         <LinearLayout
             android:id="@+id/linear5"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:orientation="horizontal"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.875"
@@ -161,6 +161,233 @@
 
         </LinearLayout>
 
+
+
+        <LinearLayout
+            android:id="@+id/linear6"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear5"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/pengalaman_trainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengalaman =" />
+
+            <EditText
+                android:id="@+id/inp_pengalaman_trainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear7"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear6"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/jdl_harga"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Form Harga Paket" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear8"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear7"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/subjdl_harga"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Isilah harga paket anda dalam form dibawah ini" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear9"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear8"
+            app:layout_constraintVertical_bias="0.05">
+
+            <TextView
+                android:id="@+id/no_paket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No. Paket =" />
+
+            <EditText
+                android:id="@+id/inp_no_paket"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear10"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear9"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/durasi_trainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Durasi Latihan =" />
+
+            <EditText
+                android:id="@+id/inp_durasi_trainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear11"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear10"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/harga_trainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga =" />
+
+            <EditText
+                android:id="@+id/inp_harga_trainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear12"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear11"
+            app:layout_constraintVertical_bias="0.15">
+
+            <Button
+                android:id="@+id/tambah_paket"
+                android:layout_width="230dp"
+                android:layout_height="50dp"
+                android:text="Tambahkan Paket"
+                android:layout_marginRight="5dp"/>
+
+            <Button
+                android:id="@+id/cek_paket"
+                android:layout_width="230dp"
+                android:layout_height="50dp"
+                android:text="Cek Paket"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nv_cek_paket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/konfirmasi_trainer"
+            app:layout_constraintTop_toBottomOf="@+id/linear12"
+            app:layout_constraintVertical_bias="0">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/form_harga_out_no"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
         <Button
             android:id="@+id/konfirmasi_trainer"
             android:layout_width="wrap_content"
@@ -170,6 +397,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linear5" />
+            app:layout_constraintTop_toBottomOf="@id/nv_cek_paket"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

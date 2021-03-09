@@ -8,20 +8,29 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.protrainner.R;
+import com.example.protrainner.model.Harga;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class FormTrainerActivity extends AppCompatActivity {
 
-    EditText input_namaLengkap_trainer, input_jenisKelamin_trainer, input_ttl_trainer, input_alamatAsal_trainer, input_alamatJogja_trainer;
-    Button button;
+    String id, harga, hargaNoPaket, hargaDurasiLat, hargaHarga ;
+    EditText input_namaLengkap_trainer, input_jenisKelamin_trainer, input_ttl_trainer, input_usia__trainer, input_alamatJogja_trainer, input_pengalaman_trainer
+            ,input_nomor_paket, input_durasi_latihan, input_harga_pt;
+    TextView tvOutPaket;
+    Button btnSelesai, btnTambah_paket, btnCek_paket;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
 
@@ -32,24 +41,63 @@ public class FormTrainerActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
+        Bundle b = getIntent().getExtras();
+        id = b.getString("id");
+        harga = b.getString("harga");
+
         input_namaLengkap_trainer = findViewById(R.id.inp_nama_lengkap_trainer);
         input_jenisKelamin_trainer = findViewById(R.id.inp_jenis_kelamin_trainer);
         input_ttl_trainer = findViewById(R.id.inp_ttl_trainer);
-        input_alamatAsal_trainer = findViewById(R.id.inp_asal_alamat_trainer);
+        input_usia__trainer = findViewById(R.id.inp_usia_trainer);
         input_alamatJogja_trainer = findViewById(R.id.inp_alamat_jogja_trainer);
+        input_pengalaman_trainer = findViewById(R.id.inp_pengalaman_trainer);
 
-        button = findViewById(R.id.konfirmasi_trainer);
+        tvOutPaket = findViewById(R.id.form_harga_out_no);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        input_nomor_paket = findViewById(R.id.inp_no_paket);
+        input_durasi_latihan = findViewById(R.id.inp_durasi_trainer);
+        input_harga_pt = findViewById(R.id.inp_harga_trainer);
+
+        btnTambah_paket = findViewById(R.id.tambah_paket);
+        btnCek_paket = findViewById(R.id.cek_paket);
+        btnSelesai = findViewById(R.id.konfirmasi_trainer);
+
+        btnTambah_paket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hargaNoPaket = input_nomor_paket.getText().toString();
+                hargaDurasiLat = input_durasi_latihan.getText().toString();
+                hargaHarga = input_harga_pt.getText().toString();
+
+                DocumentReference df = fStore.collection("Akun").document(id).
+                        collection("Harga").document(harga);
+                Map<String,Object> userinfo = new HashMap<>();
+                userinfo.put("noPaket", hargaNoPaket);
+                userinfo.put("durasiLatihan", hargaDurasiLat);
+                userinfo.put("harga", hargaHarga);
+
+                input_nomor_paket.setText("");
+                input_durasi_latihan.setText("");
+                input_harga_pt.setText("");
+            }
+        });
+
+        btnCek_paket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { loadHarga (v); }
+        });
+
+        btnSelesai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String namaLengkap = input_namaLengkap_trainer.getText().toString();
                 String jenisKelamin = input_jenisKelamin_trainer.getText().toString();
                 String ttl = input_ttl_trainer.getText().toString();
-                String alamatAsal = input_alamatAsal_trainer.getText().toString();
+                String usia = input_usia__trainer.getText().toString();
                 String alamatJogja = input_alamatJogja_trainer.getText().toString();
+                String pengalaman = input_pengalaman_trainer.getText().toString();
 
-                if (!(namaLengkap.isEmpty() && jenisKelamin.isEmpty() && ttl.isEmpty() && alamatAsal.isEmpty() && alamatJogja.isEmpty())){
+                if (!(namaLengkap.isEmpty() && jenisKelamin.isEmpty() && ttl.isEmpty() && usia.isEmpty() && alamatJogja.isEmpty() && pengalaman.isEmpty())){
                     FirebaseUser user = mAuth.getCurrentUser();
                     DocumentReference df = fStore.collection("Akun").document(user.getUid())
                             .collection("Data").document(user.getUid());
@@ -57,14 +105,36 @@ public class FormTrainerActivity extends AppCompatActivity {
                     userinfo.put("namalengkap",namaLengkap);
                     userinfo.put("jeniskelamin",jenisKelamin);
                     userinfo.put("ttl",ttl);
-                    userinfo.put("alamatasal",alamatAsal);
+                    userinfo.put("usia",usia);
                     userinfo.put("alamatjogja",alamatJogja);
+                    userinfo.put("pengalaman",pengalaman);
 
                     df.set(userinfo);
                     Intent inthome =new Intent(FormTrainerActivity.this, HomeTrainerActivity.class);
                     startActivity(inthome);
                 }
 
+            }
+        });
+    }
+
+    public void loadHarga(View v) {
+        CollectionReference cr = fStore.collection("Akun").document(id).collection("Harga");
+        cr.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            String data = "";
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots){
+                    Harga harga = documentSnapshot.toObject(Harga.class);
+
+                    String noPaket = harga.getNoPaket();
+                    String durasilat = harga.getDurasiLat();
+                    String hargaPkt = harga.getHarga();
+
+                    data+= "No. Paket   : " +noPaket+ "\nDurasi    : " +durasilat+ "Harga Paket   : "  +hargaPkt+ "\n\n";
+
+                }
+                tvOutPaket.setText(data);
             }
         });
     }
