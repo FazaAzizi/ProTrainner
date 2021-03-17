@@ -153,6 +153,7 @@ public class LoginActivity extends AppCompatActivity {
         if (FirebaseAuth.getInstance().getCurrentUser()!=null){
             DocumentReference df = FirebaseFirestore.getInstance().collection("Akun").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
             df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                String id;
                 @Override
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                     if(documentSnapshot.getString("isMember").equals("0")){
@@ -160,7 +161,11 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(inthome);
                     }
                     if(documentSnapshot.getString("isMember").equals("1")){
+                        id = documentSnapshot.getId();
+                        Bundle b = new Bundle();
+                        b.putString("id",id);
                         Intent inthome =new Intent(LoginActivity.this, MainActivity.class);
+                        inthome.putExtras(b);
                         startActivity(inthome);
                     }
 

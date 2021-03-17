@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     CardView c1,c2,c3,c4;
     LinearLayout l1,l2;
     FirebaseAuth mAuth;
+    public String id;
     float v=0;
     ChipNavigationBar chipNavigationBar;
     private FirebaseAuth.AuthStateListener mAutStateListener;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         chipNavigationBar.setItemSelected(R.id.home_member,true);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_member,new homeMemberFragment()).commit();
 
+//        id = mAuth.getCurrentUser().getUid();
         botMenu();
 
 //        c1 = findViewById(R.id.kiri1);
@@ -95,12 +97,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void botMenu(){
         chipNavigationBar.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
+
             @Override
             public void onItemSelected(int i) {
                 Fragment fragment = null;
                 switch (i){
                     case R.id.home_member:
                         fragment = new homeMemberFragment();
+//                        Bundle bundle= new Bundle();
+//                        bundle.putString("id",id);
+//                        fragment.setArguments(bundle);
                         break;
                     case R.id.profile_member:
                         fragment = new profileMemberFragment();
