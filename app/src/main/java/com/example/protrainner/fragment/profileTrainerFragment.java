@@ -67,9 +67,8 @@ public class profileTrainerFragment extends Fragment {
                     addrs.setText(addrs1);
                     exp.setText(exp1);
                 }
-
             }
         });
         return view;
-
-    }}
+    }
+}

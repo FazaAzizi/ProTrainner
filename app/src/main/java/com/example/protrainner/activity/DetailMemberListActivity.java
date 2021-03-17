@@ -58,12 +58,23 @@ public class DetailMemberListActivity extends AppCompatActivity {
                     String addrsJgj1 = task.getResult().getString("alamatasal");
                     String addrsAsal1 = task.getResult().getString("alamatjogja");
 
+                    String batuk = task.getResult().getString("batuk");
+                    String cacat = task.getResult().getString("cacat");
+                    String cedera = task.getResult().getString("cedera");
+                    String dada = task.getResult().getString("dada");
+                    String rokok = task.getResult().getString("rokok");
+                    String sendi = task.getResult().getString("sendi");
+                    String tidur = task.getResult().getString("tidur");
+
+
                     nm = nL1;
                     nL.setText(nL1);
                     tTL.setText(tTl1);
                     gndr.setText(gndr1);
                     addrsJgj.setText(addrsJgj1);
                     addrsAsal.setText(addrsAsal1);
+
+
 
                 }
 
