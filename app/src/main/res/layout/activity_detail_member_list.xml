@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,8 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
-        app:cardCornerRadius="90dp"
-        >
+        app:cardCornerRadius="90dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,11 +24,10 @@
                 android:id="@+id/tvMl1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textSize="24sp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="32dp"
-                 />
+                android:text="TextView"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/tvMl2"
@@ -53,24 +51,179 @@
                 android:id="@+id/tvMl5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"/>
+                android:text="TextView" />
 
 
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear5"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_percent="0.8">
+
+                <TableRow android:background="@color/pt1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="Kondisi" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="tak tau?" />
+
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:text="Riwayat nyeri dada atau berdebar" />
+
+                    <TextView
+                        android:id="@+id/parq_out_dada"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Isi" />
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:text="Riwayat batuk lama atau sesak napas" />
+
+                    <TextView
+                        android:id="@+id/parq_out_batuk"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Isi" />
+
+
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:text="Adakah Riwayat Persendian" />
+
+                    <TextView
+                        android:id="@+id/parq_out_sendi"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Isi" />
+
+
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:text="Riwayat cedera yang dialami 1 bulan terakhir" />
+
+                    <TextView
+                        android:id="@+id/parq_out_cedera"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Isi" />
+
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:text="Riwayat cacat tubuh" />
+
+                    <TextView
+                        android:id="@+id/parq_out_cacat"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Isi" />
+
+
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:text="Riwayat perokok aktif" />
+
+                    <TextView
+                        android:id="@+id/parq_out_rokok"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Isi" />
+
+
+                </TableRow>
+
+                <TableRow android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:text="Riwayat gangguan tidur sehari sebelum tes ini berlangsung" />
+
+                    <TextView
+                        android:id="@+id/parq_out_tidur"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Isi" />
+
+
+                </TableRow>
+
+
+            </TableLayout>
 
 
             <android.widget.Button
                 android:id="@+id/inp_ftl"
-                android:layout_marginTop="32dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
                 android:background="@drawable/button_bg"
                 android:text="Isi data FTL" />
 
             <android.widget.Button
                 android:id="@+id/cek_ftl"
-                android:layout_marginTop="32dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
                 android:background="@drawable/button_bg"
                 android:text="Cek data FTL" />
 
@@ -78,15 +231,15 @@
                 android:id="@+id/inp_dataukur"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Isi data Pengukuran"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/button_bg"
-                android:layout_marginTop="16dp" />
+                android:text="Isi data Pengukuran" />
 
             <android.widget.Button
                 android:id="@+id/cek_dataukur"
-                android:layout_marginTop="32dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
                 android:background="@drawable/button_bg"
                 android:text="Cek Data Pengukuran" />
         </LinearLayout>
@@ -94,4 +247,4 @@
     </androidx.cardview.widget.CardView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

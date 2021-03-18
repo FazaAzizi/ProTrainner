@@ -11,8 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
-        app:cardCornerRadius="90dp"
-        >
+        app:cardCornerRadius="90dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,11 +24,10 @@
                 android:id="@+id/tvMl1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textSize="24sp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="32dp"
-                />
+                android:text="TextView"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/tvMl2"
@@ -53,7 +51,7 @@
                 android:id="@+id/tvMl5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"/>
+                android:text="TextView" />
 
 
         </LinearLayout>

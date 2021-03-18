@@ -51,4 +51,8 @@ public class HomeTrainerActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+    }
 }

@@ -64,6 +64,7 @@ public class MemberListActivity extends AppCompatActivity implements  ListTraine
         });
     }
 
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -79,5 +80,11 @@ public class MemberListActivity extends AppCompatActivity implements  ListTraine
     @Override
     public void onItemClick(DocumentSnapshot dS, int position) {
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(MemberListActivity.this, HomeTrainerActivity.class);
+        startActivity(intent);
     }
 }

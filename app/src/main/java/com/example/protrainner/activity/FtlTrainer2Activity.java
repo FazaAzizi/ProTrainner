@@ -66,7 +66,7 @@ public class FtlTrainer2Activity extends AppCompatActivity {
             public void onClick(View v) {
                 noPemanasan = etPemanasanNo.getText().toString();
                 PemanasanJp= etPemanasanJp.getText().toString();
-                PemanasanReps= etPemanasanJp.getText().toString();
+                PemanasanReps= etPemansanReps.getText().toString();
                 PemanasanDurasi= etPemanasanDurasi.getText().toString();
 
                 DocumentReference df = fStore.collection("Akun").document(id).

@@ -67,7 +67,7 @@ public class FtlTrainer4Activity extends AppCompatActivity {
             public void onClick(View v) {
                 noPendinginan = etPendinginanNo.getText().toString();
                 PendinginanJp= etPendinginanJp.getText().toString();
-                PendinginanReps= etPendinginanJp.getText().toString();
+                PendinginanReps= etPendinginanReps.getText().toString();
                 PendinginanDurasi= etPendinginanDurasi.getText().toString();
 
                 DocumentReference df = fStore.collection("Akun").document(id).

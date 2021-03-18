@@ -9,9 +9,9 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        app:cardBackgroundColor="@color/pt1"
+        android:layout_height="350dp"
         android:layout_marginTop="-50dp"
+        app:cardBackgroundColor="@color/pt1"
         app:cardCornerRadius="40dp">
 
     </androidx.cardview.widget.CardView>
@@ -20,15 +20,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Berat badan"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Berat badan"/>
+            android:text="Berat badan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Berat badan" />
 
     </LinearLayout>
 

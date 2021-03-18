@@ -20,7 +20,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class DetailMemberListActivity extends AppCompatActivity {
 
     String uid,nm;
-    TextView nL,tTL,gndr,addrsJgj,addrsAsal;
+    TextView nL,tTL,gndr,addrsJgj,addrsAsal,outDada,outSendi,outCedera,outCacat,outRokok,outTidur;
+    TextView outBatuk;
     Button btFtl,btUkur, btFtlCek, btUkurCek;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
@@ -43,6 +44,14 @@ public class DetailMemberListActivity extends AppCompatActivity {
         btFtlCek = findViewById(R.id.cek_ftl);
         btUkurCek = findViewById(R.id.cek_dataukur);
 
+        outBatuk = (TextView) findViewById(R.id.parq_out_batuk);
+        outDada = (TextView) findViewById(R.id.parq_out_dada);
+        outSendi = (TextView) findViewById(R.id.parq_out_sendi);
+        outCedera = (TextView) findViewById(R.id.parq_out_cedera);
+        outCacat = (TextView) findViewById(R.id.parq_out_cacat);
+        outRokok = (TextView) findViewById(R.id.parq_out_rokok);
+        outTidur = (TextView) findViewById(R.id.parq_out_tidur);
+
 
         Bundle b = getIntent().getExtras();
         uid = b.getString("UID");
@@ -57,7 +66,6 @@ public class DetailMemberListActivity extends AppCompatActivity {
                     String  gndr1 = task.getResult().getString("jeniskelamin");
                     String addrsJgj1 = task.getResult().getString("alamatasal");
                     String addrsAsal1 = task.getResult().getString("alamatjogja");
-
                     String batuk = task.getResult().getString("batuk");
                     String cacat = task.getResult().getString("cacat");
                     String cedera = task.getResult().getString("cedera");
@@ -66,7 +74,6 @@ public class DetailMemberListActivity extends AppCompatActivity {
                     String sendi = task.getResult().getString("sendi");
                     String tidur = task.getResult().getString("tidur");
 
-
                     nm = nL1;
                     nL.setText(nL1);
                     tTL.setText(tTl1);
@@ -74,10 +81,49 @@ public class DetailMemberListActivity extends AppCompatActivity {
                     addrsJgj.setText(addrsJgj1);
                     addrsAsal.setText(addrsAsal1);
 
-
-
+                    if(batuk.equals("1")){
+                        outBatuk.setText("Ya");
+                    }
+                    if(batuk.equals("0")){
+                        outBatuk.setText("Tidak");
+                    }
+                    if(sendi.equals("1")){
+                        outSendi.setText("Ya");
+                    }
+                    if(sendi.equals("0")){
+                        outSendi.setText("Tidak");
+                    }
+                    if(dada.equals("1")){
+                        outDada.setText("Ya");
+                    }
+                    if(dada.equals("0")){
+                        outDada.setText("Tidak");
+                    }
+                    if(cedera.equals("1")){
+                        outCedera.setText("Ya");
+                    }
+                    if(cedera.equals("0")){
+                        outCedera.setText("Tidak");
+                    }
+                    if(cacat.equals("1")){
+                        outCacat.setText("Ya");
+                    }
+                    if(cacat.equals("0")){
+                        outCacat.setText("Tidak");
+                    }
+                    if(rokok.equals("1")){
+                        outRokok.setText("Ya");
+                    }
+                    if(rokok.equals("0")){
+                        outRokok.setText("Tidak");
+                    }
+                    if(tidur.equals("1")){
+                        outTidur.setText("Ya");
+                    }
+                    if(tidur.equals("0")){
+                        outTidur.setText("Tidak");
+                    }
                 }
-
             }
         });
 
@@ -108,8 +154,13 @@ public class DetailMemberListActivity extends AppCompatActivity {
         btUkur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(DetailMemberListActivity.this, MemberListActivity.class);
+        startActivity(intent);
     }
 }

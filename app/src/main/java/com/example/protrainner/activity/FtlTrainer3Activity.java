@@ -69,7 +69,7 @@ public class FtlTrainer3Activity extends AppCompatActivity {
                 noInti = etIntiNo.getText().toString();
                 IntiJp= etIntiJp.getText().toString();
                 IntiLoad = etIntiLoad.getText().toString();
-                IntiReps= etIntiJp.getText().toString();
+                IntiReps= etIntiReps.getText().toString();
                 IntiDurasi= etIntiDurasi.getText().toString();
                 IntiSet = etIntiSet.getText().toString();
 
