@@ -70,7 +70,7 @@ public class PriceListMemberActivity extends AppCompatActivity implements  ListT
                 intent.putExtras(b);
                 startActivity(intent);
 
-                Toast.makeText(PriceListMemberActivity.this, "id = " + id,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(PriceListMemberActivity.this, "id = " + id,Toast.LENGTH_SHORT).show();
             }
         });
     }
