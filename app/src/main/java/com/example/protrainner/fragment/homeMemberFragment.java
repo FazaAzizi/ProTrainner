@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import com.example.protrainner.activity.MemberOutFtlActivity;
 import com.example.protrainner.R;
 import com.example.protrainner.activity.PriceListMemberActivity;
+import com.example.protrainner.activity.weekly_schedule_member;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -39,6 +40,14 @@ public class homeMemberFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), PriceListMemberActivity.class);
+                startActivity(i);
+            }
+        });
+
+        cvWs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), weekly_schedule_member.class);
                 startActivity(i);
             }
         });

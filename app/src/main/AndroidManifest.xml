@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProTrainner">
-        <activity android:name=".activity.EditDataParQMemberActivity"></activity>
+        <activity android:name=".activity.input_weekly_schedule"></activity>
+        <activity android:name=".activity.weekly_schedule_trainer" />
+        <activity android:name=".activity.weekly_schedule_member" />
+        <activity android:name=".activity.EditDataParQMemberActivity" />
         <activity android:name=".activity.EditDataTrainerActivity" />
         <activity android:name=".activity.EditDataMemberActivity" />
         <activity android:name=".activity.MemberPengukuranActivity" />
