@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.protrainner.R;
@@ -21,6 +22,7 @@ public class FtlTrainer1Activity extends AppCompatActivity {
 
     String id, nama;
     TextView tv1;
+    ImageView ab,an;
     EditText etSesi,etGt,etMg,etNote,etPemanasanNo,etPemanasanJp,etPemansanReps
             ,etPemanasanDurasi,etIntiNo,etIntiJp,etIntiLoad,etIntiReps,etIntiDurasi
             ,etIntiSet,etPendinginanNo,etPendinginanJp,etPendinginanReps,etPendinginanDurasi;
@@ -38,7 +40,7 @@ public class FtlTrainer1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ftl_trainer1);
 
-        tv1 = findViewById(R.id.ftl_out_nama);
+        //tv1 = findViewById(R.id.ftl_out_nama);
 
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -47,12 +49,15 @@ public class FtlTrainer1Activity extends AppCompatActivity {
         nama = b.getString("nama");
         id = b.getString("id");
 
-        tv1.setText(nama);
+        //tv1.setText(nama);
 
         etSesi = findViewById(R.id.ftl_sesi);
         etGt= findViewById(R.id.ftl_goalTraining);
         etMg= findViewById(R.id.ftl_muscleGroup);
         etNote= findViewById(R.id.ftl_notes);
+
+        ab = findViewById(R.id.ab_ftl1);
+        an = findViewById(R.id.an_ftl1);
 
 //        etPemanasanNo = findViewById(R.id.ftl_pemanasan_no);
 //        etPemanasanJp= findViewById(R.id.ftl_pemanasan_jenis);
@@ -77,7 +82,7 @@ public class FtlTrainer1Activity extends AppCompatActivity {
 //        buttonPemanasan= findViewById(R.id.button_ftl_pemanasan);
 //        buttonInti= findViewById(R.id.button_ftl_inti);
 //        buttonPendinginan= findViewById(R.id.button_ftl_pendinginan);
-        buttonKonfirmasi= findViewById(R.id.konfirmasi_ftl);
+        //buttonKonfirmasi= findViewById(R.id.konfirmasi_ftl);
 //
 //        buttonPemanasan.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -142,7 +147,7 @@ public class FtlTrainer1Activity extends AppCompatActivity {
 //            }
 //        });
 //
-        buttonKonfirmasi.setOnClickListener(new View.OnClickListener() {
+        an.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Sesi = etSesi.getText().toString();
@@ -167,5 +172,22 @@ public class FtlTrainer1Activity extends AppCompatActivity {
                 startActivity(inthome);
             }
         });
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Bundle c = new Bundle();
+        c.putString("nama",nama);
+        c.putString("id",id);
+        Intent intent = new Intent(FtlTrainer1Activity.this,OutFtlActivity.class);
+        intent.putExtras(c);
+        startActivity(intent);
     }
 }

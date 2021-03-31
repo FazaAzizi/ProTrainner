@@ -7,323 +7,240 @@
     android:orientation="vertical"
     tools:context=".activity.FormTrainerActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
         android:background="@color/white">
 
         <TextView
             android:id="@+id/jdlForm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lengkapi Form Terlebih Dahulu"
-            android:textColor="@color/black"
-            android:textSize="18sp"
+            android:text="Form Trainer"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/pt1"
+            android:textSize="32sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias=".05" />
+             />
 
-        <LinearLayout
-            android:id="@+id/linear1"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/jdlForm"
-            app:layout_constraintVertical_bias="0.05">
 
             <TextView
                 android:id="@+id/nama_lengkap_trainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama Lengkap =" />
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                android:text="Nama Lengkap" />
 
-            <EditText
-                android:id="@+id/inp_nama_lengkap_trainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear2"
+        <EditText
+            android:id="@+id/inp_nama_lengkap_trainer"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear1"
-            app:layout_constraintVertical_bias="0">
+            android:backgroundTint="@color/pt1"
+            android:textColorLink="@color/pt1" />
+
 
             <TextView
                 android:id="@+id/jenis_kelamin_trainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jenis Kelamin =" />
+                android:text="Jenis Kelamin ="
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                />
 
-            <EditText
-                android:id="@+id/inp_jenis_kelamin_trainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear3"
+        <EditText
+            android:id="@+id/inp_jenis_kelamin_trainer"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear2"
-            app:layout_constraintVertical_bias="0.0">
+            android:backgroundTint="@color/pt1"
+            android:textColorLink="@color/pt1"/>
 
-            <TextView
+        <TextView
                 android:id="@+id/ttl_trainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TTL =" />
+                android:text="TTL ="
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="16dp"/>
 
             <EditText
                 android:id="@+id/inp_ttl_trainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/pt1"
+                android:textColorLink="@color/pt1"/>
 
-        </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linear4"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.875"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear3"
-            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/usia_trainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Usia =" />
+                android:text="Usia ="
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"/>
 
             <EditText
                 android:id="@+id/inp_usia_trainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/pt1"
+                android:textColorLink="@color/pt1"/>
 
-        </LinearLayout>
 
 
-        <LinearLayout
-            android:id="@+id/linear5"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.875"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear4"
-            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/alamat_jogja_trainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alamat di Jogja =" />
+                android:text="Alamat di Jogja ="
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"/>
 
             <EditText
                 android:id="@+id/inp_alamat_jogja_trainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/pt1"
+                android:textColorLink="@color/pt1"/>
 
-        </LinearLayout>
 
 
-        <LinearLayout
-            android:id="@+id/linear6"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.875"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear5"
-            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/pengalaman_trainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pengalaman =" />
+                android:text="Pengalaman ="
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"/>
 
             <EditText
                 android:id="@+id/inp_pengalaman_trainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/pt1"
+                android:textColorLink="@color/pt1"/>
 
-        </LinearLayout>
 
-
-        <LinearLayout
-            android:id="@+id/linear7"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="16dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.875"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear6"
-            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/jdl_harga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_gravity="center_horizontal"
                 android:text="Form Harga Paket"
-                android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textColor="@color/pt1"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear8"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.875"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear7"
-            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/subjdl_harga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="Isilah harga paket anda dalam form dibawah ini"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
-        </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linear9"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.875"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear8"
-            app:layout_constraintVertical_bias="0.05">
+
 
             <TextView
                 android:id="@+id/no_paket"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No. Paket =" />
+                android:text="No. Paket"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"/>
 
             <EditText
                 android:id="@+id/inp_no_paket"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear10"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.875"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear9"
-            app:layout_constraintVertical_bias="0.0">
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/pt1"
+                android:textColorLink="@color/pt1"/>
 
             <TextView
                 android:id="@+id/durasi_trainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Durasi Latihan =" />
+                android:text="Durasi Latihan ="
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"/>
 
             <EditText
                 android:id="@+id/inp_durasi_trainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/pt1"
+                android:textColorLink="@color/pt1"/>
 
-        </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linear11"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.875"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear10"
-            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/harga_trainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Harga =" />
+                android:text="Harga ="
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"/>
 
             <EditText
                 android:id="@+id/inp_harga_trainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/pt1"
+                android:textColorLink="@color/pt1"/>
 
-        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linear12"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:orientation="horizontal"
@@ -334,17 +251,25 @@
             app:layout_constraintTop_toBottomOf="@+id/linear11"
             app:layout_constraintVertical_bias="0.15">
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/tambah_paket"
-                android:layout_width="230dp"
-                android:layout_height="50dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
+                android:layout_weight="5"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@drawable/button_bg_abu"
                 android:text="Tambahkan Paket" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/cek_paket"
-                android:layout_width="230dp"
+                android:layout_width="0dp"
+                android:layout_weight="5"
                 android:layout_height="50dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@drawable/button_bg_abu"
                 android:layout_marginLeft="5dp"
                 android:text="Cek Paket" />
 
@@ -384,16 +309,20 @@
         </androidx.core.widget.NestedScrollView>
 
 
-        <Button
+        <android.widget.Button
             android:id="@+id/konfirmasi_trainer"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/button_bg_oren"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:textSize="20sp"
             android:text="Selesai"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nv_cek_paket" />
+            android:layout_marginBottom="32dp"
+             />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>

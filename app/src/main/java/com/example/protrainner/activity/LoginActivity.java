@@ -86,15 +86,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        mAuthStateListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser mFirebaseUser = mAuth.getCurrentUser();
-                if(mFirebaseUser !=null){
-                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                }
-            }
-        };
+//        mAuthStateListener = new FirebaseAuth.AuthStateListener() {
+//            @Override
+//            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+//                FirebaseUser mFirebaseUser = mAuth.getCurrentUser();
+//                if(mFirebaseUser !=null){
+////                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
+//                }
+//            }
+//        };
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

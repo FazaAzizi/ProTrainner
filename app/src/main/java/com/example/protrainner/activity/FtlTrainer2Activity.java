@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.protrainner.R;
@@ -25,6 +26,7 @@ import java.util.Map;
 public class FtlTrainer2Activity extends AppCompatActivity {
 
     String id, sesi,noPemanasan;
+    ImageView ab,an;
     TextView tv1,etPemanasanOutNo,etPemanasanOutJp,etPemansanOutReps
             ,etPemanasanOutDurasi;;
     EditText etPemanasanNo,etPemanasanJp,etPemansanReps
@@ -59,7 +61,9 @@ public class FtlTrainer2Activity extends AppCompatActivity {
 
         buttonPemanasan= findViewById(R.id.button_ftl_pemanasan);
         buttonPemanasanCek= findViewById(R.id.button_ftl_pemanasan_cek);
-        buttonPemanasanNext=findViewById(R.id.next_pemanasan);
+        //buttonPemanasanNext=findViewById(R.id.next_pemanasan);
+        ab = findViewById(R.id.ab_ftl2);
+        an = findViewById(R.id.an_ftl2);
 
         buttonPemanasan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,7 +97,9 @@ public class FtlTrainer2Activity extends AppCompatActivity {
             }
         });
 
-        buttonPemanasanNext.setOnClickListener(new View.OnClickListener() {
+
+
+        an.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle c = new Bundle();
@@ -102,6 +108,13 @@ public class FtlTrainer2Activity extends AppCompatActivity {
                 Intent inthome =new Intent(FtlTrainer2Activity.this, FtlTrainer3Activity.class);
                 inthome.putExtras(c);
                 startActivity(inthome);
+            }
+        });
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
 
@@ -135,5 +148,14 @@ public class FtlTrainer2Activity extends AppCompatActivity {
         });
 
 
+    }
+    @Override
+    public void onBackPressed() {
+        Bundle c = new Bundle();
+        c.putString("id",id);
+        c.putString("sesi",sesi);
+        Intent intent = new Intent(FtlTrainer2Activity.this,FtlTrainer1Activity.class);
+        intent.putExtras(c);
+        startActivity(intent);
     }
 }

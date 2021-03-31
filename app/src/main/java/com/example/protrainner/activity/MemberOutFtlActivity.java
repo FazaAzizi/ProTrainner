@@ -89,4 +89,10 @@ public class MemberOutFtlActivity extends AppCompatActivity implements  ListTrai
     public void onItemClick(DocumentSnapshot dS, int position) {
 
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(MemberOutFtlActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
 }

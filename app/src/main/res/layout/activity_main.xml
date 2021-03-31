@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_container_member"
@@ -14,15 +13,15 @@
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
+        android:layout_gravity="bottom"
         android:background="@drawable/navbar_bg"
         android:elevation="10dp"
         android:padding="8dp"
         app:cnb_menuResource="@menu/menu_navbot_member"
-
         app:cnb_unselectedColor="@color/white" />
 
 
-</RelativeLayout>
+</FrameLayout>
 
     <!--<LinearLayout-->
     <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->

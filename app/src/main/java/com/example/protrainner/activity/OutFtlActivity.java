@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.protrainner.R;
 import com.example.protrainner.adapter.ListFtlAdapter;
@@ -24,6 +26,7 @@ public class OutFtlActivity extends AppCompatActivity implements  ListTrainerAda
     private RecyclerView recyclerView;
     private ListFtlAdapter adapter;
     String nama,id;
+    ImageView ab,tmbh;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     private CollectionReference cF;
@@ -37,9 +40,32 @@ public class OutFtlActivity extends AppCompatActivity implements  ListTrainerAda
         nama = b.getString("nama");
         id = b.getString("id");
 
+        ab = findViewById(R.id.ab_outftl);
+        tmbh = findViewById(R.id.tambah_outftl);
+
         recyclerView = findViewById(R.id.rv_list_ftl);
 
         setUpRecyclerView();
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+
+        tmbh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle c = new Bundle();
+                c.putString("nama",nama);
+                c.putString("id",id);
+                Intent intent = new Intent(OutFtlActivity.this, FtlTrainer1Activity.class);
+                intent.putExtras(c);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setUpRecyclerView() {
@@ -90,5 +116,15 @@ public class OutFtlActivity extends AppCompatActivity implements  ListTrainerAda
     @Override
     public void onItemClick(DocumentSnapshot dS, int position) {
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Bundle c = new Bundle();
+        c.putString("nama",nama);
+        c.putString("id",id);
+        Intent intent = new Intent(OutFtlActivity.this, DetailMemberList2Activity.class);
+        intent.putExtras(c);
+        startActivity(intent);
     }
 }

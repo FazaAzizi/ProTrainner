@@ -91,4 +91,10 @@ public class PriceListMemberActivity extends AppCompatActivity implements  ListT
     public void onItemClick(DocumentSnapshot dS, int position) {
 
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(PriceListMemberActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
 }

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.protrainner.R;
@@ -23,6 +24,7 @@ public class DetailMemberListActivity extends AppCompatActivity {
     TextView nL,tTL,gndr,addrsJgj,addrsAsal,outDada,outSendi,outCedera,outCacat,outRokok,outTidur;
     TextView outBatuk;
     Button btFtl,btUkur, btFtlCek, btUkurCek;
+    ImageView ab,an;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
 
@@ -39,10 +41,12 @@ public class DetailMemberListActivity extends AppCompatActivity {
         addrsJgj = findViewById(R.id.tvMl4);
         addrsAsal = findViewById(R.id.tvMl5);
 
-        btFtl = findViewById(R.id.inp_ftl);
-        btUkur = findViewById(R.id.inp_dataukur);
-        btFtlCek = findViewById(R.id.cek_ftl);
-        btUkurCek = findViewById(R.id.cek_dataukur);
+        an = findViewById(R.id.an_memberlist);
+        ab = findViewById(R.id.ab_memberlist);
+//        btFtl = findViewById(R.id.inp_ftl);
+//        btUkur = findViewById(R.id.inp_dataukur);
+//        btFtlCek = findViewById(R.id.cek_ftl);
+//        btUkurCek = findViewById(R.id.cek_dataukur);
 
         outBatuk = (TextView) findViewById(R.id.parq_out_batuk);
         outDada = (TextView) findViewById(R.id.parq_out_dada);
@@ -127,33 +131,52 @@ public class DetailMemberListActivity extends AppCompatActivity {
             }
         });
 
-        btFtl.setOnClickListener(new View.OnClickListener() {
+//        btFtl.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Bundle c = new Bundle();
+//                c.putString("nama",nm);
+//                c.putString("id",uid);
+//                Intent intent = new Intent(DetailMemberListActivity.this, FtlTrainer1Activity.class);
+//                intent.putExtras(c);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        btFtlCek.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Bundle c = new Bundle();
+//                c.putString("nama",nm);
+//                c.putString("id",uid);
+//                Intent intent = new Intent(DetailMemberListActivity.this, OutFtlActivity.class);
+//                intent.putExtras(c);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        btUkur.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//            }
+//        });
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+        an.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle c = new Bundle();
                 c.putString("nama",nm);
                 c.putString("id",uid);
-                Intent intent = new Intent(DetailMemberListActivity.this, FtlTrainer1Activity.class);
+                Intent intent = new Intent(DetailMemberListActivity.this, DetailMemberList2Activity.class);
                 intent.putExtras(c);
                 startActivity(intent);
-            }
-        });
-
-        btFtlCek.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Bundle c = new Bundle();
-                c.putString("nama",nm);
-                c.putString("id",uid);
-                Intent intent = new Intent(DetailMemberListActivity.this, OutFtlActivity.class);
-                intent.putExtras(c);
-                startActivity(intent);
-            }
-        });
-
-        btUkur.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
             }
         });
     }

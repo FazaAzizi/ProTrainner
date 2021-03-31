@@ -10,16 +10,36 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         app:cardCornerRadius="40dp"
+        app:cardBackgroundColor="@color/pt2"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp">
 
-        <TextView
-            android:id="@+id/list_ftl_tv"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="SESI" />
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="32sp"
+                android:text="SESI " />
+            <TextView
+                android:id="@+id/list_ftl_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="32sp"
+                android:text="" />
+        </LinearLayout>
+
+
 
     </androidx.cardview.widget.CardView>
 

@@ -12,10 +12,9 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        tools:context=".activity.MainActivity">
+        >
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@color/white"
@@ -32,18 +31,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginTop="32dp"
-                    android:text="My Dashboard"
+                    android:layout_marginTop="16dp"
+                    android:text="Hallo!"
+                    android:textStyle="bold"
                     android:textColor="@color/black"
-                    android:textSize="24sp" />
+                    android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="32dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Login as member"
-                    android:textSize="16sp" />
+                    android:text="Member"
+                    android:textStyle="bold"
+                    android:textColor="@color/pt1"
+                    android:textSize="22sp" />
 
             </LinearLayout>
 
@@ -55,10 +56,10 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginRight="32dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="46dp"
                     android:src="@drawable/man" />
 
                 <TextView
@@ -67,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="32dp"
-                    android:text="Nama Lengkap"
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -77,8 +78,9 @@
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginTop="-60dp"
+            android:layout_marginBottom="100dp"
             android:alignmentMode="alignMargins"
             android:columnCount="2"
             android:columnOrderPreserved="false"
@@ -100,26 +102,23 @@
                     android:id="@+id/PriceList"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/iconpricelist" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
                         android:text="Price List"
+                        android:textStyle="bold"
                         android:textColor="@color/black"
-                        android:textSize="18dp" />
+                        android:textSize="22dp" />
 
                 </LinearLayout>
 
@@ -140,25 +139,22 @@
                     android:id="@+id/JadwalLatihan"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:src="@drawable/iconws" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
                         android:text="Jadwal \nLatihan"
+                        android:textStyle="bold"
                         android:textColor="@color/black"
-                        android:textSize="18dp" />
+                        android:textSize="22dp" />
 
                 </LinearLayout>
 
@@ -179,26 +175,23 @@
                     android:id="@+id/FormulirPengukuran"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:src="@drawable/iconprogress" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
                         android:gravity="center"
+                        android:textStyle="bold"
                         android:text="Data \nPengukuran"
                         android:textColor="@color/black"
-                        android:textSize="18dp" />
+                        android:textSize="22dp" />
 
                 </LinearLayout>
 
@@ -219,25 +212,22 @@
                     android:id="@+id/FTL"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="20dp">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:src="@drawable/iconftl" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
                         android:text="FTL"
+                        android:textStyle="bold"
                         android:textColor="@color/black"
-                        android:textSize="18dp" />
+                        android:textSize="22dp" />
 
                 </LinearLayout>
 

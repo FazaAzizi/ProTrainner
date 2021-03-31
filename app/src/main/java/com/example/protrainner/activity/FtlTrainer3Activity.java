@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.protrainner.R;
@@ -27,6 +28,7 @@ public class FtlTrainer3Activity extends AppCompatActivity {
 
     String id, sesi,noInti;
     TextView tv1,etIntiOutNo;
+    ImageView ab,an;
     EditText etIntiNo,etIntiJp,etIntiReps
             ,etIntiDurasi,etIntiLoad,etIntiSet;
 
@@ -61,8 +63,9 @@ public class FtlTrainer3Activity extends AppCompatActivity {
 
         buttonInti= findViewById(R.id.button_ftl_inti);
         buttonIntiCek= findViewById(R.id.button_ftl_inti_cek);
-        buttonIntiNext=findViewById(R.id.next_inti);
-
+        //buttonIntiNext=findViewById(R.id.next_inti);
+        ab = findViewById(R.id.ab_ftl3);
+        an = findViewById(R.id.an_ftl3);
         buttonInti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,7 +103,7 @@ public class FtlTrainer3Activity extends AppCompatActivity {
             }
         });
 
-        buttonIntiNext.setOnClickListener(new View.OnClickListener() {
+        an.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle c = new Bundle();
@@ -109,6 +112,13 @@ public class FtlTrainer3Activity extends AppCompatActivity {
                 Intent inthome =new Intent(FtlTrainer3Activity.this, FtlTrainer4Activity.class);
                 inthome.putExtras(c);
                 startActivity(inthome);
+            }
+        });
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
 
@@ -139,5 +149,15 @@ public class FtlTrainer3Activity extends AppCompatActivity {
         });
 
 
+    }
+    @Override
+    public void onBackPressed() {
+        Bundle c = new Bundle();
+        c.putString("id",id);
+        c.putString("sesi",sesi);
+        Intent intent = new Intent(FtlTrainer3Activity.this, FtlTrainer2Activity.class);
+        intent.putExtras(c);
+
+        startActivity(intent);
     }
 }

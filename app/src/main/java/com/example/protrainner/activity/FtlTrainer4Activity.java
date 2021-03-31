@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.protrainner.R;
@@ -30,7 +31,7 @@ public class FtlTrainer4Activity extends AppCompatActivity {
             ,etPemanasanOutDurasi;
     EditText etPendinginanNo,etPendinginanJp,etPendinginanReps
             ,etPendinginanDurasi;
-
+    ImageView an,ab;
     Button buttonPendinginan,buttonPendinginanCek,buttonPendinginanNext,buttonInti,buttonKonfirmasi;
     String Sesi,Gt,Mg,Note,PemanasanJp,PemanasanReps
             ,PemanasanDurasi,IntiJp,IntiLoad,IntiReps,IntiDurasi
@@ -60,7 +61,9 @@ public class FtlTrainer4Activity extends AppCompatActivity {
 
         buttonPendinginan= findViewById(R.id.button_ftl_pendinginan);
         buttonPendinginanCek= findViewById(R.id.button_ftl_pendinginan_cek);
-        buttonPendinginanNext=findViewById(R.id.finish_ftl);
+        //buttonPendinginanNext=findViewById(R.id.finish_ftl);
+        ab = findViewById(R.id.ab_ftl4);
+        an = findViewById(R.id.an_ftl4);
 
         buttonPendinginan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,7 +97,7 @@ public class FtlTrainer4Activity extends AppCompatActivity {
             }
         });
 
-        buttonPendinginanNext.setOnClickListener(new View.OnClickListener() {
+        an.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle c = new Bundle();
@@ -102,6 +105,13 @@ public class FtlTrainer4Activity extends AppCompatActivity {
                 Intent inthome =new Intent(FtlTrainer4Activity.this, DetailMemberListActivity.class);
                 inthome.putExtras(c);
                 startActivity(inthome);
+            }
+        });
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
     }
@@ -133,5 +143,15 @@ public class FtlTrainer4Activity extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Bundle c = new Bundle();
+        c.putString("id",id);
+        c.putString("sesi",sesi);
+        Intent intent = new Intent(FtlTrainer4Activity.this, FtlTrainer3Activity.class);
+        intent.putExtras(c);
+        startActivity(intent);
     }
 }

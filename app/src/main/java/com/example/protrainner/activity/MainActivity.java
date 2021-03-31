@@ -104,9 +104,6 @@ public class MainActivity extends AppCompatActivity {
                 switch (i){
                     case R.id.home_member:
                         fragment = new homeMemberFragment();
-//                        Bundle bundle= new Bundle();
-//                        bundle.putString("id",id);
-//                        fragment.setArguments(bundle);
                         break;
                     case R.id.profile_member:
                         fragment = new profileMemberFragment();

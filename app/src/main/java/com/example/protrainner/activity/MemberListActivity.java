@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.protrainner.R;
@@ -22,6 +24,7 @@ public class MemberListActivity extends AppCompatActivity implements  ListTraine
 
     private RecyclerView recyclerView;
     private ListTrainerAdapter adapter;
+    ImageView ab;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     private CollectionReference cF = fStore.collection("Akun");
@@ -33,6 +36,13 @@ public class MemberListActivity extends AppCompatActivity implements  ListTraine
 
         recyclerView = findViewById(R.id.list_member);
         setUpRecyclerView();
+        ab =findViewById(R.id.ab_memberlist3);
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     private void setUpRecyclerView() {

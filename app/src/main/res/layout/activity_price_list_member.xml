@@ -4,20 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pt1"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".activity.PriceListMemberActivity">
 
 
+    <ImageView
+        android:id="@+id/ab_pricelistmember"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/arroworen"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="32dp"
         android:text="Daftar\nTrainer"
         android:textColor="@color/black"
-        android:textSize="36sp"
+        android:textSize="46sp"
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView

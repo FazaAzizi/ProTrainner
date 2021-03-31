@@ -7,8 +7,9 @@
     android:orientation="vertical"
     tools:context=".activity.FormMemberActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="wrap_content"
         android:background="@color/white">
 
@@ -17,182 +18,148 @@
             android:id="@+id/jdlForm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lengkapi Form Terlebih Dahulu"
-            android:textColor="@color/black"
-            android:textSize="18sp"
+            android:text="Form Member"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/pt1"
+            android:textSize="32sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias=".05" />
+             />
 
-        <LinearLayout
-            android:id="@+id/linear1"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/jdlForm"
-            app:layout_constraintVertical_bias="0.05">
+
 
             <TextView
                 android:id="@+id/nama_lengkap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama Lengkap =" />
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                android:text="Nama Lengkap" />
 
             <EditText
                 android:id="@+id/inp_nama_lengkap"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear1"
-            app:layout_constraintVertical_bias="0.0">
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/pt1"/>
 
             <TextView
                 android:id="@+id/jenis_kelamin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jenis Kelamin =" />
+                android:text="Jenis Kelamin"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"/>
 
             <EditText
                 android:id="@+id/inp_jenis_kelamin"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/pt1"/>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear3"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear2"
-            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/ttl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TTL =" />
+                android:text="TTL"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"/>
 
             <EditText
                 android:id="@+id/inp_ttl"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/pt1"/>
 
-        </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linear4"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.875"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear3"
-            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/asal_alamat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Asal Alamat =" />
+                android:text="Asal Alamat"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"/>
 
             <EditText
                 android:id="@+id/inp_asal_alamat"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/pt1"
+                />
 
-        </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linear5"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.875"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear4"
-            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/alamat_jogja"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alamat di Jogja =" />
+                android:text="Alamat di Jogja"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"/>
 
-            <EditText
-                android:id="@+id/inp_alamat_jogja"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
 
-        </LinearLayout>
+        <EditText
+            android:id="@+id/inp_alamat_jogja"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/pt1" />
 
         <TableLayout
             android:id="@+id/tableLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear5"
-            app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintWidth_percent="0.8">
+            android:layout_gravity="center_horizontal">
 
-            <TableRow android:background="@color/c">
+            <TableRow android:background="@color/pt1">
 
                 <TextView
                     android:layout_width="250dp"
                     android:layout_height="40dp"
                     android:gravity="center"
-                    android:text="Kondisi" />
+                    android:text="Kondisi"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Ya" />
+                    android:text="Ya"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Tidak" />
+                    android:text="Tidak"
+                    android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             </TableRow>
 
@@ -202,6 +169,7 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
+                    android:textColor="@color/black"
                     android:text="Riwayat nyeri dada atau berdebar" />
 
                 <LinearLayout
@@ -243,6 +211,7 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
+                    android:textColor="@color/black"
                     android:text="Riwayat batuk lama atau sesak napas" />
 
                 <LinearLayout
@@ -285,6 +254,8 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
+
+                    android:textColor="@color/black"
                     android:text="Adakah Riwayat Persendian" />
 
                 <LinearLayout
@@ -327,6 +298,7 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
+                    android:textColor="@color/black"
                     android:text="Riwayat cedera yang dialami 1 bulan terakhir" />
 
                 <LinearLayout
@@ -370,6 +342,7 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
+                    android:textColor="@color/black"
                     android:text="Riwayat cacat tubuh" />
 
                 <LinearLayout
@@ -412,6 +385,7 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
+                    android:textColor="@color/black"
                     android:text="Riwayat perokok aktif" />
 
                 <LinearLayout
@@ -455,6 +429,7 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
+                    android:textColor="@color/black"
                     android:text="Riwayat gangguan tidur sehari sebelum tes ini berlangsung" />
 
                 <LinearLayout
@@ -494,17 +469,20 @@
 
         </TableLayout>
 
-        <Button
+        <android.widget.Button
             android:id="@+id/konfirmasi"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
             android:text="Selesai"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/button_bg_oren"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+    </LinearLayout>
 
 
 </ScrollView>
