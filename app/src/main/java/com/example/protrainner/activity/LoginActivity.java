@@ -13,8 +13,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.protrainner.R;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
@@ -110,19 +112,31 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 else if(!(email.isEmpty() &&  pass.isEmpty() )){
-                    mAuth.signInWithEmailAndPassword(email,pass).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                    mAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
-                        public void onSuccess(AuthResult authResult) {
-                            Toast.makeText(LoginActivity.this,"Login Succesfull",Toast.LENGTH_SHORT).show();
-                            checkIfMember(authResult.getUser().getUid());
-
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(LoginActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()){
+                                Toast.makeText(LoginActivity.this,"Login Succesfull",Toast.LENGTH_SHORT).show();
+                                checkIfMember(mAuth.getCurrentUser().getUid());
+                            }
                         }
                     });
+
+
+
+//                    mAuth.signInWithEmailAndPassword(email,pass).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+//                        @Override
+//                        public void onSuccess(AuthResult authResult) {
+//                            Toast.makeText(LoginActivity.this,"Login Succesfull",Toast.LENGTH_SHORT).show();
+//                            checkIfMember(authResult.getUser().getUid());
+//
+//                        }
+//                    }).addOnFailureListener(new OnFailureListener() {
+//                        @Override
+//                        public void onFailure(@NonNull Exception e) {
+//                            Toast.makeText(LoginActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+//                        }
+//                    });
 
                     //mAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
 //                        @Override

@@ -15,6 +15,7 @@ import com.example.protrainner.activity.MemberListActivity;
 import com.example.protrainner.activity.PriceListMemberActivity;
 import com.example.protrainner.activity.TrainerListActivity;
 import com.example.protrainner.activity.WsTrainerActivity;
+import com.example.protrainner.activity.weekly_schedule_trainer;
 
 public class homeTrainerFragment extends Fragment {
 
@@ -39,7 +40,8 @@ public class homeTrainerFragment extends Fragment {
         cvWs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(), WsTrainerActivity.class);
+
+                Intent i = new Intent(getActivity(), weekly_schedule_trainer.class);
                 startActivity(i);
             }
         });

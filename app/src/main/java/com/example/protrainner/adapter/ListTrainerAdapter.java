@@ -36,11 +36,13 @@ public class ListTrainerAdapter extends FirestoreRecyclerAdapter<Akun, ListTrain
     }
 
     class ListTrainerHolder extends RecyclerView.ViewHolder{
-        TextView tvNama;
+        TextView tvNama,tvPengalaman;
+
 
         public ListTrainerHolder( View itemView) {
             super(itemView);
             tvNama = itemView.findViewById(R.id.listnamatrainer);
+//            tvPengalaman = itemView.findViewById()
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

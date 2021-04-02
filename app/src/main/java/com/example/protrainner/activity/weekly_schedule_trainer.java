@@ -13,15 +13,9 @@ import com.example.protrainner.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
 
 import javax.annotation.Nonnull;
 
@@ -55,109 +49,6 @@ public class weekly_schedule_trainer extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
-        namaJadwal = findViewById(R.id.senin7);
-        namaJadwal = findViewById(R.id.senin8);
-        namaJadwal = findViewById(R.id.senin9);
-        namaJadwal = findViewById(R.id.senin10);
-        namaJadwal = findViewById(R.id.senin12);
-        namaJadwal = findViewById(R.id.senin13);
-        namaJadwal = findViewById(R.id.senin14);
-        namaJadwal = findViewById(R.id.senin15);
-        namaJadwal = findViewById(R.id.senin16);
-        namaJadwal = findViewById(R.id.senin17);
-        namaJadwal = findViewById(R.id.senin18);
-        namaJadwal = findViewById(R.id.senin19);
-        namaJadwal = findViewById(R.id.senin20);
-
-        namaJadwal = findViewById(R.id.selasa7);
-        namaJadwal = findViewById(R.id.selasa8);
-        namaJadwal = findViewById(R.id.selasa9);
-        namaJadwal = findViewById(R.id.selasa10);
-        namaJadwal = findViewById(R.id.selasa11);
-        namaJadwal = findViewById(R.id.selasa12);
-        namaJadwal = findViewById(R.id.selasa13);
-        namaJadwal = findViewById(R.id.selasa14);
-        namaJadwal = findViewById(R.id.selasa15);
-        namaJadwal = findViewById(R.id.selasa16);
-        namaJadwal = findViewById(R.id.selasa17);
-        namaJadwal = findViewById(R.id.selasa18);
-        namaJadwal = findViewById(R.id.selasa19);
-        namaJadwal = findViewById(R.id.selasa20);
-
-        namaJadwal = findViewById(R.id.rabu7);
-        namaJadwal = findViewById(R.id.rabu8);
-        namaJadwal = findViewById(R.id.rabu9);
-        namaJadwal = findViewById(R.id.rabu10);
-        namaJadwal = findViewById(R.id.rabu11);
-        namaJadwal = findViewById(R.id.rabu12);
-        namaJadwal = findViewById(R.id.rabu13);
-        namaJadwal = findViewById(R.id.rabu14);
-        namaJadwal = findViewById(R.id.rabu15);
-        namaJadwal = findViewById(R.id.rabu16);
-        namaJadwal = findViewById(R.id.rabu17);
-        namaJadwal = findViewById(R.id.rabu18);
-        namaJadwal = findViewById(R.id.rabu19);
-        namaJadwal = findViewById(R.id.rabu20);
-
-        namaJadwal = findViewById(R.id.kamis7);
-        namaJadwal = findViewById(R.id.kamis8);
-        namaJadwal = findViewById(R.id.kamis9);
-        namaJadwal = findViewById(R.id.kamis10);
-        namaJadwal = findViewById(R.id.kamis11);
-        namaJadwal = findViewById(R.id.kamis12);
-        namaJadwal = findViewById(R.id.kamis13);
-        namaJadwal = findViewById(R.id.kamis14);
-        namaJadwal = findViewById(R.id.kamis15);
-        namaJadwal = findViewById(R.id.kamis16);
-        namaJadwal = findViewById(R.id.kamis17);
-        namaJadwal = findViewById(R.id.kamis18);
-        namaJadwal = findViewById(R.id.kamis19);
-        namaJadwal = findViewById(R.id.kamis20);
-
-        namaJadwal = findViewById(R.id.jumat7);
-        namaJadwal = findViewById(R.id.jumat8);
-        namaJadwal = findViewById(R.id.jumat9);
-        namaJadwal = findViewById(R.id.jumat10);
-        namaJadwal = findViewById(R.id.jumat11);
-        namaJadwal = findViewById(R.id.jumat12);
-        namaJadwal = findViewById(R.id.jumat13);
-        namaJadwal = findViewById(R.id.jumat14);
-        namaJadwal = findViewById(R.id.jumat15);
-        namaJadwal = findViewById(R.id.jumat16);
-        namaJadwal = findViewById(R.id.jumat17);
-        namaJadwal = findViewById(R.id.jumat18);
-        namaJadwal = findViewById(R.id.jumat19);
-        namaJadwal = findViewById(R.id.jumat20);
-
-        namaJadwal = findViewById(R.id.sabtu7);
-        namaJadwal = findViewById(R.id.sabtu8);
-        namaJadwal = findViewById(R.id.sabtu9);
-        namaJadwal = findViewById(R.id.sabtu10);
-        namaJadwal = findViewById(R.id.sabtu11);
-        namaJadwal = findViewById(R.id.sabtu12);
-        namaJadwal = findViewById(R.id.sabtu13);
-        namaJadwal = findViewById(R.id.sabtu14);
-        namaJadwal = findViewById(R.id.sabtu15);
-        namaJadwal = findViewById(R.id.sabtu16);
-        namaJadwal = findViewById(R.id.sabtu17);
-        namaJadwal = findViewById(R.id.sabtu18);
-        namaJadwal = findViewById(R.id.sabtu19);
-        namaJadwal = findViewById(R.id.sabtu20);
-
-        namaJadwal = findViewById(R.id.minggu7);
-        namaJadwal = findViewById(R.id.minggu8);
-        namaJadwal = findViewById(R.id.minggu9);
-        namaJadwal = findViewById(R.id.minggu10);
-        namaJadwal = findViewById(R.id.minggu11);
-        namaJadwal = findViewById(R.id.minggu12);
-        namaJadwal = findViewById(R.id.minggu13);
-        namaJadwal = findViewById(R.id.minggu14);
-        namaJadwal = findViewById(R.id.minggu15);
-        namaJadwal = findViewById(R.id.minggu16);
-        namaJadwal = findViewById(R.id.minggu17);
-        namaJadwal = findViewById(R.id.minggu18);
-        namaJadwal = findViewById(R.id.minggu19);
-        namaJadwal = findViewById(R.id.minggu20);
 
 
         outSen7 = findViewById(R.id.senin7);
@@ -266,10 +157,12 @@ public class weekly_schedule_trainer extends AppCompatActivity {
 
         btnInputJadwalLatihan = (Button) findViewById(R.id.inp_jadwal_latihan);
 
-        /*
-        FirebaseUser user = mAuth.getCurrentUser();
-        DocumentReference df = fStore.collection("Akun").document(user.getUid()).
-                collection("Jadwal").document(user.getUid());
+        Bundle b = getIntent().getExtras();
+        uid = b.getString("UID");
+
+
+        DocumentReference df = fStore.collection("Akun").document(uid).
+                collection("Jadwal").document(uid);
         df.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -388,11 +281,13 @@ public class weekly_schedule_trainer extends AppCompatActivity {
                     String outMinggu19 = task.getResult().getString("minggu19");
                     String outMinggu20 = task.getResult().getString("minggu20");
 
+
+
                     nmJdw = nJdw1;
                     namaJadwal.setText(nJdw1);
 
                     if (outSenin7.equals("1")){
-                        outSen7.setText(nJdw1);
+                        outSen7.setText(nmJdw);
                     }
                     if (outSenin8.equals("1")){
                         outSen8.setText(nmJdw);
@@ -704,14 +599,12 @@ public class weekly_schedule_trainer extends AppCompatActivity {
                     if (outMinggu20.equals("1")){
                         outMing20.setText(nmJdw);
                     }
-
-
                 }
 
             }
         });
 
-        */
+
         btnInputJadwalLatihan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

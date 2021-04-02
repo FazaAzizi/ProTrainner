@@ -47,9 +47,8 @@ public class DetailPriceMemberActivity extends AppCompatActivity {
 
         nL = findViewById(R.id.textView2);
         tTL = findViewById(R.id.textView3);
-        gndr = findViewById(R.id.textView4);
-        addrsJgj = findViewById(R.id.textView5);
-        addrsAsal = findViewById(R.id.textView6);
+        gndr = findViewById(R.id.textView5);
+        addrsJgj = findViewById(R.id.textView4);
 
         recyclerView = findViewById(R.id.rv_harga_paket);
 
@@ -65,14 +64,12 @@ public class DetailPriceMemberActivity extends AppCompatActivity {
                     String nL1 = task.getResult().getString("namalengkap");
                     String tTl1 = task.getResult().getString("ttl");
                     String  gndr1 = task.getResult().getString("jeniskelamin");
-                    String addrsJgj1 = task.getResult().getString("alamatasal");
-                    String addrsAsal1 = task.getResult().getString("alamatjogja");
+                    String addrsJgj1 = task.getResult().getString("usia");
 
                     nL.setText(nL1);
                     tTL.setText(tTl1);
                     gndr.setText(gndr1);
                     addrsJgj.setText(addrsJgj1);
-                    addrsAsal.setText(addrsAsal1);
 
                 }
 
