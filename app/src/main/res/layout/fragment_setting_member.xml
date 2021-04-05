@@ -11,8 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="64dp"
+            android:elevation="5dp"
+            android:src="@drawable/icosetting"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/textView6"
+            android:elevation="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -35,35 +46,35 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
             app:layout_constraintVertical_bias="0.1"
-            app:cardBackgroundColor="@color/pt2">
+            app:cardBackgroundColor="@color/pt1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="16dp"
-                android:orientation="vertical">
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:orientation="horizontal">
+
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
                     android:layout_height="wrap_content"
-                    android:text="Profile"
+                    android:text="PROFILE"
                     android:textSize="32dp"
+
                     android:layout_marginBottom="32dp"
                     android:textStyle="bold"
                     android:textColor="@color/white"/>
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="@color/black"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ubah data diri"
-                    android:textSize="24dp"
-                    android:gravity="right"
-                    android:layout_marginTop="8dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
+                    android:layout_marginTop="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/iconprofile"/>
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -72,44 +83,40 @@
             android:id="@+id/cardView3"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            app:cardBackgroundColor="@color/pt2"
+            app:cardBackgroundColor="@color/pt1"
             android:layout_marginRight="32dp"
             android:layout_marginLeft="32dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="20dp"
+            android:layout_marginTop="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView2"
-            app:layout_constraintVertical_bias="0.2">
+            app:layout_constraintVertical_bias="0">
 
             <LinearLayout
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="match_parent"
                     android:layout_marginBottom="32dp"
                     android:text="ParQ"
                     android:textColor="@color/white"
                     android:textSize="32dp"
                     android:textStyle="bold" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="@color/black" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="right"
-                    android:text="Ubah data parQ"
-                    android:textColor="@color/white"
-                    android:textSize="24dp"
-                    android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/iconparq"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -118,9 +125,14 @@
             android:id="@+id/logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_bg_abu"
+            android:background="@drawable/button_bg_abu2"
             android:padding="16dp"
             android:text="Logout"
+            android:textSize="18sp"
+            android:elevation="20dp"
+            android:layout_marginBottom="32dp"
+            android:translationZ="2dp"
+            android:stateListAnimator="@null"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:layout_marginLeft="32dp"
