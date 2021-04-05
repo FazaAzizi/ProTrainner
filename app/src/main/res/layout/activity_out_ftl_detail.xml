@@ -1,137 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pt1"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".activity.OutFtlActivity">
 
-    <ScrollView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/arroworen"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="46sp"
+            android:textStyle="bold"
+            android:text="Sesi " />
+        <TextView
+            android:id="@+id/cek_ftl_sesi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="46sp"
+            android:textStyle="bold"
+            android:text="1" />
+    </LinearLayout>
 
-            <androidx.cardview.widget.CardView
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/button_bg_oren"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:text="Goal training"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/pt1"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:id="@+id/cek_ftl_gt"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/pt1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:text="Muscle group"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/pt1"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:id="@+id/cek_ftl_mg"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/pt1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:text="Notes"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/pt1"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:id="@+id/cek_ftl_note"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/pt1"/>
+
+
+
+
+            <android.widget.Button
+                android:id="@+id/bt_pemanasan_outftldetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="8dp"
-                app:cardCornerRadius="40dp">
+                android:layout_marginRight="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="32dp"
+                android:text="Pemanasan"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:background="@drawable/button_bg_abu"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="32dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/cek_ftl_nama"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Nama" />
-
-                    <TextView
-                        android:id="@+id/cek_ftl_sesi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:text="No Sesi" />
-
-                    <TextView
-                        android:id="@+id/cek_ftl_gt"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Goal Training" />
-
-                    <TextView
-                        android:id="@+id/cek_ftl_mg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Muscle Group" />
-
-                    <TextView
-                        android:id="@+id/cek_ftl_note"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Notes" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
+            <android.widget.Button
+                android:id="@+id/bt_inti_outftldetail"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginLeft="8dp"
-
+                android:layout_height="wrap_content"
+                android:layout_marginRight="32dp"
+                android:layout_marginLeft="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginRight="8dp"
-                app:cardCornerRadius="40dp">
+                android:text="Inti"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:background="@drawable/button_bg_abu"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/list_ftl_pemanasan"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="16dp" />
-
-                </LinearLayout>
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
+            <android.widget.Button
+                android:id="@+id/bt_pendinginan_outftldetail"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:layout_marginLeft="8dp"
-
+                android:layout_height="wrap_content"
+                android:layout_marginRight="32dp"
+                android:layout_marginLeft="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginRight="8dp"
-                app:cardCornerRadius="40dp">
+                android:text="Pendinginan"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_bg_abu"/>
+    </LinearLayout>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/list_ftl_inti"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="16dp" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginLeft="8dp"
-
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="8dp"
-                app:cardCornerRadius="40dp">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/list_ftl_pendinginan"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="16dp" />
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
