@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.example.protrainner.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,11 +23,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-    public class FormMemberActivity extends AppCompatActivity {
+    public class FormMemberActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
         EditText input_namaLengkap, input_jenisKelamin, input_ttl, input_alamatAsal, input_alamatJogja;
         CheckBox ya1, td1, ya2, td2, ya3, td3, ya4, td4, ya5, td5, ya6, td6, ya7, td7;
         Button button;
+        Spinner spinner;
+        String jenisKelamin;
         FirebaseAuth mAuth;
         FirebaseFirestore fStore;
 
@@ -37,10 +42,16 @@ import java.util.Map;
         fStore = FirebaseFirestore.getInstance();
 
         input_namaLengkap = findViewById(R.id.inp_nama_lengkap);
-        input_jenisKelamin = findViewById(R.id.inp_jenis_kelamin);
+        //input_jenisKelamin = findViewById(R.id.inp_jenis_kelamin);
         input_ttl = findViewById(R.id.inp_ttl);
         input_alamatAsal = findViewById(R.id.inp_asal_alamat);
         input_alamatJogja = findViewById(R.id.inp_alamat_jogja);
+        spinner =findViewById(R.id.spin_gender_formmember);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.kelamin, R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
 
         button = findViewById(R.id.konfirmasi);
 
@@ -65,66 +76,68 @@ import java.util.Map;
             @Override
             public void onClick(View v) {
                 String namaLengkap = input_namaLengkap.getText().toString();
-                String jenisKelamin = input_jenisKelamin.getText().toString();
+                //String jenisKelamin = input_jenisKelamin.getText().toString();
                 String ttl = input_ttl.getText().toString();
                 String alamatAsal = input_alamatAsal.getText().toString();
                 String alamatJogja = input_alamatJogja.getText().toString();
 
                 if (!(namaLengkap.isEmpty() && jenisKelamin.isEmpty() && ttl.isEmpty() && alamatAsal.isEmpty() && alamatJogja.isEmpty())){
                     FirebaseUser user = mAuth.getCurrentUser();
-                    DocumentReference df = fStore.collection("Akun").document(user.getUid())
-                            .collection("Data").document(user.getUid());
+                    DocumentReference df = fStore.collection("Akun").document(user.getUid());
                     Map<String,Object> userinfo = new HashMap<>();
                     userinfo.put("namalengkap",namaLengkap);
                     userinfo.put("jeniskelamin",jenisKelamin);
                     userinfo.put("ttl",ttl);
                     userinfo.put("alamatasal",alamatAsal);
                     userinfo.put("alamatjogja",alamatJogja);
+                    df.update(userinfo);
 
+                    DocumentReference df1 = fStore.collection("Akun").document(user.getUid())
+                            .collection("Data").document(user.getUid());
+                    Map<String,Object> userinfo1 = new HashMap<>();
                     if (ya1.isChecked()){
-                        userinfo.put("dada","1");
+                        userinfo1.put("dada","1");
                     }
                     if (td1.isChecked()){
-                        userinfo.put("dada","0");
+                        userinfo1.put("dada","0");
                     }
                     if (ya2.isChecked()){
-                        userinfo.put("batuk","1");
+                        userinfo1.put("batuk","1");
                     }
                     if (td2.isChecked()){
-                        userinfo.put("batuk","0");
+                        userinfo1.put("batuk","0");
                     }
                     if (ya3.isChecked()){
-                        userinfo.put("sendi","1");
+                        userinfo1.put("sendi","1");
                     }
                     if (td3.isChecked()){
-                        userinfo.put("sendi","0");
+                        userinfo1.put("sendi","0");
                     }
                     if (ya4.isChecked()){
-                        userinfo.put("cedera","1");
+                        userinfo1.put("cedera","1");
                     }
                     if (td4.isChecked()){
-                        userinfo.put("cedera","0");
+                        userinfo1.put("cedera","0");
                     }
                     if (ya5.isChecked()){
-                        userinfo.put("cacat","1");
+                        userinfo1.put("cacat","1");
                     }
                     if (td5.isChecked()){
-                        userinfo.put("cacat","0");
+                        userinfo1.put("cacat","0");
                     }
                     if (ya6.isChecked()){
-                        userinfo.put("rokok","1");
+                        userinfo1.put("rokok","1");
                     }
                     if (td6.isChecked()){
-                        userinfo.put("rokok","0");
+                        userinfo1.put("rokok","0");
                     }
                     if (ya7.isChecked()){
-                        userinfo.put("tidur","1");
+                        userinfo1.put("tidur","1");
                     }
                     if (td7.isChecked()){
-                        userinfo.put("tidur","0");
+                        userinfo1.put("tidur","0");
                     }
-                    
-                    df.set(userinfo);
+                    df1.set(userinfo1);
                     Intent inthome =new Intent(FormMemberActivity.this, MainActivity.class);
                     startActivity(inthome);
                 }
@@ -259,4 +272,14 @@ import java.util.Map;
         });
 
     }
-}
+
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            jenisKelamin = parent.getItemAtPosition(position).toString();
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
+    }

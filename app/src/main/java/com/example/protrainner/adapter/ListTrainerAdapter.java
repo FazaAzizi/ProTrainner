@@ -25,6 +25,7 @@ public class ListTrainerAdapter extends FirestoreRecyclerAdapter<Akun, ListTrain
     @Override
     protected void onBindViewHolder(@NonNull ListTrainerHolder listTrainerHolder, int i, @NonNull Akun listTrainer) {
             listTrainerHolder.tvNama.setText(listTrainer.getFullname());
+            listTrainerHolder.tvPengalaman.setText(listTrainer.getPengalaman());
     }
 
     @NonNull
@@ -42,7 +43,7 @@ public class ListTrainerAdapter extends FirestoreRecyclerAdapter<Akun, ListTrain
         public ListTrainerHolder( View itemView) {
             super(itemView);
             tvNama = itemView.findViewById(R.id.listnamatrainer);
-//            tvPengalaman = itemView.findViewById()
+            tvPengalaman = itemView.findViewById(R.id.list_pengalaman);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

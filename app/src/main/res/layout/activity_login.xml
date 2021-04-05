@@ -38,10 +38,10 @@
             android:id="@+id/email"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
             android:background="@drawable/edit_text_bg_abu"
             android:backgroundTint="@null"
             android:hint="Email"
+            android:fontFamily="@font/montserrat_regular"
             android:paddingLeft="20dp"
             android:paddingTop="5dp"
             android:paddingBottom="10dp"
@@ -78,10 +78,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:textStyle="bold"
                 android:background="@drawable/edit_text_bg_abu"
                 android:backgroundTint="@null"
+                android:fontFamily="@font/montserrat_regular"
                 android:hint="Password"
+                android:inputType="textPassword"
                 android:paddingLeft="20dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="10dp"
@@ -96,6 +97,7 @@
             android:layout_marginTop="32dp"
             android:background="@drawable/button_bg"
             android:backgroundTint="@null"
+            android:fontFamily="@font/montserrat_boldd"
             android:text="Login"
             android:textColor="@color/pt1"
             android:textSize="16sp"
@@ -111,9 +113,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="35dp"
-            android:text="Create account"
+            android:text="Bikin akun yuk"
+            android:fontFamily="@font/montserrat_regular"
             android:textColor="@color/white"
-            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -127,6 +131,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
             android:text="Lupa password?"
+            android:fontFamily="@font/montserrat_regular"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toTopOf="@+id/button"
@@ -137,20 +142,20 @@
             app:layout_constraintVertical_bias="0.1" />
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_google"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:elevation="10dp"
-            android:src="@drawable/google"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/create_acc_member" />
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/fab_google"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:elevation="10dp"-->
+<!--            android:src="@drawable/google"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/create_acc_member" />-->
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

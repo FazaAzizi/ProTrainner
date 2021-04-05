@@ -19,7 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class profileMemberFragment extends Fragment {
 
-    TextView nL,tTL,mail,gndr,addrs;
+    TextView nL,tTL,mail,gndr,addrs,outBatuk,outDada,outSendi,outCedera,outCacat,outRokok,outTidur;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -39,6 +39,13 @@ public class profileMemberFragment extends Fragment {
         mail = (TextView) view.findViewById(R.id.out_mail);
         gndr = (TextView) view.findViewById(R.id.out_gender);
         addrs = (TextView) view.findViewById(R.id.out_address);
+        outBatuk = (TextView) view.findViewById(R.id.parq_out_batuk);
+        outDada = (TextView) view.findViewById(R.id.parq_out_dada);
+        outSendi = (TextView) view.findViewById(R.id.parq_out_sendi);
+        outCedera = (TextView) view.findViewById(R.id.parq_out_cedera);
+        outCacat = (TextView) view.findViewById(R.id.parq_out_cacat);
+        outRokok = (TextView)view.findViewById(R.id.parq_out_rokok);
+        outTidur = (TextView) view.findViewById(R.id.parq_out_tidur);
 
 
         userId =mAuth.getCurrentUser().getUid();
@@ -49,8 +56,15 @@ public class profileMemberFragment extends Fragment {
                 if(task.getResult().exists()){
                     String nL1 = task.getResult().getString("fullname");
                     String mail1 = task.getResult().getString("email");
+                    String ttl1 = task.getResult().getString("ttl");
+                    String gndr1 = task.getResult().getString("jeniskelamin");
+                    String addr1 = task.getResult().getString("alamatjogja");
+
                     nL.setText(nL1);
                     mail.setText(mail1);
+                    tTL.setText(ttl1);
+                    gndr.setText(gndr1);
+                    addrs.setText(addr1);
                 }
 
             }
@@ -61,12 +75,56 @@ public class profileMemberFragment extends Fragment {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if(task.getResult().exists()){
-                    String ttl1 = task.getResult().getString("ttl");
-                    String gndr1 = task.getResult().getString("jeniskelamin");
-                    String addr1 = task.getResult().getString("alamatjogja");
-                    tTL.setText(ttl1);
-                    gndr.setText(gndr1);
-                    addrs.setText(addr1);
+                    String batuk = task.getResult().getString("batuk");
+                    String cacat = task.getResult().getString("cacat");
+                    String cedera = task.getResult().getString("cedera");
+                    String dada = task.getResult().getString("dada");
+                    String rokok = task.getResult().getString("rokok");
+                    String sendi = task.getResult().getString("sendi");
+                    String tidur = task.getResult().getString("tidur");
+
+                    if(batuk.equals("1")){
+                        outBatuk.setText("Ya");
+                    }
+                    if(batuk.equals("0")){
+                        outBatuk.setText("Tidak");
+                    }
+                    if(sendi.equals("1")){
+                        outSendi.setText("Ya");
+                    }
+                    if(sendi.equals("0")){
+                        outSendi.setText("Tidak");
+                    }
+                    if(dada.equals("1")){
+                        outDada.setText("Ya");
+                    }
+                    if(dada.equals("0")){
+                        outDada.setText("Tidak");
+                    }
+                    if(cedera.equals("1")){
+                        outCedera.setText("Ya");
+                    }
+                    if(cedera.equals("0")){
+                        outCedera.setText("Tidak");
+                    }
+                    if(cacat.equals("1")){
+                        outCacat.setText("Ya");
+                    }
+                    if(cacat.equals("0")){
+                        outCacat.setText("Tidak");
+                    }
+                    if(rokok.equals("1")){
+                        outRokok.setText("Ya");
+                    }
+                    if(rokok.equals("0")){
+                        outRokok.setText("Tidak");
+                    }
+                    if(tidur.equals("1")){
+                        outTidur.setText("Ya");
+                    }
+                    if(tidur.equals("0")){
+                        outTidur.setText("Tidak");
+                    }
                 }
             }
         });

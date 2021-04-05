@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.protrainner.R;
+import com.example.protrainner.adapter.ListMemberAdapter;
 import com.example.protrainner.adapter.ListTrainerAdapter;
 import com.example.protrainner.model.Akun;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
@@ -23,7 +24,7 @@ import com.google.firebase.firestore.Query;
 public class MemberListActivity extends AppCompatActivity implements  ListTrainerAdapter.OnItemClickListener {
 
     private RecyclerView recyclerView;
-    private ListTrainerAdapter adapter;
+    private ListMemberAdapter adapter;
     ImageView ab;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
@@ -51,13 +52,13 @@ public class MemberListActivity extends AppCompatActivity implements  ListTraine
                 .setQuery(query,Akun.class)
                 .build();
 
-        adapter = new ListTrainerAdapter(options);
+        adapter = new ListMemberAdapter(options);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
-        adapter.setOnItemClickListener(new ListTrainerAdapter.OnItemClickListener() {
+        adapter.setOnItemClickListener(new ListMemberAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(DocumentSnapshot dS, int position) {
                 Akun akun = dS.toObject(Akun.class);

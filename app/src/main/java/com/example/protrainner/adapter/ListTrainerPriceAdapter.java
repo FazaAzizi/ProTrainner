@@ -24,6 +24,7 @@ public class ListTrainerPriceAdapter extends FirestoreRecyclerAdapter<Akun, List
     @Override
     protected void onBindViewHolder(@NonNull ListTrainerPriceAdapter.ListTrainerHolderPrice listTrainerHolderPrice, int i, @NonNull Akun listTrainer) {
         listTrainerHolderPrice.tvNama.setText(listTrainer.getFullname());
+        listTrainerHolderPrice.tvP.setText(listTrainer.getPengalaman());
     }
 
     @NonNull
@@ -41,6 +42,7 @@ public class ListTrainerPriceAdapter extends FirestoreRecyclerAdapter<Akun, List
             super(itemView);
             tvNama = itemView.findViewById(R.id.listnama);
             tvP = itemView.findViewById(R.id.list_pengalaman);
+
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

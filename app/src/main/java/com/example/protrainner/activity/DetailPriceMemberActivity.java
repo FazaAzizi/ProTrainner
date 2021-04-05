@@ -56,7 +56,7 @@ public class DetailPriceMemberActivity extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         uid = b.getString("UID");
 
-        DocumentReference df = fStore.collection("Akun").document(uid).collection("Data").document(uid);
+        DocumentReference df = fStore.collection("Akun").document(uid);
         df.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -70,7 +70,6 @@ public class DetailPriceMemberActivity extends AppCompatActivity {
                     tTL.setText(tTl1);
                     gndr.setText(gndr1);
                     addrsJgj.setText(addrsJgj1);
-
                 }
 
             }

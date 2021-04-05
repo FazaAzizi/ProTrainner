@@ -24,6 +24,7 @@ public class ListMemberAdapter extends FirestoreRecyclerAdapter<Akun, ListMember
     @Override
     protected void onBindViewHolder(@NonNull ListMemberAdapter.ListMemberHolder listMemberHolder, int i, @NonNull Akun listMember) {
         listMemberHolder.tvNama.setText(listMember.getFullname());
+        listMemberHolder.tvGndr.setText(listMember.getJeniskelamin());
     }
 
     @NonNull
@@ -35,11 +36,13 @@ public class ListMemberAdapter extends FirestoreRecyclerAdapter<Akun, ListMember
     }
 
     class ListMemberHolder extends RecyclerView.ViewHolder{
-        TextView tvNama;
+        TextView tvNama,tvGndr;
 
         public ListMemberHolder( View itemView) {
             super(itemView);
             tvNama = itemView.findViewById(R.id.listnamamember);
+            tvGndr = itemView.findViewById(R.id.tv_listmember_pengalaman);
+
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

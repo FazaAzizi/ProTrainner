@@ -9,10 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProTrainner">
-        <activity android:name=".activity.EditDataParQMemberActivity"></activity>
+        <activity android:name=".activity.ForgotPasswordActivity"></activity>
+        <activity android:name=".activity.MemberPengukuranDetailActivity" />
+        <activity android:name=".activity.MemberPengukuranActivity" />
+        <activity android:name=".activity.PengukuranDetailActivity" />
+        <activity android:name=".activity.PengukuranInputActivity" />
+        <activity android:name=".activity.EditDataParQMemberActivity" />
         <activity android:name=".activity.EditDataTrainerActivity" />
         <activity android:name=".activity.EditDataMemberActivity" />
-        <activity android:name=".activity.MemberPengukuranActivity" />
+        <activity android:name=".activity.PengukuranActivity" />
         <activity android:name=".activity.MemberOutFtlActivity" />
         <activity android:name=".activity.OutFtlDetailActivity" />
         <activity android:name=".activity.OutFtlActivity" />
@@ -21,6 +26,7 @@
         <activity android:name=".activity.FtlTrainer2Activity" />
         <activity android:name=".activity.FtlTrainer1Activity" />
         <activity android:name=".activity.DetailMemberListActivity" />
+        <activity android:name=".activity.DetailMemberList2Activity" />
         <activity android:name=".activity.DetailTrainerListActivity" />
         <activity android:name=".activity.DetailPriceMemberActivity" />
         <activity android:name=".activity.TrainerListActivity" />

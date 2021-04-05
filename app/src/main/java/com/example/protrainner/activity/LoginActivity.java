@@ -21,7 +21,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -56,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         forgetpass = findViewById(R.id.forgetpass);
         button = findViewById(R.id.button);
         textView = findViewById(R.id.create_acc_member);
-        google = findViewById(R.id.fab_google);
+
 
         textView.setTranslationX(800);
         textView.setAlpha(v);
@@ -67,15 +66,15 @@ public class LoginActivity extends AppCompatActivity {
         lyttext.setTranslationX(800);
         forgetpass.setTranslationX(800);
         button.setTranslationX(800);
-        google.setTranslationX(800);
+        //google.setTranslationX(800);
 
         inp_email.setAlpha(v);
         lyttext.setAlpha(v);
         forgetpass.setAlpha(v);
         button.setAlpha(v);
-        google.setAlpha(v);
+        //google.setAlpha(v);
 
-        google.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(600).start();
+        //google.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(600).start();
         inp_email.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(300).start();
         lyttext.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(500).start();
         forgetpass.animate().translationX(0).alpha(1).setDuration(1000).setStartDelay(600).start();
@@ -84,6 +83,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(myIntent);
+            }
+        });
+
+        forgetpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
                 startActivity(myIntent);
             }
         });
@@ -168,6 +175,7 @@ public class LoginActivity extends AppCompatActivity {
             DocumentReference df = FirebaseFirestore.getInstance().collection("Akun").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
             df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                 String id;
+
                 @Override
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                     if(documentSnapshot.getString("isMember").equals("0")){

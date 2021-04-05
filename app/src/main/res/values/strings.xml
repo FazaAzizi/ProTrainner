@@ -7,4 +7,8 @@
 
     <string name="start">Start</string>
     <string name="next">Next</string>
+    <string-array name="kelamin">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
 </resources>

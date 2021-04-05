@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.PengukuranDetailActivity">
+
+    <ImageView
+        android:id="@+id/ab_memberpengukurandetail"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/arroworen"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="5dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="120dp"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_memberpengukurandetail_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="5">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_out_tb"
+                        android:layout_width="0dp"
+                        android:layout_weight="6"
+                        android:layout_height="wrap_content"
+                        android:textSize="32sp"
+                        android:gravity="right"
+                        android:textColor="@color/pt1"
+                        android:textStyle="bold"
+                        android:text=" "/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:gravity="left"
+                        android:textColor="@color/pt1"
+                        android:textStyle="bold"
+                        android:text="CM"/>
+                </LinearLayout>
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:textStyle="bold"
+                    android:textColor="@color/pt2"
+                    android:layout_height="wrap_content"
+                    android:text="Tinggi\nbadan"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="5">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_out_bb"
+                        android:layout_width="0dp"
+                        android:layout_weight="6"
+                        android:layout_height="wrap_content"
+                        android:textSize="32sp"
+                        android:gravity="right"
+                        android:textColor="@color/pt1"
+                        android:textStyle="bold"
+                        android:text=" "/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:gravity="left"
+                        android:textColor="@color/pt1"
+                        android:textStyle="bold"
+                        android:text="KG"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/pt2"
+                    android:layout_height="wrap_content"
+                    android:text="Berat\nbadan"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="550dp"
+        android:scaleType="centerCrop"
+        android:elevation="15dp"
+        android:src="@drawable/viewdatapengukuran"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

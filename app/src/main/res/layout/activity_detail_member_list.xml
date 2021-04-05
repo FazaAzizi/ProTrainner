@@ -56,41 +56,36 @@
 
             <TextView
                 android:id="@+id/tvMl2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="130dp"
+                android:gravity="right"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="TTL" />
 
             <TextView
                 android:id="@+id/tvMl3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="130dp"
+                android:gravity="right"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="USIA" />
 
             <TextView
                 android:id="@+id/tvMl4"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="130dp"
+                android:gravity="right"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="GENDER" />
-
-            <TextView
-                android:id="@+id/tvMl5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="16dp"
-                android:text="ALAMAT" />
-
 
 
         </LinearLayout>
@@ -116,7 +111,7 @@
             android:paddingRight="16dp"
             android:paddingLeft="16dp"
             android:elevation="15dp"
-            android:layout_marginTop="-350dp"
+            android:layout_marginTop="-340dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="32dp">
 
@@ -146,7 +141,8 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
                     android:paddingLeft="8dp"
                     android:layout_weight="0.8"
                     android:textColor="@color/black"
@@ -155,7 +151,7 @@
                 <TextView
                     android:id="@+id/parq_out_dada"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
                     android:layout_weight="0.2"
                     android:textColor="@color/black"
                     android:gravity="center"
@@ -166,7 +162,8 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
                     android:paddingLeft="8dp"
                     android:layout_weight="0.8"
                     android:textColor="@color/black"
@@ -177,7 +174,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="0.2"
                     android:textColor="@color/black"
-                    android:layout_height="match_parent"
+                    android:layout_height="25dp"
                     android:gravity="center"
                     android:text="" />
 
@@ -188,7 +185,8 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
                     android:paddingLeft="8dp"
 
                     android:layout_weight="0.8"
@@ -200,7 +198,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="0.2"
                     android:textColor="@color/black"
-                    android:layout_height="match_parent"
+                    android:layout_height="25dp"
                     android:gravity="center"
                     android:text="" />
 
@@ -211,7 +209,8 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
                     android:paddingLeft="8dp"
                     android:layout_weight="0.8"
                     android:textColor="@color/black"
@@ -220,7 +219,7 @@
                 <TextView
                     android:id="@+id/parq_out_cedera"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
                     android:layout_weight="0.2"
                     android:textColor="@color/black"
                     android:gravity="center"
@@ -233,7 +232,8 @@
                 <TextView
 
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
                     android:paddingLeft="8dp"
                     android:layout_weight="0.8"
                     android:textColor="@color/black"
@@ -244,7 +244,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="0.2"
                     android:textColor="@color/black"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
                     android:gravity="center"
                     android:text="" />
 
@@ -255,7 +255,8 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
                     android:paddingLeft="8dp"
                     android:layout_weight="0.8"
                     android:textColor="@color/black"
@@ -266,7 +267,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="0.2"
                     android:textColor="@color/black"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
                     android:gravity="center"
                     android:text="" />
 
@@ -277,7 +278,8 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
                     android:paddingLeft="8dp"
                     android:layout_weight="0.8"
                     android:textColor="@color/black"
@@ -288,7 +290,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="0.2"
                     android:textColor="@color/black"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25dp"
                     android:gravity="center"
                     android:text="" />
 
@@ -297,6 +299,7 @@
 
 
         </TableLayout>
+
 
         <ImageView
             android:id="@+id/an_memberlist"

@@ -102,7 +102,7 @@ public class FtlTrainer4Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Bundle c = new Bundle();
                 c.putString("UID",id);
-                Intent inthome =new Intent(FtlTrainer4Activity.this, DetailMemberListActivity.class);
+                Intent inthome =new Intent(FtlTrainer4Activity.this, DetailMemberList2Activity.class);
                 inthome.putExtras(c);
                 startActivity(inthome);
             }

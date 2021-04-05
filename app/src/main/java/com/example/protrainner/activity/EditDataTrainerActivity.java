@@ -51,17 +51,6 @@ public class EditDataTrainerActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if(task.getResult().exists()){
                     String nL1 = task.getResult().getString("fullname");
-                    etNl.setText(nL1);
-                }
-
-            }
-        });
-
-        DocumentReference df2 = fStore.collection("Akun").document(userId).collection("Data").document(userId);
-        df2.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if(task.getResult().exists()){
                     String ttl1 = task.getResult().getString("ttl");
                     String gndr1 = task.getResult().getString("jeniskelamin");
                     String addr1 = task.getResult().getString("alamatjogja");
@@ -73,9 +62,12 @@ public class EditDataTrainerActivity extends AppCompatActivity {
                     etAj.setText(addr1);
                     etUsia.setText(usia);
                     etPengalaman.setText(pengalaman);
+                    etNl.setText(nL1);
                 }
+
             }
         });
+
 
         accperubahan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,8 +81,7 @@ public class EditDataTrainerActivity extends AppCompatActivity {
 
 
                 if (!(ttl1.isEmpty() && gndr1.isEmpty() && addr1.isEmpty() && usia.isEmpty() && nL1.isEmpty()&&pengalaman.isEmpty())){
-                    DocumentReference df = fStore.collection("Akun").document(userId)
-                            .collection("Data").document(userId);
+                    DocumentReference df = fStore.collection("Akun").document(userId);
                     Map<String,Object> userinfo1 = new HashMap<>();
                     userinfo1.put("namalengkap",nL1);
                     userinfo1.put("jeniskelamin",gndr1);
@@ -98,12 +89,9 @@ public class EditDataTrainerActivity extends AppCompatActivity {
                     userinfo1.put("usia",usia);
                     userinfo1.put("alamatjogja",addr1);
                     userinfo1.put("pengalaman",pengalaman);
+                    userinfo1.put("fullname",nL1);
                     df.update(userinfo1);
 
-                    DocumentReference df1 = fStore.collection("Akun").document(userId);
-                    Map<String,Object> userinfo2 = new HashMap<>();
-                    userinfo2.put("fullname",nL1);
-                    df1.update(userinfo2);
 
 
                     Intent inthome =new Intent(EditDataTrainerActivity.this, MainActivity.class);

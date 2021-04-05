@@ -60,11 +60,8 @@
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textColor="@color/black"
-
                         android:textSize="18sp"
-                        android:text="jenis pendinginan" />
-
-
+                        android:text="Jenis pendinginan" />
 
                     <EditText
                         android:id="@+id/ftl_pendinginan_jenis"
@@ -110,6 +107,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
                     android:background="@drawable/button_bg_abu"
                     android:text="Tambahkan" />
 
@@ -118,6 +118,9 @@
                     android:layout_width="match_parent"
                     android:background="@drawable/button_bg_abu"
                     android:layout_marginTop="16dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
                     android:layout_height="wrap_content"
                     android:text="Cek" />
 

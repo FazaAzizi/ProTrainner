@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.protrainner.R;
 
@@ -57,6 +56,12 @@ public class DetailMemberList2Activity extends AppCompatActivity {
         cvDataUkur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle c = new Bundle();
+                c.putString("nama",nama);
+                c.putString("id",id);
+                Intent intent = new Intent(DetailMemberList2Activity.this, PengukuranActivity.class);
+                intent.putExtras(c);
+                startActivity(intent);
             }
         });
 

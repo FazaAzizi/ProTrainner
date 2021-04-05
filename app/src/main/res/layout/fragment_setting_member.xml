@@ -5,64 +5,164 @@
     android:id="@+id/settingfrgmnt"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pt1">
+    android:background="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.cardview.widget.CardView
+        <TextView
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardCornerRadius="50dp"
-            android:layout_margin="8dp">
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Setting"
+            android:textColor="@color/black"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="32dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintVertical_bias="0.1"
+            app:cardBackgroundColor="@color/pt2">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
+                android:padding="16dp"
                 android:orientation="vertical">
 
-
-                <android.widget.Button
-                    android:id="@+id/btn_edit_data_diri"
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/button_bg"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:elevation="10dp"
-                    android:padding="16dp"
-                    android:text="Edit Data Diri" />
-
-                <android.widget.Button
-                    android:id="@+id/btn_edit_data_parq"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:background="@drawable/button_bg"
-                    android:elevation="10dp"
-                    android:padding="16dp"
+                    android:text="Profile"
+                    android:textSize="32dp"
                     android:layout_marginBottom="32dp"
-                    android:text="Edit Data PARQ" />
-
-                <android.widget.Button
-                    android:id="@+id/logout"
-                    android:layout_marginTop="32dp"
-                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/button_bg"
-                    android:padding="16dp"
-                    android:text="Logout yok" />
-
+                    android:text="Ubah data diri"
+                    android:textSize="24dp"
+                    android:gravity="right"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
             </LinearLayout>
-
-
 
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:cardBackgroundColor="@color/pt2"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="32dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2"
+            app:layout_constraintVertical_bias="0.2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:text="ParQ"
+                    android:textColor="@color/white"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="right"
+                    android:text="Ubah data parQ"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <android.widget.Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg_abu"
+            android:padding="16dp"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+
+                <!--                <android.widget.Button-->
+                <!--                    android:id="@+id/btn_edit_data_diri"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:background="@drawable/button_bg"-->
+                <!--                    android:layout_marginBottom="16dp"-->
+                <!--                    android:layout_marginLeft="16dp"-->
+                <!--                    android:layout_marginRight="16dp"-->
+                <!--                    android:elevation="10dp"-->
+                <!--                    android:padding="16dp"-->
+                <!--                    android:text="Edit Data Diri" />-->
+
+                <!--                <android.widget.Button-->
+                <!--                    android:id="@+id/btn_edit_data_parq"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginLeft="16dp"-->
+                <!--                    android:layout_marginRight="16dp"-->
+                <!--                    android:background="@drawable/button_bg"-->
+                <!--                    android:elevation="10dp"-->
+                <!--                    android:padding="16dp"-->
+                <!--                    android:layout_marginBottom="32dp"-->
+                <!--                    android:text="Edit Data PARQ" />-->
+
+                <!--                <android.widget.Button-->
+                <!--                    android:id="@+id/logout"-->
+                <!--                    android:layout_marginTop="32dp"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:background="@drawable/button_bg"-->
+                <!--                    android:padding="16dp"-->
+                <!--                    android:text="Logout yok" />-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

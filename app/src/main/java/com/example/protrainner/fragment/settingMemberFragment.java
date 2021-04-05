@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.protrainner.activity.EditDataMemberActivity;
@@ -17,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class settingMemberFragment extends Fragment {
     Button logout,editDataDiri,editDataParQ;
+    CardView cv1,cv2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -24,18 +26,20 @@ public class settingMemberFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_setting_member, container, false);
 
 
-        editDataDiri = (Button) view.findViewById(R.id.btn_edit_data_diri);
-        editDataParQ = (Button) view.findViewById(R.id.btn_edit_data_parq);
+//        editDataDiri = (Button) view.findViewById(R.id.btn_edit_data_diri);
+//        editDataParQ = (Button) view.findViewById(R.id.btn_edit_data_parq);
+        cv1 = (CardView)view.findViewById(R.id.cardView2);
+        cv2 = (CardView)view.findViewById(R.id.cardView3);
         logout = (Button) view.findViewById(R.id.logout);
 
-        editDataDiri.setOnClickListener(new View.OnClickListener() {
+        cv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), EditDataMemberActivity.class);
                 startActivity(i);
             }
         });
-        editDataParQ.setOnClickListener(new View.OnClickListener() {
+        cv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), EditDataParQMemberActivity.class);

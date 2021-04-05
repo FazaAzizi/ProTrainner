@@ -8,11 +8,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.protrainner.R;
+import com.example.protrainner.adapter.ListDataTrainerAdapter;
 import com.example.protrainner.adapter.ListTrainerAdapter;
 import com.example.protrainner.model.Akun;
+import com.example.protrainner.model.Data;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
@@ -23,11 +24,13 @@ import com.google.firebase.firestore.Query;
 public class TrainerListActivity extends AppCompatActivity implements  ListTrainerAdapter.OnItemClickListener {
 
     private RecyclerView recyclerView;
-    private ListTrainerAdapter adapter;
+    private ListDataTrainerAdapter adapter;
     ImageView ab;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     private CollectionReference cF = fStore.collection("Akun");
+    private CollectionReference cFData;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,17 +53,16 @@ public class TrainerListActivity extends AppCompatActivity implements  ListTrain
 
     private void setUpRecyclerView() {
         Query query = cF.whereEqualTo("isMember","0");
-        FirestoreRecyclerOptions<Akun> options = new FirestoreRecyclerOptions.Builder<Akun>()
-                .setQuery(query,Akun.class)
+        FirestoreRecyclerOptions<Data> options = new FirestoreRecyclerOptions.Builder<Data>()
+                .setQuery(query, Data.class)
                 .build();
-
-        adapter = new ListTrainerAdapter(options);
+        adapter = new ListDataTrainerAdapter(options);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
-        adapter.setOnItemClickListener(new ListTrainerAdapter.OnItemClickListener() {
+        adapter.setOnItemClickListener(new ListDataTrainerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(DocumentSnapshot dS, int position) {
                 Akun akun = dS.toObject(Akun.class);
@@ -72,7 +74,7 @@ public class TrainerListActivity extends AppCompatActivity implements  ListTrain
                 intent.putExtras(b);
                 startActivity(intent);
 
-                Toast.makeText(TrainerListActivity.this, "id = " + id,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(TrainerListActivity.this, "id = " + id,Toast.LENGTH_SHORT).show();
             }
         });
     }

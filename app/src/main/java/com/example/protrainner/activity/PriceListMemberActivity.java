@@ -6,11 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.example.protrainner.R;
+import com.example.protrainner.adapter.ListDataTrainerAdapter;
 import com.example.protrainner.adapter.ListTrainerPriceAdapter;
 import com.example.protrainner.model.Akun;
+import com.example.protrainner.model.Data;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
@@ -22,7 +23,7 @@ public class PriceListMemberActivity extends AppCompatActivity implements  ListT
 
 
     private RecyclerView recyclerView;
-    private ListTrainerPriceAdapter adapter;
+    private ListDataTrainerAdapter adapter;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     private CollectionReference cF = fStore.collection("Akun");
@@ -48,17 +49,17 @@ public class PriceListMemberActivity extends AppCompatActivity implements  ListT
 
     private void setUpRecyclerView() {
         Query query = cF.whereEqualTo("isMember","0");
-        FirestoreRecyclerOptions<Akun> options = new FirestoreRecyclerOptions.Builder<Akun>()
-                .setQuery(query,Akun.class)
+        FirestoreRecyclerOptions<Data> options = new FirestoreRecyclerOptions.Builder<Data>()
+                .setQuery(query, Data.class)
                 .build();
 
-        adapter = new ListTrainerPriceAdapter(options);
+        adapter = new ListDataTrainerAdapter(options);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
-        adapter.setOnItemClickListener(new ListTrainerPriceAdapter.OnItemClickListener() {
+        adapter.setOnItemClickListener(new ListDataTrainerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(DocumentSnapshot dS, int position) {
                 Akun akun = dS.toObject(Akun.class);

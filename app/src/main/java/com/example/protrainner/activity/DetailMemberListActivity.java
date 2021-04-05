@@ -22,6 +22,7 @@ public class DetailMemberListActivity extends AppCompatActivity {
 
     String uid,nm;
     TextView nL,tTL,gndr,addrsJgj,addrsAsal,outDada,outSendi,outCedera,outCacat,outRokok,outTidur;
+
     TextView outBatuk;
     Button btFtl,btUkur, btFtlCek, btUkurCek;
     ImageView ab,an;
@@ -39,7 +40,7 @@ public class DetailMemberListActivity extends AppCompatActivity {
         tTL = findViewById(R.id.tvMl2);
         gndr = findViewById(R.id.tvMl3);
         addrsJgj = findViewById(R.id.tvMl4);
-        addrsAsal = findViewById(R.id.tvMl5);
+        //addrsAsal = findViewById(R.id.tvMl5);
 
         an = findViewById(R.id.an_memberlist);
         ab = findViewById(R.id.ab_memberlist);
@@ -60,7 +61,7 @@ public class DetailMemberListActivity extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         uid = b.getString("UID");
 
-        DocumentReference df = fStore.collection("Akun").document(uid).collection("Data").document(uid);
+        DocumentReference df = fStore.collection("Akun").document(uid);
         df.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -69,64 +70,71 @@ public class DetailMemberListActivity extends AppCompatActivity {
                     String tTl1 = task.getResult().getString("ttl");
                     String  gndr1 = task.getResult().getString("jeniskelamin");
                     String addrsJgj1 = task.getResult().getString("alamatasal");
-                    String addrsAsal1 = task.getResult().getString("alamatjogja");
-                    String batuk = task.getResult().getString("batuk");
-                    String cacat = task.getResult().getString("cacat");
-                    String cedera = task.getResult().getString("cedera");
-                    String dada = task.getResult().getString("dada");
-                    String rokok = task.getResult().getString("rokok");
-                    String sendi = task.getResult().getString("sendi");
-                    String tidur = task.getResult().getString("tidur");
+                   // String addrsAsal1 = task.getResult().getString("alamatjogja");
 
                     nm = nL1;
                     nL.setText(nL1);
                     tTL.setText(tTl1);
                     gndr.setText(gndr1);
                     addrsJgj.setText(addrsJgj1);
-                    addrsAsal.setText(addrsAsal1);
+                    //addrsAsal.setText(addrsAsal1);
+                }
+            }
+        });
 
-                    if(batuk.equals("1")){
-                        outBatuk.setText("Ya");
-                    }
-                    if(batuk.equals("0")){
-                        outBatuk.setText("Tidak");
-                    }
-                    if(sendi.equals("1")){
-                        outSendi.setText("Ya");
-                    }
-                    if(sendi.equals("0")){
-                        outSendi.setText("Tidak");
-                    }
-                    if(dada.equals("1")){
-                        outDada.setText("Ya");
-                    }
-                    if(dada.equals("0")){
-                        outDada.setText("Tidak");
-                    }
-                    if(cedera.equals("1")){
-                        outCedera.setText("Ya");
-                    }
-                    if(cedera.equals("0")){
-                        outCedera.setText("Tidak");
-                    }
-                    if(cacat.equals("1")){
-                        outCacat.setText("Ya");
-                    }
-                    if(cacat.equals("0")){
-                        outCacat.setText("Tidak");
-                    }
-                    if(rokok.equals("1")){
-                        outRokok.setText("Ya");
-                    }
-                    if(rokok.equals("0")){
-                        outRokok.setText("Tidak");
-                    }
-                    if(tidur.equals("1")){
-                        outTidur.setText("Ya");
-                    }
-                    if(tidur.equals("0")){
-                        outTidur.setText("Tidak");
-                    }
+        DocumentReference df1 = fStore.collection("Akun").document(uid).collection("Data").document(uid);
+        df1.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                String batuk = task.getResult().getString("batuk");
+                String cacat = task.getResult().getString("cacat");
+                String cedera = task.getResult().getString("cedera");
+                String dada = task.getResult().getString("dada");
+                String rokok = task.getResult().getString("rokok");
+                String sendi = task.getResult().getString("sendi");
+                String tidur = task.getResult().getString("tidur");
+
+                if(batuk.equals("1")){
+                    outBatuk.setText("Ya");
+                }
+                if(batuk.equals("0")){
+                    outBatuk.setText("Tidak");
+                }
+                if(sendi.equals("1")){
+                    outSendi.setText("Ya");
+                }
+                if(sendi.equals("0")){
+                    outSendi.setText("Tidak");
+                }
+                if(dada.equals("1")){
+                    outDada.setText("Ya");
+                }
+                if(dada.equals("0")){
+                    outDada.setText("Tidak");
+                }
+                if(cedera.equals("1")){
+                    outCedera.setText("Ya");
+                }
+                if(cedera.equals("0")){
+                    outCedera.setText("Tidak");
+                }
+                if(cacat.equals("1")){
+                    outCacat.setText("Ya");
+                }
+                if(cacat.equals("0")){
+                    outCacat.setText("Tidak");
+                }
+                if(rokok.equals("1")){
+                    outRokok.setText("Ya");
+                }
+                if(rokok.equals("0")){
+                    outRokok.setText("Tidak");
+                }
+                if(tidur.equals("1")){
+                    outTidur.setText("Ya");
+                }
+                if(tidur.equals("0")){
+                    outTidur.setText("Tidak");
                 }
             }
         });

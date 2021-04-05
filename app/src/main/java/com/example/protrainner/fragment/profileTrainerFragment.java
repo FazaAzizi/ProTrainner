@@ -63,17 +63,6 @@ public class profileTrainerFragment extends Fragment {
                 if(task.getResult().exists()){
                     String namal1 = task.getResult().getString("fullname");
                     String mail1 = task.getResult().getString("email");
-                    namal.setText(namal1);
-                    mail.setText(mail1);
-                }
-            }
-        });
-
-        DocumentReference df2 = fStore.collection("Akun").document(userId).collection("Data").document(userId);
-        df2.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.getResult().exists()){
                     String ttl1 = task.getResult().getString("ttl");
                     String gender1 = task.getResult().getString("jeniskelamin");
                     String addrs1 = task.getResult().getString("alamatjogja");
@@ -82,9 +71,12 @@ public class profileTrainerFragment extends Fragment {
                     gender.setText(gender1);
                     addrs.setText(addrs1);
                     exp.setText(exp1);
+                    namal.setText(namal1);
+                    mail.setText(mail1);
                 }
             }
         });
+
         setUpRecyclerView();
         return view;
     }

@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.protrainner.R;
@@ -24,12 +27,14 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FormTrainerActivity extends AppCompatActivity {
+public class FormTrainerActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     String id, harga, hargaNoPaket, hargaDurasiLat, hargaHarga ;
     EditText input_namaLengkap_trainer, input_jenisKelamin_trainer, input_ttl_trainer, input_usia__trainer, input_alamatJogja_trainer, input_pengalaman_trainer
             ,input_nomor_paket, input_durasi_latihan, input_harga_pt;
     TextView tvOutPaket;
+    Spinner spinner;
+    String jenisKelamin;
     Button btnSelesai, btnTambah_paket, btnCek_paket;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
@@ -44,13 +49,19 @@ public class FormTrainerActivity extends AppCompatActivity {
 
 
         input_namaLengkap_trainer = findViewById(R.id.inp_nama_lengkap_trainer);
-        input_jenisKelamin_trainer = findViewById(R.id.inp_jenis_kelamin_trainer);
+        //input_jenisKelamin_trainer = findViewById(R.id.inp_jenis_kelamin_trainer);
         input_ttl_trainer = findViewById(R.id.inp_ttl_trainer);
         input_usia__trainer = findViewById(R.id.inp_usia_trainer);
         input_alamatJogja_trainer = findViewById(R.id.inp_alamat_jogja_trainer);
         input_pengalaman_trainer = findViewById(R.id.inp_pengalaman_trainer);
 
         tvOutPaket = findViewById(R.id.form_harga_out_no);
+
+        spinner =findViewById(R.id.spin_gender_formtrainer);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.kelamin, R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
 
         input_nomor_paket = findViewById(R.id.inp_no_paket);
         input_durasi_latihan = findViewById(R.id.inp_durasi_trainer);
@@ -75,7 +86,7 @@ public class FormTrainerActivity extends AppCompatActivity {
                 userinfo.put("noPaket", hargaNoPaket);
                 userinfo.put("durasiLatihan", hargaDurasiLat);
                 userinfo.put("harga", hargaHarga);
-                df.set(userinfo);
+                df.update(userinfo);
 
                 input_nomor_paket.setText("");
                 input_durasi_latihan.setText("");
@@ -92,7 +103,7 @@ public class FormTrainerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String namaLengkap = input_namaLengkap_trainer.getText().toString();
-                String jenisKelamin = input_jenisKelamin_trainer.getText().toString();
+                //String jenisKelamin = input_jenisKelamin_trainer.getText().toString();
                 String ttl = input_ttl_trainer.getText().toString();
                 String usia = input_usia__trainer.getText().toString();
                 String alamatJogja = input_alamatJogja_trainer.getText().toString();
@@ -100,8 +111,7 @@ public class FormTrainerActivity extends AppCompatActivity {
 
                 if (!(namaLengkap.isEmpty() && jenisKelamin.isEmpty() && ttl.isEmpty() && usia.isEmpty() && alamatJogja.isEmpty() && pengalaman.isEmpty())){
                     FirebaseUser user = mAuth.getCurrentUser();
-                    DocumentReference df = fStore.collection("Akun").document(user.getUid())
-                            .collection("Data").document(user.getUid());
+                    DocumentReference df = fStore.collection("Akun").document(user.getUid());
                     Map<String,Object> userinfo = new HashMap<>();
                     userinfo.put("namalengkap",namaLengkap);
                     userinfo.put("jeniskelamin",jenisKelamin);
@@ -139,5 +149,15 @@ public class FormTrainerActivity extends AppCompatActivity {
                 tvOutPaket.setText(data);
             }
         });
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        jenisKelamin = parent.getItemAtPosition(position).toString();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
