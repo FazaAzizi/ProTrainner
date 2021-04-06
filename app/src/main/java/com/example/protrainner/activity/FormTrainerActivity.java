@@ -86,7 +86,7 @@ public class FormTrainerActivity extends AppCompatActivity implements AdapterVie
                 userinfo.put("noPaket", hargaNoPaket);
                 userinfo.put("durasiLatihan", hargaDurasiLat);
                 userinfo.put("harga", hargaHarga);
-                df.update(userinfo);
+                df.set(userinfo);
 
                 input_nomor_paket.setText("");
                 input_durasi_latihan.setText("");
@@ -119,8 +119,7 @@ public class FormTrainerActivity extends AppCompatActivity implements AdapterVie
                     userinfo.put("usia",usia);
                     userinfo.put("alamatjogja",alamatJogja);
                     userinfo.put("pengalaman",pengalaman);
-
-                    df.set(userinfo);
+                    df.update(userinfo);
                     Intent inthome =new Intent(FormTrainerActivity.this, HomeTrainerActivity.class);
                     startActivity(inthome);
                 }

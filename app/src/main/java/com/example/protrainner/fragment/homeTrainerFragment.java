@@ -30,7 +30,7 @@ public class homeTrainerFragment extends Fragment {
     CardView cvBp,cvWs,cvPtl,cvMl;
     FirebaseAuth mAuth;
     TextView nL;
-    String id;
+    String id,nama;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
 
     @Override
@@ -51,8 +51,8 @@ public class homeTrainerFragment extends Fragment {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if(task.getResult().exists()){
-                    String nL1 = task.getResult().getString("fullname");
-                    nL.setText(nL1);
+                    nama = task.getResult().getString("fullname");
+                    nL.setText(nama);
                 }
 
             }
@@ -69,8 +69,10 @@ public class homeTrainerFragment extends Fragment {
         cvWs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Bundle b = new Bundle();
+                b.putString("nama",nama);
                 Intent i = new Intent(getActivity(), weekly_schedule_trainer.class);
+                i.putExtras(b);
                 startActivity(i);
             }
         });

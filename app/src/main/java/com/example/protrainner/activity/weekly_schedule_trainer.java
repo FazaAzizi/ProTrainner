@@ -10,20 +10,26 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.protrainner.R;
+import com.example.protrainner.activity.input_weekly_schedule;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 import javax.annotation.Nonnull;
 
 public class weekly_schedule_trainer extends AppCompatActivity {
 
-    String uid, nmJdw;
+    String uid, nm;
     Button btnInputJadwalLatihan;
-    TextView namaJadwal;
     TextView outSen7, outSel7, outRab7, outKam7, outJum7, outSab7, outMing7
             ,outSen8, outSel8, outRab8, outKam8, outJum8, outSab8, outMing8
             ,outSen9, outSel9, outRab9, outKam9, outJum9, outSab9, outMing9
@@ -46,10 +52,12 @@ public class weekly_schedule_trainer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weekly_schedule_trainer);
 
+        Bundle b = getIntent().getExtras();
+        nm = b.getString("nama");
+
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
-
-
+        btnInputJadwalLatihan = (Button) findViewById(R.id.inp_jadwal_latihan);
 
         outSen7 = findViewById(R.id.senin7);
         outSen8 = findViewById(R.id.senin8);
@@ -155,18 +163,15 @@ public class weekly_schedule_trainer extends AppCompatActivity {
         outMing19 = findViewById(R.id.minggu19);
         outMing20 = findViewById(R.id.minggu20);
 
-        btnInputJadwalLatihan = (Button) findViewById(R.id.inp_jadwal_latihan);
-
-        Bundle b = getIntent().getExtras();
-        uid = b.getString("UID");
 
 
-        DocumentReference df = fStore.collection("Akun").document(uid).
-                collection("Jadwal").document(uid);
+
+        FirebaseUser user = mAuth.getCurrentUser();
+        DocumentReference df = fStore.collection("Jadwal").document("senin");
         df.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.getResult().exists()){
+                if (task.getResult().exists()) {
                     String nJdw1 = task.getResult().getString("namajadwal");
 
                     String outSenin7 = task.getResult().getString("senin7");
@@ -184,423 +189,241 @@ public class weekly_schedule_trainer extends AppCompatActivity {
                     String outSenin19 = task.getResult().getString("senin19");
                     String outSenin20 = task.getResult().getString("senin20");
 
-
-                    String outSelasa7 = task.getResult().getString("selasa7");
-                    String outSelasa8 = task.getResult().getString("selasa8");
-                    String outSelasa9 = task.getResult().getString("selasa9");
-                    String outSelasa10 = task.getResult().getString("selasa10");
-                    String outSelasa11 = task.getResult().getString("selasa11");
-                    String outSelasa12 = task.getResult().getString("selasa12");
-                    String outSelasa13 = task.getResult().getString("selasa13");
-                    String outSelasa14 = task.getResult().getString("selasa14");
-                    String outSelasa15 = task.getResult().getString("selasa15");
-                    String outSelasa16 = task.getResult().getString("selasa16");
-                    String outSelasa17 = task.getResult().getString("selasa17");
-                    String outSelasa18 = task.getResult().getString("selasa18");
-                    String outSelasa19 = task.getResult().getString("selasa19");
-                    String outSelasa20 = task.getResult().getString("selasa20");
-
-
-                    String outRabu7 = task.getResult().getString("rabu7");
-                    String outRabu8 = task.getResult().getString("rabu8");
-                    String outRabu9 = task.getResult().getString("rabu9");
-                    String outRabu10 = task.getResult().getString("rabu10");
-                    String outRabu11 = task.getResult().getString("rabu11");
-                    String outRabu12 = task.getResult().getString("rabu12");
-                    String outRabu13 = task.getResult().getString("rabu13");
-                    String outRabu14 = task.getResult().getString("rabu14");
-                    String outRabu15 = task.getResult().getString("rabu15");
-                    String outRabu16 = task.getResult().getString("rabu16");
-                    String outRabu17 = task.getResult().getString("rabu17");
-                    String outRabu18 = task.getResult().getString("rabu18");
-                    String outRabu19 = task.getResult().getString("rabu19");
-                    String outRabu20 = task.getResult().getString("rabu20");
-
-
-                    String outKamis7 = task.getResult().getString("kamis7");
-                    String outKamis8 = task.getResult().getString("kamis8");
-                    String outKamis9 = task.getResult().getString("kamis9");
-                    String outKamis10 = task.getResult().getString("kamis10");
-                    String outKamis11 = task.getResult().getString("kamis11");
-                    String outKamis12 = task.getResult().getString("kamis12");
-                    String outKamis13 = task.getResult().getString("kamis13");
-                    String outKamis14 = task.getResult().getString("kamis14");
-                    String outKamis15 = task.getResult().getString("kamis15");
-                    String outKamis16 = task.getResult().getString("kamis16");
-                    String outKamis17 = task.getResult().getString("kamis17");
-                    String outKamis18 = task.getResult().getString("kamis18");
-                    String outKamis19 = task.getResult().getString("kamis19");
-                    String outKamis20 = task.getResult().getString("kamis20");
-
-
-                    String outJumat7 = task.getResult().getString("jumat7");
-                    String outJumat8 = task.getResult().getString("jumat8");
-                    String outJumat9 = task.getResult().getString("jumat9");
-                    String outJumat10 = task.getResult().getString("jumat10");
-                    String outJumat11 = task.getResult().getString("jumat11");
-                    String outJumat12 = task.getResult().getString("jumat12");
-                    String outJumat13 = task.getResult().getString("jumat13");
-                    String outJumat14 = task.getResult().getString("jumat14");
-                    String outJumat15 = task.getResult().getString("jumat15");
-                    String outJumat16 = task.getResult().getString("jumat16");
-                    String outJumat17 = task.getResult().getString("jumat17");
-                    String outJumat18 = task.getResult().getString("jumat18");
-                    String outJumat19 = task.getResult().getString("jumat19");
-                    String outJumat20 = task.getResult().getString("jumat20");
-
-
-                    String outSabtu7 = task.getResult().getString("sabtu7");
-                    String outSabtu8 = task.getResult().getString("sabtu8");
-                    String outSabtu9 = task.getResult().getString("sabtu9");
-                    String outSabtu10 = task.getResult().getString("sabtu10");
-                    String outSabtu11 = task.getResult().getString("sabtu11");
-                    String outSabtu12 = task.getResult().getString("sabtu12");
-                    String outSabtu13 = task.getResult().getString("sabtu13");
-                    String outSabtu14 = task.getResult().getString("sabtu14");
-                    String outSabtu15 = task.getResult().getString("sabtu15");
-                    String outSabtu16 = task.getResult().getString("sabtu16");
-                    String outSabtu17 = task.getResult().getString("sabtu17");
-                    String outSabtu18 = task.getResult().getString("sabtu18");
-                    String outSabtu19 = task.getResult().getString("sabtu19");
-                    String outSabtu20 = task.getResult().getString("sabtu20");
-
-
-
-                    String outMinggu7 = task.getResult().getString("minggu7");
-                    String outMinggu8 = task.getResult().getString("minggu8");
-                    String outMinggu9 = task.getResult().getString("minggu9");
-                    String outMinggu10 = task.getResult().getString("minggu10");
-                    String outMinggu11 = task.getResult().getString("minggu11");
-                    String outMinggu12 = task.getResult().getString("minggu12");
-                    String outMinggu13 = task.getResult().getString("minggu13");
-                    String outMinggu14 = task.getResult().getString("minggu14");
-                    String outMinggu15 = task.getResult().getString("minggu15");
-                    String outMinggu16 = task.getResult().getString("minggu16");
-                    String outMinggu17 = task.getResult().getString("minggu17");
-                    String outMinggu18 = task.getResult().getString("minggu18");
-                    String outMinggu19 = task.getResult().getString("minggu19");
-                    String outMinggu20 = task.getResult().getString("minggu20");
-
-
-
-                    nmJdw = nJdw1;
-                    namaJadwal.setText(nJdw1);
-
-                    if (outSenin7.equals("1")){
-                        outSen7.setText(nmJdw);
-                    }
-                    if (outSenin8.equals("1")){
-                        outSen8.setText(nmJdw);
-                    }
-                    if (outSenin9.equals("1")){
-                        outSen9.setText(nmJdw);
-                    }
-                    if (outSenin10.equals("1")){
-                        outSen10.setText(nmJdw);
-                    }
-                    if (outSenin11.equals("1")){
-                        outSen11.setText(nmJdw);
-                    }
-                    if (outSenin12.equals("1")){
-                        outSen12.setText(nmJdw);
-                    }
-                    if (outSenin13.equals("1")){
-                        outSen13.setText(nmJdw);
-                    }
-                    if (outSenin14.equals("1")){
-                        outSen14.setText(nmJdw);
-                    }
-                    if (outSenin15.equals("1")){
-                        outSen15.setText(nmJdw);
-                    }
-                    if (outSenin16.equals("1")){
-                        outSen16.setText(nmJdw);
-                    }
-                    if (outSenin17.equals("1")){
-                        outSen17.setText(nmJdw);
-                    }
-                    if (outSenin18.equals("1")){
-                        outSen18.setText(nmJdw);
-                    }
-                    if (outSenin19.equals("1")){
-                        outSen19.setText(nmJdw);
-                    }
-                    if (outSenin20.equals("1")){
-                        outSen20.setText(nmJdw);
-                    }
-
-
-
-                    if (outSelasa7.equals("1")){
-                        outSel7.setText(nmJdw);
-                    }
-                    if (outSelasa8.equals("1")){
-                        outSel8.setText(nmJdw);
-                    }
-                    if (outSelasa9.equals("1")){
-                        outSel9.setText(nmJdw);
-                    }
-                    if (outSelasa10.equals("1")){
-                        outSel10.setText(nmJdw);
-                    }
-                    if (outSelasa11.equals("1")){
-                        outSel11.setText(nmJdw);
-                    }
-                    if (outSelasa12.equals("1")){
-                        outSel12.setText(nmJdw);
-                    }
-                    if (outSelasa13.equals("1")){
-                        outSel13.setText(nmJdw);
-                    }
-                    if (outSelasa14.equals("1")){
-                        outSel14.setText(nmJdw);
-                    }
-                    if (outSelasa15.equals("1")){
-                        outSel15.setText(nmJdw);
-                    }
-                    if (outSelasa16.equals("1")){
-                        outSel16.setText(nmJdw);
-                    }
-                    if (outSelasa17.equals("1")){
-                        outSel17.setText(nmJdw);
-                    }
-                    if (outSelasa18.equals("1")){
-                        outSel18.setText(nmJdw);
-                    }
-                    if (outSelasa19.equals("1")){
-                        outSel19.setText(nmJdw);
-                    }
-                    if (outSelasa20.equals("1")){
-                        outSel20.setText(nmJdw);
-                    }
-
-
-
-                    if (outRabu7.equals("1")){
-                        outRab7.setText(nmJdw);
-                    }
-                    if (outRabu8.equals("1")){
-                        outRab8.setText(nmJdw);
-                    }
-                    if (outRabu9.equals("1")){
-                        outRab9.setText(nmJdw);
-                    }
-                    if (outRabu10.equals("1")){
-                        outRab10.setText(nmJdw);
-                    }
-                    if (outRabu11.equals("1")){
-                        outRab11.setText(nmJdw);
-                    }
-                    if (outRabu12.equals("1")){
-                        outRab12.setText(nmJdw);
-                    }
-                    if (outRabu13.equals("1")){
-                        outRab13.setText(nmJdw);
-                    }
-                    if (outRabu14.equals("1")){
-                        outRab14.setText(nmJdw);
-                    }
-                    if (outRabu15.equals("1")){
-                        outRab15.setText(nmJdw);
-                    }
-                    if (outRabu16.equals("1")){
-                        outRab16.setText(nmJdw);
-                    }
-                    if (outRabu17.equals("1")){
-                        outRab17.setText(nmJdw);
-                    }
-                    if (outRabu18.equals("1")){
-                        outRab18.setText(nmJdw);
-                    }
-                    if (outRabu19.equals("1")){
-                        outRab19.setText(nmJdw);
-                    }
-                    if (outRabu20.equals("1")){
-                        outRab20.setText(nmJdw);
-                    }
-
-
-
-                    if (outKamis7.equals("1")){
-                        outKam7.setText(nmJdw);
-                    }
-                    if (outKamis8.equals("1")){
-                        outKam8.setText(nmJdw);
-                    }
-                    if (outKamis9.equals("1")){
-                        outKam9.setText(nmJdw);
-                    }
-                    if (outKamis10.equals("1")){
-                        outKam10.setText(nmJdw);
-                    }
-                    if (outKamis11.equals("1")){
-                        outKam11.setText(nmJdw);
-                    }
-                    if (outKamis12.equals("1")){
-                        outKam12.setText(nmJdw);
-                    }
-                    if (outKamis13.equals("1")){
-                        outKam13.setText(nmJdw);
-                    }
-                    if (outKamis14.equals("1")){
-                        outKam14.setText(nmJdw);
-                    }
-                    if (outKamis15.equals("1")){
-                        outKam15.setText(nmJdw);
-                    }
-                    if (outKamis16.equals("1")){
-                        outKam16.setText(nmJdw);
-                    }
-                    if (outKamis17.equals("1")){
-                        outKam17.setText(nmJdw);
-                    }
-                    if (outKamis18.equals("1")){
-                        outKam18.setText(nmJdw);
-                    }
-                    if (outKamis19.equals("1")){
-                        outKam19.setText(nmJdw);
-                    }
-                    if (outKamis20.equals("1")){
-                        outKam20.setText(nmJdw);
-                    }
-
-
-
-                    if (outJumat7.equals("1")){
-                        outJum7.setText(nmJdw);
-                    }
-                    if (outJumat8.equals("1")){
-                        outJum9.setText(nmJdw);
-                    }
-                    if (outJumat9.equals("1")){
-                        outJum9.setText(nmJdw);
-                    }
-                    if (outJumat10.equals("1")){
-                        outJum10.setText(nmJdw);
-                    }
-                    if (outJumat11.equals("1")){
-                        outJum11.setText(nmJdw);
-                    }
-                    if (outJumat12.equals("1")){
-                        outJum12.setText(nmJdw);
-                    }
-                    if (outJumat13.equals("1")){
-                        outJum13.setText(nmJdw);
-                    }
-                    if (outJumat14.equals("1")){
-                        outJum14.setText(nmJdw);
-                    }
-                    if (outJumat15.equals("1")){
-                        outJum15.setText(nmJdw);
-                    }
-                    if (outJumat16.equals("1")){
-                        outJum16.setText(nmJdw);
-                    }
-                    if (outJumat17.equals("1")){
-                        outJum17.setText(nmJdw);
-                    }
-                    if (outJumat18.equals("1")){
-                        outJum18.setText(nmJdw);
-                    }
-                    if (outJumat19.equals("1")){
-                        outJum19.setText(nmJdw);
-                    }
-                    if (outJumat20.equals("1")){
-                        outJum20.setText(nmJdw);
-                    }
-
-
-
-
-                    if (outSabtu7.equals("1")){
-                        outSab7.setText(nmJdw);
-                    }
-                    if (outSabtu8.equals("1")){
-                        outSab8.setText(nmJdw);
-                    }
-                    if (outSabtu9.equals("1")){
-                        outSab9.setText(nmJdw);
-                    }
-                    if (outSabtu10.equals("1")){
-                        outSab10.setText(nmJdw);
-                    }
-                    if (outSabtu11.equals("1")){
-                        outSab11.setText(nmJdw);
-                    }
-                    if (outSabtu12.equals("1")){
-                        outSab12.setText(nmJdw);
-                    }
-                    if (outSabtu13.equals("1")){
-                        outSab13.setText(nmJdw);
-                    }
-                    if (outSabtu14.equals("1")){
-                        outSab14.setText(nmJdw);
-                    }
-                    if (outSabtu15.equals("1")){
-                        outSab15.setText(nmJdw);
-                    }
-                    if (outSabtu16.equals("1")){
-                        outSab16.setText(nmJdw);
-                    }
-                    if (outSabtu17.equals("1")){
-                        outSab17.setText(nmJdw);
-                    }
-                    if (outSabtu18.equals("1")){
-                        outSab18.setText(nmJdw);
-                    }
-                    if (outSabtu19.equals("1")){
-                        outSab19.setText(nmJdw);
-                    }
-                    if (outSabtu20.equals("1")){
-                        outSab20.setText(nmJdw);
-                    }
-
-
-
-                    if (outMinggu7.equals("1")){
-                        outMing7.setText(nmJdw);
-                    }
-                    if (outMinggu8.equals("1")){
-                        outMing8.setText(nmJdw);
-                    }
-                    if (outMinggu9.equals("1")){
-                        outMing9.setText(nmJdw);
-                    }
-                    if (outMinggu10.equals("1")){
-                        outMing10.setText(nmJdw);
-                    }
-                    if (outMinggu11.equals("1")){
-                        outMing11.setText(nmJdw);
-                    }
-                    if (outMinggu12.equals("1")){
-                        outMing12.setText(nmJdw);
-                    }
-                    if (outMinggu13.equals("1")){
-                        outMing13.setText(nmJdw);
-                    }
-                    if (outMinggu14.equals("1")){
-                        outMing14.setText(nmJdw);
-                    }
-                    if (outMinggu15.equals("1")){
-                        outMing15.setText(nmJdw);
-                    }
-                    if (outMinggu16.equals("1")){
-                        outMing16.setText(nmJdw);
-                    }
-                    if (outMinggu17.equals("1")){
-                        outMing17.setText(nmJdw);
-                    }
-                    if (outMinggu18.equals("1")){
-                        outMing18.setText(nmJdw);
-                    }
-                    if (outMinggu19.equals("1")){
-                        outMing19.setText(nmJdw);
-                    }
-                    if (outMinggu20.equals("1")){
-                        outMing20.setText(nmJdw);
-                    }
+                    outSen7.setText(outSenin7);
+                    outSen8.setText(outSenin8);
+                    outSen9.setText(outSenin9);
+                    outSen10.setText(outSenin10);
+                    outSen11.setText(outSenin11);
+                    outSen12.setText(outSenin12);
+                    outSen13.setText(outSenin13);
+                    outSen14.setText(outSenin14);
+                    outSen15.setText(outSenin15);
+                    outSen16.setText(outSenin16);
+                    outSen17.setText(outSenin17);
+                    outSen18.setText(outSenin18);
+                    outSen19.setText(outSenin19);
+                    outSen20.setText(outSenin20);
                 }
 
+                }
+            });
+
+        DocumentReference df2 = fStore.collection("Jadwal").document("selasa");
+        df2.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                String outSelasa7 = task.getResult().getString("selasa7");
+                String outSelasa8 = task.getResult().getString("selasa8");
+                String outSelasa9 = task.getResult().getString("selasa9");
+                String outSelasa10 = task.getResult().getString("selasa10");
+                String outSelasa11 = task.getResult().getString("selasa11");
+                String outSelasa12 = task.getResult().getString("selasa12");
+                String outSelasa13 = task.getResult().getString("selasa13");
+                String outSelasa14 = task.getResult().getString("selasa14");
+                String outSelasa15 = task.getResult().getString("selasa15");
+                String outSelasa16 = task.getResult().getString("selasa16");
+                String outSelasa17 = task.getResult().getString("selasa17");
+                String outSelasa18 = task.getResult().getString("selasa18");
+                String outSelasa19 = task.getResult().getString("selasa19");
+                String outSelasa20 = task.getResult().getString("selasa20");
+
+                outSel7.setText(outSelasa7);
+                outSel8.setText(outSelasa8);
+                outSel9.setText(outSelasa9);
+                outSel10.setText(outSelasa10);
+                outSel11.setText(outSelasa11);
+                outSel12.setText(outSelasa12);
+                outSel13.setText(outSelasa13);
+                outSel14.setText(outSelasa14);
+                outSel15.setText(outSelasa15);
+                outSel16.setText(outSelasa16);
+                outSel17.setText(outSelasa17);
+                outSel18.setText(outSelasa18);
+                outSel19.setText(outSelasa19);
+                outSel20.setText(outSelasa20);
+
+            }
+        });
+
+        DocumentReference df3 = fStore.collection("Jadwal").document("rabu");
+        df3.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                String outRabu7 = task.getResult().getString("rabu7");
+                String outRabu8 = task.getResult().getString("rabu8");
+                String outRabu9 = task.getResult().getString("rabu9");
+                String outRabu10 = task.getResult().getString("rabu10");
+                String outRabu11 = task.getResult().getString("rabu11");
+                String outRabu12 = task.getResult().getString("rabu12");
+                String outRabu13 = task.getResult().getString("rabu13");
+                String outRabu14 = task.getResult().getString("rabu14");
+                String outRabu15 = task.getResult().getString("rabu15");
+                String outRabu16 = task.getResult().getString("rabu16");
+                String outRabu17 = task.getResult().getString("rabu17");
+                String outRabu18 = task.getResult().getString("rabu18");
+                String outRabu19 = task.getResult().getString("rabu19");
+                String outRabu20 = task.getResult().getString("rabu20");
+
+                outRab7.setText(outRabu7);
+                outRab8.setText(outRabu8);
+                outRab9.setText(outRabu9);
+                outRab10.setText(outRabu10);
+                outRab11.setText(outRabu11);
+                outRab12.setText(outRabu12);
+                outRab13.setText(outRabu13);
+                outRab14.setText(outRabu14);
+                outRab15.setText(outRabu15);
+                outRab16.setText(outRabu16);
+                outRab17.setText(outRabu17);
+                outRab18.setText(outRabu18);
+                outRab19.setText(outRabu19);
+                outRab20.setText(outRabu20);
+
+
+            }
+        });
+
+        DocumentReference df4 = fStore.collection("Jadwal").document("kamis");
+        df4.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                String outKamis7 = task.getResult().getString("kamis7");
+                String outKamis8 = task.getResult().getString("kamis8");
+                String outKamis9 = task.getResult().getString("kamis9");
+                String outKamis10 = task.getResult().getString("kamis10");
+                String outKamis11 = task.getResult().getString("kamis11");
+                String outKamis12 = task.getResult().getString("kamis12");
+                String outKamis13 = task.getResult().getString("kamis13");
+                String outKamis14 = task.getResult().getString("kamis14");
+                String outKamis15 = task.getResult().getString("kamis15");
+                String outKamis16 = task.getResult().getString("kamis16");
+                String outKamis17 = task.getResult().getString("kamis17");
+                String outKamis18 = task.getResult().getString("kamis18");
+                String outKamis19 = task.getResult().getString("kamis19");
+                String outKamis20 = task.getResult().getString("kamis20");
+
+                outKam7.setText(outKamis7);
+                outKam8.setText(outKamis8);
+                outKam9.setText(outKamis9);
+                outKam10.setText(outKamis10);
+                outKam11.setText(outKamis11);
+                outKam12.setText(outKamis12);
+                outKam13.setText(outKamis13);
+                outKam14.setText(outKamis14);
+                outKam15.setText(outKamis15);
+                outKam16.setText(outKamis16);
+                outKam17.setText(outKamis17);
+                outKam18.setText(outKamis18);
+                outKam19.setText(outKamis19);
+                outKam20.setText(outKamis20);
+            }
+        });
+
+        DocumentReference df5 = fStore.collection("Jadwal").document("jumat");
+        df5.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                String outJumat7 = task.getResult().getString("jumat7");
+                String outJumat8 = task.getResult().getString("jumat8");
+                String outJumat9 = task.getResult().getString("jumat9");
+                String outJumat10 = task.getResult().getString("jumat10");
+                String outJumat11 = task.getResult().getString("jumat11");
+                String outJumat12 = task.getResult().getString("jumat12");
+                String outJumat13 = task.getResult().getString("jumat13");
+                String outJumat14 = task.getResult().getString("jumat14");
+                String outJumat15 = task.getResult().getString("jumat15");
+                String outJumat16 = task.getResult().getString("jumat16");
+                String outJumat17 = task.getResult().getString("jumat17");
+                String outJumat18 = task.getResult().getString("jumat18");
+                String outJumat19 = task.getResult().getString("jumat19");
+                String outJumat20 = task.getResult().getString("jumat20");
+
+                outJum7.setText(outJumat7);
+                outJum8.setText(outJumat8);
+                outJum9.setText(outJumat9);
+                outJum10.setText(outJumat10);
+                outJum11.setText(outJumat11);
+                outJum12.setText(outJumat12);
+                outJum13.setText(outJumat13);
+                outJum14.setText(outJumat14);
+                outJum15.setText(outJumat15);
+                outJum16.setText(outJumat16);
+                outJum17.setText(outJumat17);
+                outJum18.setText(outJumat18);
+                outJum19.setText(outJumat19);
+                outJum20.setText(outJumat20);
+            }
+        });
+
+        DocumentReference df6 = fStore.collection("Jadwal").document("sabtu");
+        df6.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                String outSabtu7 = task.getResult().getString("sabtu7");
+                String outSabtu8 = task.getResult().getString("sabtu8");
+                String outSabtu9 = task.getResult().getString("sabtu9");
+                String outSabtu10 = task.getResult().getString("sabtu10");
+                String outSabtu11 = task.getResult().getString("sabtu11");
+                String outSabtu12 = task.getResult().getString("sabtu12");
+                String outSabtu13 = task.getResult().getString("sabtu13");
+                String outSabtu14 = task.getResult().getString("sabtu14");
+                String outSabtu15 = task.getResult().getString("sabtu15");
+                String outSabtu16 = task.getResult().getString("sabtu16");
+                String outSabtu17 = task.getResult().getString("sabtu17");
+                String outSabtu18 = task.getResult().getString("sabtu18");
+                String outSabtu19 = task.getResult().getString("sabtu19");
+                String outSabtu20 = task.getResult().getString("sabtu20");
+
+                outSab7.setText(outSabtu7);
+                outSab8.setText(outSabtu8);
+                outSab9.setText(outSabtu9);
+                outSab10.setText(outSabtu10);
+                outSab11.setText(outSabtu11);
+                outSab12.setText(outSabtu12);
+                outSab13.setText(outSabtu13);
+                outSab14.setText(outSabtu14);
+                outSab15.setText(outSabtu15);
+                outSab16.setText(outSabtu16);
+                outSab17.setText(outSabtu17);
+                outSab18.setText(outSabtu18);
+                outSab19.setText(outSabtu19);
+                outSab20.setText(outSabtu20);
+            }
+        });
+
+        DocumentReference df7 = fStore.collection("Jadwal").document("minggu");
+        df7.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                String outMinggu7 = task.getResult().getString("minggu7");
+                String outMinggu8 = task.getResult().getString("minggu8");
+                String outMinggu9 = task.getResult().getString("minggu9");
+                String outMinggu10 = task.getResult().getString("minggu10");
+                String outMinggu11 = task.getResult().getString("minggu11");
+                String outMinggu12 = task.getResult().getString("minggu12");
+                String outMinggu13 = task.getResult().getString("minggu13");
+                String outMinggu14 = task.getResult().getString("minggu14");
+                String outMinggu15 = task.getResult().getString("minggu15");
+                String outMinggu16 = task.getResult().getString("minggu16");
+                String outMinggu17 = task.getResult().getString("minggu17");
+                String outMinggu18 = task.getResult().getString("minggu18");
+                String outMinggu19 = task.getResult().getString("minggu19");
+                String outMinggu20 = task.getResult().getString("minggu20");
+
+                outMing7.setText(outMinggu7);
+                outMing8.setText(outMinggu8);
+                outMing9.setText(outMinggu9);
+                outMing10.setText(outMinggu10);
+                outMing11.setText(outMinggu11);
+                outMing12.setText(outMinggu12);
+                outMing13.setText(outMinggu13);
+                outMing14.setText(outMinggu14);
+                outMing15.setText(outMinggu15);
+                outMing16.setText(outMinggu16);
+                outMing17.setText(outMinggu17);
+                outMing18.setText(outMinggu18);
+                outMing19.setText(outMinggu19);
+                outMing20.setText(outMinggu20);
             }
         });
 
@@ -608,7 +431,11 @@ public class weekly_schedule_trainer extends AppCompatActivity {
         btnInputJadwalLatihan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle c = new Bundle();
+                c.putString("nama",nm);
+
                 Intent i = new Intent(weekly_schedule_trainer.this, input_weekly_schedule.class);
+                i.putExtras(c);
                 startActivity(i);
             }
         });
