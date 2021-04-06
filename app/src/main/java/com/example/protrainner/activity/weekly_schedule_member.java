@@ -2,7 +2,11 @@ package com.example.protrainner.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.protrainner.R;
@@ -19,6 +23,7 @@ public class weekly_schedule_member extends AppCompatActivity {
 
     String uid, nm;
     TextView namaJadwal;
+    ImageView ab;
     TextView outSen7, outSel7, outRab7, outKam7, outJum7, outSab7, outMing7
             ,outSen8, outSel8, outRab8, outKam8, outJum8, outSab8, outMing8
             ,outSen9, outSel9, outRab9, outKam9, outJum9, outSab9, outMing9
@@ -41,12 +46,13 @@ public class weekly_schedule_member extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weekly_schedule_member);
 
-        Bundle b = getIntent().getExtras();
-        nm = b.getString("nama");
+//        Bundle b = getIntent().getExtras();
+//        nm = b.getString("nama");
 
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
+        ab = (ImageView) findViewById(R.id.ab_wsmember);
         outSen7 = findViewById(R.id.senin7);
         outSen8 = findViewById(R.id.senin8);
         outSen9 = findViewById(R.id.senin9);
@@ -150,6 +156,13 @@ public class weekly_schedule_member extends AppCompatActivity {
         outMing18 = findViewById(R.id.minggu18);
         outMing19 = findViewById(R.id.minggu19);
         outMing20 = findViewById(R.id.minggu20);
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         DocumentReference df = fStore.collection("Jadwal").document("senin");
         df.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -411,6 +424,12 @@ public class weekly_schedule_member extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(weekly_schedule_member.this, MainActivity.class);
+        startActivity(intent);
     }
 }
 

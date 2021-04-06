@@ -17,6 +17,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/popup_detail"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/arroworen"
+        android:rotationY="180"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

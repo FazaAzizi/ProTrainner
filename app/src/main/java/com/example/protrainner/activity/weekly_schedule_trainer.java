@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.protrainner.R;
@@ -30,6 +31,7 @@ public class weekly_schedule_trainer extends AppCompatActivity {
 
     String uid, nm;
     Button btnInputJadwalLatihan;
+    ImageView ab;
     TextView outSen7, outSel7, outRab7, outKam7, outJum7, outSab7, outMing7
             ,outSen8, outSel8, outRab8, outKam8, outJum8, outSab8, outMing8
             ,outSen9, outSel9, outRab9, outKam9, outJum9, outSab9, outMing9
@@ -58,6 +60,8 @@ public class weekly_schedule_trainer extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         btnInputJadwalLatihan = (Button) findViewById(R.id.inp_jadwal_latihan);
+
+        ab=(ImageView) findViewById(R.id.ab_wstrainer);
 
         outSen7 = findViewById(R.id.senin7);
         outSen8 = findViewById(R.id.senin8);
@@ -164,6 +168,12 @@ public class weekly_schedule_trainer extends AppCompatActivity {
         outMing20 = findViewById(R.id.minggu20);
 
 
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 
         FirebaseUser user = mAuth.getCurrentUser();
@@ -440,5 +450,11 @@ public class weekly_schedule_trainer extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(weekly_schedule_trainer.this, HomeTrainerActivity.class);
+        startActivity(intent);
     }
 }
