@@ -9,104 +9,97 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
         android:layout_height="wrap_content"
-        android:background="@color/white">
-
+        android:background="@color/white"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/jdlForm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Form Member"
-            android:layout_marginTop="32dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:text="Form Member"
             android:textColor="@color/pt1"
             android:textSize="32sp"
-            android:textStyle="bold"
-             />
+            android:textStyle="bold" />
 
 
+        <TextView
+            android:id="@+id/nama_lengkap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Nama Lengkap"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/nama_lengkap"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginLeft="16dp"
-                android:text="Nama Lengkap" />
-
-            <EditText
-                android:id="@+id/inp_nama_lengkap"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:backgroundTint="@color/pt1"/>
-
+        <EditText
+            android:id="@+id/inp_nama_lengkap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/pt1" />
 
 
-<!--            <EditText-->
-<!--                android:id="@+id/inp_jenis_kelamin"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_marginLeft="16dp"-->
-<!--                android:layout_marginRight="16dp"-->
-<!--                android:backgroundTint="@color/pt1"/>-->
+        <!--            <EditText-->
+        <!--                android:id="@+id/inp_jenis_kelamin"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:layout_marginLeft="16dp"-->
+        <!--                android:layout_marginRight="16dp"-->
+        <!--                android:backgroundTint="@color/pt1"/>-->
 
 
-            <TextView
-                android:id="@+id/ttl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TTL"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginLeft="16dp"/>
+        <TextView
+            android:id="@+id/ttl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="TTL"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/inp_ttl"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:backgroundTint="@color/pt1"/>
-
-
-
-            <TextView
-                android:id="@+id/asal_alamat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Asal Alamat"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginLeft="16dp"/>
-
-            <EditText
-                android:id="@+id/inp_asal_alamat"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:backgroundTint="@color/pt1"
-                />
+        <EditText
+            android:id="@+id/inp_ttl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/pt1" />
 
 
+        <TextView
+            android:id="@+id/asal_alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Asal Alamat"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/alamat_jogja"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Alamat di Jogja"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginLeft="16dp"/>
+        <EditText
+            android:id="@+id/inp_asal_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/pt1" />
+
+
+        <TextView
+            android:id="@+id/alamat_jogja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Alamat di Jogja"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
 
         <EditText
@@ -122,11 +115,11 @@
             android:id="@+id/jenis_kelamin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jenis Kelamin"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
+            android:text="Jenis Kelamin"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_marginLeft="16dp"/>
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spin_gender_formmember"
@@ -134,21 +127,21 @@
             android:layout_height="45dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            app:backgroundTint="@color/pt1"/>
+            app:backgroundTint="@color/pt1" />
 
         <ImageView
             android:layout_width="match_parent"
+            android:layout_height="2dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_height="2dp"
-            android:background="@color/pt1"/>
+            android:background="@color/pt1" />
 
         <TableLayout
             android:id="@+id/tableLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp">
 
             <TableRow android:background="@color/pt1">
 
@@ -157,27 +150,27 @@
                     android:layout_height="40dp"
                     android:gravity="center"
                     android:text="Kondisi"
-                    android:textStyle="bold"
+                    android:textColor="@color/white"
                     android:textSize="18sp"
-                    android:textColor="@color/white"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Ya"
-                    android:textStyle="bold"
+                    android:textColor="@color/white"
                     android:textSize="18sp"
-                    android:textColor="@color/white"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Tidak"
+                    android:textColor="@color/white"
                     android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                    android:textStyle="bold" />
 
             </TableRow>
 
@@ -187,8 +180,8 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
-                    android:textColor="@color/black"
-                    android:text="Riwayat nyeri dada atau berdebar" />
+                    android:text="Riwayat nyeri dada atau berdebar"
+                    android:textColor="@color/black" />
 
                 <LinearLayout
                     android:layout_width="50dp"
@@ -229,8 +222,8 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
-                    android:textColor="@color/black"
-                    android:text="Riwayat batuk lama atau sesak napas" />
+                    android:text="Riwayat batuk lama atau sesak napas"
+                    android:textColor="@color/black" />
 
                 <LinearLayout
                     android:layout_width="50dp"
@@ -273,8 +266,8 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
 
-                    android:textColor="@color/black"
-                    android:text="Adakah Riwayat Persendian" />
+                    android:text="Adakah Riwayat Persendian"
+                    android:textColor="@color/black" />
 
                 <LinearLayout
                     android:layout_width="50dp"
@@ -316,8 +309,8 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
-                    android:textColor="@color/black"
-                    android:text="Riwayat cedera yang dialami 1 bulan terakhir" />
+                    android:text="Riwayat cedera yang dialami 1 bulan terakhir"
+                    android:textColor="@color/black" />
 
                 <LinearLayout
                     android:layout_width="50dp"
@@ -360,8 +353,8 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
-                    android:textColor="@color/black"
-                    android:text="Riwayat cacat tubuh" />
+                    android:text="Riwayat cacat tubuh"
+                    android:textColor="@color/black" />
 
                 <LinearLayout
                     android:layout_width="50dp"
@@ -403,8 +396,8 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
-                    android:textColor="@color/black"
-                    android:text="Riwayat perokok aktif" />
+                    android:text="Riwayat perokok aktif"
+                    android:textColor="@color/black" />
 
                 <LinearLayout
                     android:layout_width="50dp"
@@ -447,8 +440,8 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="8dp"
-                    android:textColor="@color/black"
-                    android:text="Riwayat gangguan tidur sehari sebelum tes ini berlangsung" />
+                    android:text="Riwayat gangguan tidur sehari sebelum tes ini berlangsung"
+                    android:textColor="@color/black" />
 
                 <LinearLayout
                     android:layout_width="50dp"
@@ -491,15 +484,15 @@
             android:id="@+id/konfirmasi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="32dp"
-            android:text="Selesai"
             android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
             android:layout_marginRight="16dp"
+            android:layout_marginBottom="32dp"
             android:background="@drawable/button_bg_oren"
-            android:textStyle="bold"
+            android:text="Selesai"
             android:textColor="@color/white"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 

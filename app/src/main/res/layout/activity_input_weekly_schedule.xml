@@ -13,7 +13,7 @@
         android:background="@color/white">
 
         <ImageView
-            android:id="@+id/ab_wstrainer"
+            android:id="@+id/ab_inputws"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="16dp"
@@ -38,7 +38,7 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ab_wstrainer"
+            app:layout_constraintTop_toBottomOf="@+id/ab_inputws"
             app:layout_constraintVertical_bias="0" />
 
         <LinearLayout

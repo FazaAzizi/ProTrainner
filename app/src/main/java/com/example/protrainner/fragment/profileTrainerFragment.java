@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.protrainner.R;
 import com.example.protrainner.adapter.ListHargaAdapter;
+import com.example.protrainner.adapter.ListHargaTabelAdapter;
+import com.example.protrainner.adapter.ListMemberAdapter;
 import com.example.protrainner.model.Harga;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,10 +33,9 @@ public class profileTrainerFragment extends Fragment {
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
     String userId;
-
     private RecyclerView recyclerView;
-    private ListHargaAdapter adapter;
-    FirebaseFirestore fStore1 = FirebaseFirestore.getInstance();
+    private ListHargaTabelAdapter adapter;
+    FirebaseFirestore fStore1;
     private CollectionReference cF;
 
     @Override
@@ -44,6 +45,7 @@ public class profileTrainerFragment extends Fragment {
 
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
+        fStore1 = FirebaseFirestore.getInstance();
 
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -77,23 +79,21 @@ public class profileTrainerFragment extends Fragment {
             }
         });
 
-        setUpRecyclerView();
-        return view;
-    }
-
-    private void setUpRecyclerView() {
         cF = fStore1.collection("Akun").document(userId).collection("Harga");
         Query query = cF;
         FirestoreRecyclerOptions<Harga> options = new FirestoreRecyclerOptions.Builder<Harga>()
                 .setQuery(query,Harga.class)
                 .build();
 
-        adapter = new ListHargaAdapter(options);
-
+        adapter = new ListHargaTabelAdapter(options);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
+
+
+        return view;
     }
+
 
     @Override
     public void onStart() {

@@ -32,20 +32,7 @@ public class weekly_schedule_trainer extends AppCompatActivity {
     String uid, nm;
     Button btnInputJadwalLatihan;
     ImageView ab;
-    TextView outSen7, outSel7, outRab7, outKam7, outJum7, outSab7, outMing7
-            ,outSen8, outSel8, outRab8, outKam8, outJum8, outSab8, outMing8
-            ,outSen9, outSel9, outRab9, outKam9, outJum9, outSab9, outMing9
-            ,outSen10, outSel10, outRab10, outKam10, outJum10, outSab10, outMing10
-            ,outSen11, outSel11, outRab11, outKam11, outJum11, outSab11, outMing11
-            ,outSen12, outSel12, outRab12, outKam12, outJum12, outSab12, outMing12
-            ,outSen13, outSel13, outRab13, outKam13, outJum13, outSab13, outMing13
-            ,outSen14, outSel14, outRab14, outKam14, outJum14, outSab14, outMing14
-            ,outSen15, outSel15, outRab15, outKam15, outJum15, outSab15, outMing15
-            ,outSen16, outSel16, outRab16, outKam16, outJum16, outSab16, outMing16
-            ,outSen17, outSel17, outRab17, outKam17, outJum17, outSab17, outMing17
-            ,outSen18, outSel18, outRab18, outKam18, outJum18, outSab18, outMing18
-            ,outSen19, outSel19, outRab19, outKam19, outJum19, outSab19, outMing19
-            ,outSen20, outSel20, outRab20, outKam20, outJum20, outSab20, outMing20;
+    TextView outSen7, outSel7, outRab7, outKam7, outJum7, outSab7, outMing7, outSen8, outSel8, outRab8, outKam8, outJum8, outSab8, outMing8, outSen9, outSel9, outRab9, outKam9, outJum9, outSab9, outMing9, outSen10, outSel10, outRab10, outKam10, outJum10, outSab10, outMing10, outSen11, outSel11, outRab11, outKam11, outJum11, outSab11, outMing11, outSen12, outSel12, outRab12, outKam12, outJum12, outSab12, outMing12, outSen13, outSel13, outRab13, outKam13, outJum13, outSab13, outMing13, outSen14, outSel14, outRab14, outKam14, outJum14, outSab14, outMing14, outSen15, outSel15, outRab15, outKam15, outJum15, outSab15, outMing15, outSen16, outSel16, outRab16, outKam16, outJum16, outSab16, outMing16, outSen17, outSel17, outRab17, outKam17, outJum17, outSab17, outMing17, outSen18, outSel18, outRab18, outKam18, outJum18, outSab18, outMing18, outSen19, outSel19, outRab19, outKam19, outJum19, outSab19, outMing19, outSen20, outSel20, outRab20, outKam20, outJum20, outSab20, outMing20;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
 
@@ -61,7 +48,7 @@ public class weekly_schedule_trainer extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
         btnInputJadwalLatihan = (Button) findViewById(R.id.inp_jadwal_latihan);
 
-        ab=(ImageView) findViewById(R.id.ab_wstrainer);
+        ab = (ImageView) findViewById(R.id.ab_wstrainer);
 
         outSen7 = findViewById(R.id.senin7);
         outSen8 = findViewById(R.id.senin8);
@@ -171,7 +158,7 @@ public class weekly_schedule_trainer extends AppCompatActivity {
         ab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                onBackPressed();
             }
         });
 
@@ -215,8 +202,8 @@ public class weekly_schedule_trainer extends AppCompatActivity {
                     outSen20.setText(outSenin20);
                 }
 
-                }
-            });
+            }
+        });
 
         DocumentReference df2 = fStore.collection("Jadwal").document("selasa");
         df2.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -442,15 +429,13 @@ public class weekly_schedule_trainer extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Bundle c = new Bundle();
-                c.putString("nama",nm);
+                c.putString("nama", nm);
 
                 Intent i = new Intent(weekly_schedule_trainer.this, input_weekly_schedule.class);
                 i.putExtras(c);
                 startActivity(i);
             }
         });
-
-
 
 
     }

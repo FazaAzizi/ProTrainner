@@ -11,8 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,18 +32,18 @@
                     android:layout_marginLeft="32dp"
                     android:layout_marginTop="16dp"
                     android:text="Hallo!"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
-                    android:textSize="40sp" />
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="32dp"
                     android:text="Member"
-                    android:textStyle="bold"
                     android:textColor="@color/pt1"
-                    android:textSize="22sp" />
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -53,22 +52,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingLeft="32dp">
 
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="12dp"
-                    android:layout_marginRight="46dp"
                     android:src="@drawable/man" />
 
                 <TextView
                     android:id="@+id/namaHome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="right"
+                    android:layout_marginLeft="32dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="32dp"
+                    android:gravity="center"
                     android:text=""
                     android:textColor="@color/black"
                     android:textSize="16sp" />
@@ -76,14 +77,15 @@
             </LinearLayout>
 
 
-
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="-60dp"
             android:layout_marginBottom="100dp"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -95,8 +97,8 @@
                     android:id="@+id/kr1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"
                     android:layout_margin="12dp"
+                    android:layout_weight="5"
                     app:cardBackgroundColor="@color/pt3"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="6dp">
@@ -118,8 +120,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Price List"
                             android:fontFamily="@font/montserrat_regular"
+                            android:text="Price List"
                             android:textColor="@color/black"
                             android:textSize="22dp" />
 
@@ -131,8 +133,8 @@
                     android:id="@+id/knn1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"
                     android:layout_margin="12dp"
+                    android:layout_weight="5"
                     app:cardBackgroundColor="@color/pt3"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="6dp">
@@ -153,8 +155,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Jadwal \nLatihan"
                             android:fontFamily="@font/montserrat_regular"
+                            android:text="Jadwal \nLatihan"
                             android:textColor="@color/black"
                             android:textSize="22dp" />
 
@@ -163,6 +165,7 @@
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -174,8 +177,8 @@
                     android:id="@+id/kr2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"
                     android:layout_margin="12dp"
+                    android:layout_weight="5"
                     app:cardBackgroundColor="@color/pt3"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="6dp">
@@ -196,8 +199,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
                             android:fontFamily="@font/montserrat_regular"
+                            android:gravity="center"
                             android:text="Data \nPengukuran"
                             android:textColor="@color/black"
                             android:textSize="22dp" />
@@ -210,8 +213,8 @@
                     android:id="@+id/knn2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"
                     android:layout_margin="12dp"
+                    android:layout_weight="5"
                     app:cardBackgroundColor="@color/pt3"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="6dp">
@@ -232,8 +235,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="FTL"
                             android:fontFamily="@font/montserrat_regular"
+                            android:text="FTL"
                             android:textColor="@color/black"
                             android:textSize="22dp" />
 

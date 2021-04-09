@@ -9,32 +9,31 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/jdlForm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Form Trainer"
-            android:layout_marginTop="32dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:text="Form Trainer"
             android:textColor="@color/pt1"
             android:textSize="32sp"
-            android:textStyle="bold"
-             />
+            android:textStyle="bold" />
 
 
-            <TextView
-                android:id="@+id/nama_lengkap_trainer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginLeft="16dp"
-                android:text="Nama Lengkap" />
+        <TextView
+            android:id="@+id/nama_lengkap_trainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Nama Lengkap"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/inp_nama_lengkap_trainer"
@@ -47,97 +46,94 @@
 
 
         <TextView
-                android:id="@+id/ttl_trainer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TTL ="
+            android:id="@+id/ttl_trainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
+            android:text="TTL ="
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_marginLeft="16dp"/>
+            android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/inp_ttl_trainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:backgroundTint="@color/pt1"
-                android:textColorLink="@color/pt1"/>
-
+        <EditText
+            android:id="@+id/inp_ttl_trainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/pt1"
+            android:textColorLink="@color/pt1" />
 
 
-            <TextView
-                android:id="@+id/usia_trainer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Usia ="
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginLeft="16dp"/>
+        <TextView
+            android:id="@+id/usia_trainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Usia ="
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/inp_usia_trainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:backgroundTint="@color/pt1"
-                android:textColorLink="@color/pt1"/>
-
-
-
-
-            <TextView
-                android:id="@+id/alamat_jogja_trainer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Alamat di Jogja ="
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginLeft="16dp"/>
-
-            <EditText
-                android:id="@+id/inp_alamat_jogja_trainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:backgroundTint="@color/pt1"
-                android:textColorLink="@color/pt1"/>
+        <EditText
+            android:id="@+id/inp_usia_trainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/pt1"
+            android:inputType="number"
+            android:textColorLink="@color/pt1" />
 
 
+        <TextView
+            android:id="@+id/alamat_jogja_trainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Alamat di Jogja ="
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inp_alamat_jogja_trainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/pt1"
+            android:textColorLink="@color/pt1" />
 
 
-            <TextView
-                android:id="@+id/pengalaman_trainer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pengalaman ="
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginLeft="16dp"/>
+        <TextView
+            android:id="@+id/pengalaman_trainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Pengalaman ="
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/inp_pengalaman_trainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:backgroundTint="@color/pt1"
-                android:textColorLink="@color/pt1"/>
+        <EditText
+            android:id="@+id/inp_pengalaman_trainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/pt1"
+            android:textColorLink="@color/pt1" />
+
         <TextView
             android:id="@+id/jenis_kelamin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jenis Kelamin"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
+            android:text="Jenis Kelamin"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_marginLeft="16dp"/>
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spin_gender_formtrainer"
@@ -145,99 +141,97 @@
             android:layout_height="45dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            app:backgroundTint="@color/pt1"/>
+            app:backgroundTint="@color/pt1" />
 
         <ImageView
             android:layout_width="match_parent"
+            android:layout_height="2dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_height="2dp"
-            android:background="@color/pt1"/>
+            android:background="@color/pt1" />
 
 
-
-            <TextView
-                android:id="@+id/jdl_harga"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:layout_gravity="center_horizontal"
-                android:text="Form Harga Paket"
-                android:textColor="@color/pt1"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-
-            <TextView
-                android:id="@+id/subjdl_harga"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Isilah harga paket anda dalam form dibawah ini"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
+        <TextView
+            android:id="@+id/jdl_harga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:text="Form Harga Paket"
+            android:textColor="@color/pt1"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
 
+        <TextView
+            android:id="@+id/subjdl_harga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Isilah harga paket anda dalam form dibawah ini"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
 
-            <TextView
-                android:id="@+id/no_paket"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="No. Paket"
-                android:layout_marginTop="16dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginLeft="16dp"/>
+        <TextView
+            android:id="@+id/no_paket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="No. Paket"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/inp_no_paket"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:backgroundTint="@color/pt1"
-                android:textColorLink="@color/pt1"/>
+        <EditText
+            android:id="@+id/inp_no_paket"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/pt1"
+            android:inputType="number"
+            android:textColorLink="@color/pt1" />
 
-            <TextView
-                android:id="@+id/durasi_trainer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Durasi Latihan ="
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginLeft="16dp"/>
+        <TextView
+            android:id="@+id/durasi_trainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Durasi Latihan ="
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/inp_durasi_trainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:backgroundTint="@color/pt1"
-                android:textColorLink="@color/pt1"/>
+        <EditText
+            android:id="@+id/inp_durasi_trainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/pt1"
+            android:inputType="number"
+            android:textColorLink="@color/pt1" />
 
 
+        <TextView
+            android:id="@+id/harga_trainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Harga ="
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/harga_trainer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Harga ="
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginLeft="16dp"/>
-
-            <EditText
-                android:id="@+id/inp_harga_trainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:backgroundTint="@color/pt1"
-                android:textColorLink="@color/pt1"/>
+        <EditText
+            android:id="@+id/inp_harga_trainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/pt1"
+            android:textColorLink="@color/pt1" />
 
 
         <LinearLayout
@@ -260,21 +254,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:layout_weight="5"
-                android:textColor="@color/white"
-                android:textStyle="bold"
                 android:background="@drawable/button_bg_abu"
-                android:text="Tambahkan Paket" />
+                android:text="Tambahkan Paket"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <android.widget.Button
                 android:id="@+id/cek_paket"
                 android:layout_width="0dp"
-                android:layout_weight="5"
                 android:layout_height="50dp"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:background="@drawable/button_bg_abu"
                 android:layout_marginLeft="5dp"
-                android:text="Cek Paket" />
+                android:layout_weight="5"
+                android:background="@drawable/button_bg_abu"
+                android:text="Cek Paket"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -315,17 +309,16 @@
         <android.widget.Button
             android:id="@+id/konfirmasi_trainer"
             android:layout_width="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@drawable/button_bg_oren"
-            android:textStyle="bold"
-            android:textColor="@color/white"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:textSize="20sp"
-            android:text="Selesai"
+            android:layout_marginRight="16dp"
             android:layout_marginBottom="32dp"
-             />
+            android:background="@drawable/button_bg_oren"
+            android:text="Selesai"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 </ScrollView>

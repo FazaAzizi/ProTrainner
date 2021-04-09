@@ -85,6 +85,13 @@ public class MemberPengukuranDetailActivity extends AppCompatActivity {
                 createContactDialog();
             }
         });
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     public  void  createContactDialog(){

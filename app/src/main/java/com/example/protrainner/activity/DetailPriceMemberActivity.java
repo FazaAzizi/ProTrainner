@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +33,7 @@ public class DetailPriceMemberActivity extends AppCompatActivity {
     TextView nL,tTL,gndr,addrsJgj,addrsAsal;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
-
+    ImageView ab;
     private RecyclerView recyclerView;
     private ListHargaAdapter adapter;
     FirebaseFirestore fStore1 = FirebaseFirestore.getInstance();
@@ -49,7 +51,7 @@ public class DetailPriceMemberActivity extends AppCompatActivity {
         tTL = findViewById(R.id.textView3);
         gndr = findViewById(R.id.textView5);
         addrsJgj = findViewById(R.id.textView4);
-
+        ab = (ImageView)findViewById(R.id.ab_detailpricemember);
         recyclerView = findViewById(R.id.rv_harga_paket);
 
 
@@ -76,11 +78,18 @@ public class DetailPriceMemberActivity extends AppCompatActivity {
         });
 
         setUpRecyclerView();
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     private void setUpRecyclerView() {
         cF = fStore1.collection("Akun").document(uid).collection("Harga");
-        Query query = cF;
+        Query query = cF.orderBy("noPaket", Query.Direction.ASCENDING);
         FirestoreRecyclerOptions<Harga> options = new FirestoreRecyclerOptions.Builder<Harga>()
                 .setQuery(query,Harga.class)
                 .build();
@@ -102,5 +111,11 @@ public class DetailPriceMemberActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         adapter.stopListening();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(DetailPriceMemberActivity.this, TrainerListActivity.class);
+        startActivity(intent);
     }
 }

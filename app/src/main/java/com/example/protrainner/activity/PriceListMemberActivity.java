@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.protrainner.R;
 import com.example.protrainner.adapter.ListDataTrainerAdapter;
@@ -19,12 +21,13 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
-public class PriceListMemberActivity extends AppCompatActivity implements  ListTrainerPriceAdapter.OnItemClickListener{
+public class PriceListMemberActivity extends AppCompatActivity implements ListTrainerPriceAdapter.OnItemClickListener {
 
 
     private RecyclerView recyclerView;
     private ListDataTrainerAdapter adapter;
     FirebaseAuth mAuth;
+    ImageView ab;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     private CollectionReference cF = fStore.collection("Akun");
 
@@ -36,6 +39,13 @@ public class PriceListMemberActivity extends AppCompatActivity implements  ListT
 
         recyclerView = findViewById(R.id.list_trainer);
         setUpRecyclerView();
+        ab = (ImageView) findViewById(R.id.ab_pricelistmember);
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
 
 //        //Query
@@ -48,7 +58,7 @@ public class PriceListMemberActivity extends AppCompatActivity implements  ListT
     }
 
     private void setUpRecyclerView() {
-        Query query = cF.whereEqualTo("isMember","0");
+        Query query = cF.whereEqualTo("isMember", "0");
         FirestoreRecyclerOptions<Data> options = new FirestoreRecyclerOptions.Builder<Data>()
                 .setQuery(query, Data.class)
                 .build();
@@ -66,7 +76,7 @@ public class PriceListMemberActivity extends AppCompatActivity implements  ListT
                 String id = dS.getId();
 
                 Bundle b = new Bundle();
-                b.putString("UID",id);
+                b.putString("UID", id);
                 Intent intent = new Intent(PriceListMemberActivity.this, DetailPriceMemberActivity.class);
                 intent.putExtras(b);
                 startActivity(intent);

@@ -28,15 +28,15 @@
             android:id="@+id/jdlWS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
             android:text="Jadwal\nLatihan"
             android:textColor="@color/black"
             android:textSize="32sp"
             android:textStyle="bold"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ab_wstrainer"
             app:layout_constraintVertical_bias="0" />
@@ -63,206 +63,220 @@
                 <TableRow android:background="@color/pt1">
 
                     <TextView
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="70dp"
                         android:layout_height="40dp"
                         android:gravity="center"
-                        android:text="jam/hari" />
+                        android:text="jam/hari"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam7"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="07.00 - 08.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam8"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="08.00 - 09.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam9"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="09.00 - 10.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam10"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="10.00 - 11.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam11"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="11.00 - 12.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam12"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="12.00 - 13.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam13"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="13.00 - 14.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam14"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="14.00 - 15.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam15"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="15.00 - 16.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam16"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="16.00 - 17.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam17"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="17.00 - 18.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam18"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="18.00 - 19.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam19"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="19.00 - 20.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
+
                 <TableRow android:background="@color/pt2">
 
                     <TextView
                         android:id="@+id/jam20"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
                         android:layout_width="90dp"
                         android:layout_height="35dp"
                         android:gravity="center"
                         android:text="20.00 - 21.00"
-                        android:textSize="14sp">
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
                     </TextView>
                 </TableRow>
@@ -283,59 +297,59 @@
 
                         <TextView
                             android:layout_width="80dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/white"
                             android:layout_height="40dp"
                             android:gravity="center"
-                            android:text="Senin" />
+                            android:text="Senin"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="80dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/white"
                             android:layout_height="40dp"
                             android:gravity="center"
-                            android:text="Selasa" />
+                            android:text="Selasa"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="80dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/white"
                             android:layout_height="40dp"
                             android:gravity="center"
-                            android:text="Rabu" />
+                            android:text="Rabu"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="80dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/white"
                             android:layout_height="40dp"
                             android:gravity="center"
-                            android:text="Kamis" />
+                            android:text="Kamis"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="80dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/white"
                             android:layout_height="40dp"
                             android:gravity="center"
-                            android:text="Jumat" />
+                            android:text="Jumat"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="80dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/white"
                             android:layout_height="40dp"
                             android:gravity="center"
-                            android:text="Sabtu" />
+                            android:text="Sabtu"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="80dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/white"
                             android:layout_height="40dp"
                             android:gravity="center"
-                            android:text="Minggu" />
+                            android:text="Minggu"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
 
                     </TableRow>
 
@@ -346,6 +360,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -354,7 +369,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -364,6 +379,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -372,7 +388,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -382,6 +398,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -390,7 +407,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -400,6 +417,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -408,7 +426,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -418,6 +436,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -426,7 +445,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -436,6 +455,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -444,7 +464,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -454,6 +474,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -462,7 +483,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -473,10 +494,10 @@
                     <TableRow>
 
 
-
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -485,7 +506,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -495,6 +516,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -503,7 +525,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -513,6 +535,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -522,7 +545,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -532,6 +555,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -540,7 +564,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -550,6 +574,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -558,7 +583,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -568,6 +593,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -576,7 +602,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -586,6 +612,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -594,7 +621,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -606,10 +633,10 @@
                     <TableRow>
 
 
-
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -618,7 +645,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -628,6 +655,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -636,7 +664,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -646,6 +674,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -654,7 +683,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -664,6 +693,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -672,7 +702,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -682,6 +712,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -690,7 +721,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -700,6 +731,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -708,7 +740,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -718,6 +750,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -726,7 +759,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -738,10 +771,10 @@
                     <TableRow>
 
 
-
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -750,7 +783,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -760,6 +793,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -768,7 +802,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -778,6 +812,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -786,7 +821,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -796,6 +831,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -804,7 +840,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -814,6 +850,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -822,7 +859,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -832,6 +869,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -840,7 +878,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -850,6 +888,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -858,7 +897,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -870,10 +909,10 @@
                     <TableRow>
 
 
-
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -882,7 +921,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -892,6 +931,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -900,7 +940,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -910,6 +950,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -918,7 +959,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -928,6 +969,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -936,7 +978,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -946,6 +988,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -954,7 +997,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -964,6 +1007,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -972,7 +1016,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -982,6 +1026,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -990,7 +1035,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1001,10 +1046,10 @@
                     <TableRow>
 
 
-
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1013,7 +1058,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1023,6 +1068,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1031,7 +1077,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1041,6 +1087,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1049,7 +1096,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1059,6 +1106,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1067,7 +1115,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1077,6 +1125,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1085,7 +1134,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1095,6 +1144,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1103,7 +1153,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1113,6 +1163,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1121,7 +1172,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1133,10 +1184,10 @@
                     <TableRow>
 
 
-
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1145,7 +1196,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1155,6 +1206,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1163,7 +1215,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1173,6 +1225,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1181,7 +1234,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1191,6 +1244,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1199,7 +1253,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1209,6 +1263,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1217,7 +1272,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1227,6 +1282,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1235,7 +1291,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1245,6 +1301,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1253,7 +1310,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1265,10 +1322,10 @@
                     <TableRow>
 
 
-
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1277,7 +1334,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1287,6 +1344,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1295,7 +1353,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1305,6 +1363,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1313,7 +1372,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1323,6 +1382,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1331,7 +1391,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1341,6 +1401,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1349,7 +1410,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1359,6 +1420,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1367,7 +1429,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1377,6 +1439,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1385,7 +1448,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1397,12 +1460,10 @@
                     <TableRow>
 
 
-
-
-
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1411,7 +1472,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1421,6 +1482,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1429,7 +1491,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1439,6 +1501,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1447,7 +1510,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1457,6 +1520,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1465,7 +1529,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1475,6 +1539,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1483,7 +1548,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1493,6 +1558,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1501,7 +1567,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1511,6 +1577,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1519,7 +1586,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1531,10 +1598,10 @@
                     <TableRow>
 
 
-
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1543,7 +1610,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1553,6 +1620,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1561,7 +1629,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1571,6 +1639,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1579,7 +1648,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1589,6 +1658,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1597,7 +1667,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1607,6 +1677,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1615,7 +1686,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1625,6 +1696,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1633,7 +1705,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1643,6 +1715,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1651,7 +1724,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1663,10 +1736,10 @@
                     <TableRow>
 
 
-
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1675,7 +1748,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1685,6 +1758,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1693,7 +1767,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1703,6 +1777,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1711,7 +1786,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1721,6 +1796,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1729,7 +1805,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1739,6 +1815,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1747,7 +1824,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1757,6 +1834,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1765,7 +1843,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1775,6 +1853,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1783,7 +1862,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1795,10 +1874,10 @@
                     <TableRow>
 
 
-
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1807,7 +1886,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1817,6 +1896,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1825,7 +1905,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1835,6 +1915,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1843,7 +1924,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1853,6 +1934,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1861,7 +1943,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1871,6 +1953,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1879,7 +1962,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1889,6 +1972,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1897,7 +1981,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1907,6 +1991,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1915,7 +2000,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1927,10 +2012,10 @@
                     <TableRow>
 
 
-
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1939,7 +2024,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1949,6 +2034,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1957,7 +2043,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1967,6 +2053,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1975,7 +2062,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -1985,6 +2072,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -1993,7 +2081,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -2003,6 +2091,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -2011,7 +2100,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -2021,6 +2110,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -2029,7 +2119,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -2039,6 +2129,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -2047,7 +2138,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -2059,10 +2150,10 @@
                     <TableRow>
 
 
-
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -2071,7 +2162,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -2081,6 +2172,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -2089,7 +2181,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -2099,6 +2191,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -2107,7 +2200,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -2117,6 +2210,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -2125,7 +2219,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -2135,6 +2229,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -2143,7 +2238,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -2153,6 +2248,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -2161,7 +2257,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -2171,6 +2267,7 @@
                         <LinearLayout
                             android:layout_width="70dp"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/cell_bg"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -2179,7 +2276,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center"
-                                android:text="Faza Azizi"
+                                android:text=" "
                                 android:textSize="14sp">
 
                             </TextView>
@@ -2207,10 +2304,10 @@
             app:layout_constraintWidth_percent="0.5">
 
             <TextView
-                android:layout_marginLeft="32dp"
-                android:layout_marginRight="32dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
                 android:text=" * Mohon masukkan jadwal pada kolom yang belum terisi nama "
                 android:textColor="@color/black"
                 android:textStyle="bold">
@@ -2235,12 +2332,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="18dp"
                 android:background="@drawable/button_bg_abu"
                 android:gravity="center"
-                android:text="input jadwal latihan" />
+                android:text="input jadwal latihan"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
 
         </LinearLayout>

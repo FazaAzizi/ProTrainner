@@ -9,209 +9,229 @@
     tools:context=".activity.RegisterActivity">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Daftar"
-                android:textColor="@color/white"
-                android:textSize="42sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/input_name"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.401" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <android.widget.EditText
+            android:id="@+id/input_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_bg_abu"
+            android:backgroundTint="@null"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Email"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="#80000000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias=".1"
+            app:layout_constraintWidth_percent=".8" />
+
+        <android.widget.EditText
+            android:id="@+id/input_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_bg_abu"
+            android:backgroundTint="@null"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Full Name"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="#80000000"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_email"
+            app:layout_constraintWidth_percent=".8" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passlyt1"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Password"
+            android:textColorHint="#80000000"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_name"
+            app:layout_constraintVertical_bias=".0"
+            app:layout_constraintWidth_percent=".8"
+            app:passwordToggleEnabled="true">
 
             <android.widget.EditText
-                android:id="@+id/input_email"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/edit_text_bg_abu"
-                android:backgroundTint="@null"
-                android:hint="Email"
-                android:textStyle="bold"
-                android:paddingLeft="20dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="10dp"
-                android:textColorHint="@color/pt1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias=".5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias=".3"
-                app:layout_constraintWidth_percent=".8" />
-
-            <android.widget.EditText
-                android:id="@+id/input_name"
-                android:layout_width="0dp"
+                android:id="@+id/input_pass"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:textStyle="bold"
                 android:background="@drawable/edit_text_bg_abu"
                 android:backgroundTint="@null"
-                android:hint="Full Name"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Password"
+                android:inputType="textPassword"
                 android:paddingLeft="20dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="10dp"
-                android:textColorHint="@color/pt1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias=".5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/input_email"
-                app:layout_constraintWidth_percent=".8" />
+                android:textColorHint="#80000000"
+                android:textStyle="bold" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/passlyt1"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:hint="Password"
-                android:textColorHint="?android:attr/textColorHint"
-                app:boxBackgroundMode="filled"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp"
-                app:hintAnimationEnabled="false"
-                app:hintEnabled="false"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias=".5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/input_name"
-                app:layout_constraintVertical_bias=".0"
-                app:layout_constraintWidth_percent=".8"
-                app:passwordToggleEnabled="true">
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <android.widget.EditText
-                    android:id="@+id/input_pass"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:textStyle="bold"
-                    android:background="@drawable/edit_text_bg_abu"
-                    android:backgroundTint="@null"
-                    android:inputType="textPassword"
-                    android:hint="Password"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="10dp"
-                    android:textColorHint="@color/pt1" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passlyt2"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Password"
+            android:textColorHint="#80000000"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passlyt1"
+            app:layout_constraintVertical_bias=".0"
+            app:layout_constraintWidth_percent=".8"
+            app:passwordToggleEnabled="true">
 
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/passlyt2"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:hint="Password"
-                android:textColorHint="?android:attr/textColorHint"
-                app:boxBackgroundMode="filled"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp"
-                app:hintAnimationEnabled="false"
-                app:hintEnabled="false"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias=".5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/passlyt1"
-                app:layout_constraintVertical_bias=".0"
-                app:layout_constraintWidth_percent=".8"
-                app:passwordToggleEnabled="true">
-
-                <android.widget.EditText
-                    android:id="@+id/input_conf_pass"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:textStyle="bold"
-                    android:inputType="textPassword"
-                    android:background="@drawable/edit_text_bg_abu"
-                    android:backgroundTint="@null"
-                    android:hint="Confirm Password"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="10dp"
-                    android:textColorHint="@color/pt1" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <android.widget.Button
-                android:id="@+id/button_acc"
-                android:layout_width="0dp"
+            <android.widget.EditText
+                android:id="@+id/input_conf_pass"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_bg"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_bg_abu"
                 android:backgroundTint="@null"
-                android:text="Buat Akun"
-                android:textColor="@color/pt1"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lytcb"
-                app:layout_constraintVertical_bias=".1"
-                app:layout_constraintWidth_percent=".8" />
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="#80000000"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/have_acc"
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <android.widget.Button
+            android:id="@+id/button_acc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@null"
+            android:text="Buat Akun"
+            android:textColor="@color/pt1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lytcb"
+            app:layout_constraintVertical_bias=".1"
+            app:layout_constraintWidth_percent=".8" />
+
+        <TextView
+            android:id="@+id/have_acc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="35dp"
+            android:text="Sudah punya akun? MASUK"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_acc"
+            app:layout_constraintVertical_bias=".2" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Daftar sebagai : "
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passlyt2"
+            app:layout_constraintVertical_bias="0" />
+
+
+        <LinearLayout
+            android:id="@+id/lytcb"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:layout_constraintVertical_bias="0">
+
+            <CheckBox
+                android:id="@+id/checkBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:elevation="35dp"
-                android:text="Sudah punya akun? MASUK"
+                android:layout_marginRight="16dp"
+                android:buttonTint="@color/white"
+                android:text="Member"
                 android:textColor="@color/white"
-                android:textStyle="italic"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button_acc"
-                app:layout_constraintVertical_bias=".2" />
+                android:textColorLink="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:buttonTint="@color/white"
+                android:text="Trainer"
+                android:textColor="@color/white"
+                android:textColorLink="@color/pt1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-            <LinearLayout
-                android:id="@+id/lytcb"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/passlyt2"
-                app:layout_constraintVertical_bias="0.1">
-
-                <CheckBox
-                    android:id="@+id/checkBox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="16dp"
-                    android:buttonTint="@color/white"
-                    android:text="Member"
-                    android:textColor="@color/white"
-                    android:textColorLink="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <CheckBox
-                    android:id="@+id/checkBox2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Trainer"
-                    android:buttonTint="@color/white"
-                    android:textSize="20sp"
-                    android:layout_marginLeft="16dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:textColorLink="@color/pt1" />
-
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>

@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.protrainner.R;
 import com.example.protrainner.adapter.ListIntiAdapter;
@@ -23,6 +25,7 @@ import com.google.firebase.firestore.Query;
 public class OutFtlPemanasanActivity extends AppCompatActivity {
     private RecyclerView recyclerView1,recyclerView2,recyclerView3;
     private ListPemanasanAdapter adapterPemanasan;
+    ImageView ab;
     String sesi,uid,nama;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
@@ -37,12 +40,18 @@ public class OutFtlPemanasanActivity extends AppCompatActivity {
         sesi = b.getString("sesi");
         uid = b.getString("id");
         nama = b.getString("nama");
-
+        ab = (ImageView)findViewById(R.id.ab_outftilpemanasan);
         recyclerView1 = findViewById(R.id.list_ftl_pemanasan);
         cfPemanasan = fStore.collection("Akun").document(uid)
                 .collection("FTL").document(sesi).collection("Pemanasan");
 
         setUpRecyclerView();
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     private void setUpRecyclerView() {

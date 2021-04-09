@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.protrainner.R;
 import com.example.protrainner.adapter.ListIntiAdapter;
@@ -24,6 +26,7 @@ public class OutFtlIntiActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView1,recyclerView2,recyclerView3;
     private ListIntiAdapter adapterInti;String sesi,uid,nama;
+    ImageView ab;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     private CollectionReference cfPemanasan,cfInti,cfPendinginan;
@@ -37,6 +40,7 @@ public class OutFtlIntiActivity extends AppCompatActivity {
         sesi = b.getString("sesi");
         uid = b.getString("id");
         nama = b.getString("nama");
+        ab = (ImageView)findViewById(R.id.ab_outftilinti);
 
         recyclerView2 = findViewById(R.id.list_ftl_inti);
 
@@ -44,6 +48,12 @@ public class OutFtlIntiActivity extends AppCompatActivity {
                 .collection("FTL").document(sesi).collection("Inti");
 
         setUpRecyclerView();
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     private void setUpRecyclerView() {

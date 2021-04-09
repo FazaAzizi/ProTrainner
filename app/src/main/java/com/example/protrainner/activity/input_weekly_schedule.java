@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.example.protrainner.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,6 +31,7 @@ public class input_weekly_schedule extends AppCompatActivity {
 
     EditText etInputNama;
     String nm;
+    ImageView ab;
     String Ssen7, Ssel7, Srab7, Skam7, Sjum7, Ssab7, Sming7,
            Ssen8, Ssel8, Srab8, Skam8, Sjum8, Ssab8, Sming8,
             Ssen9, Ssel9, Srab9, Skam9, Sjum9, Ssab9, Sming9,
@@ -77,6 +79,7 @@ public class input_weekly_schedule extends AppCompatActivity {
         btnKonfirmasi = findViewById(R.id.KonfirmasiJadwal);
         Bundle b = getIntent().getExtras();
         nm = b.getString("nama");
+        ab = (ImageView) findViewById(R.id.ab_inputws);
 
         sen7 = findViewById(R.id.senin7);
         sen8 = findViewById(R.id.senin8);
@@ -184,6 +187,13 @@ public class input_weekly_schedule extends AppCompatActivity {
         ming20 = findViewById(R.id.minggu20);
 
         cekIsi();
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         btnKonfirmasi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -679,11 +689,9 @@ public class input_weekly_schedule extends AppCompatActivity {
                     userinfo4.put("kamis8", nm);
                 }
 
-
-
                 if (!kam9.isChecked()) {
                     if (Skam9.equals("1")) {
-                        userinfo.put("kamis9", "");
+                        userinfo4.put("kamis9", "");
                     }
                 }
                 if (kam9.isChecked()) {
@@ -883,7 +891,7 @@ public class input_weekly_schedule extends AppCompatActivity {
 
                 if (!jum13.isChecked()) {
                     if (Sjum13.equals("1")) {
-                        userinfo5.put("jumat3", "");
+                        userinfo5.put("jumat13", "");
                     }
                 }
                 if (jum13.isChecked()) {

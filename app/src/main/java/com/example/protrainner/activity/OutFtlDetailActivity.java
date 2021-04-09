@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.protrainner.R;
@@ -36,6 +37,7 @@ public class OutFtlDetailActivity extends AppCompatActivity {
     TextView nama_df,sesi_df,gt_df,mg_df,notes_df;
     String sesi,uid,nama,mg,notes,gt;
     FirebaseAuth mAuth;
+    ImageView ab;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     private CollectionReference cfPemanasan,cfInti,cfPendinginan;
 
@@ -48,6 +50,7 @@ public class OutFtlDetailActivity extends AppCompatActivity {
         sesi = b.getString("sesi");
         uid = b.getString("id");
         nama = b.getString("nama");
+        ab =(ImageView) findViewById(R.id.ab_outftldetail);
 
         sesi_df = findViewById(R.id.cek_ftl_sesi);
         gt_df = findViewById(R.id.cek_ftl_gt);
@@ -118,6 +121,23 @@ public class OutFtlDetailActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Bundle c = new Bundle();
+        c.putString("nama",nama);
+        c.putString("id",uid);
+        Intent intent = new Intent(OutFtlDetailActivity.this, OutFtlActivity.class);
+        intent.putExtras(c);
+        startActivity(intent);
     }
 
 }

@@ -66,6 +66,7 @@ public class MemberPengukuranActivity extends AppCompatActivity implements  List
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
+
         adapter.setOnItemClickListener(new ListPengukuranAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(DocumentSnapshot dS, int position) {
@@ -106,8 +107,6 @@ public class MemberPengukuranActivity extends AppCompatActivity implements  List
     @Override
     public void onBackPressed() {
         Bundle c = new Bundle();
-        c.putString("nama",nama);
-        c.putString("id",id);
         Intent intent = new Intent(MemberPengukuranActivity.this, MainActivity.class);
         intent.putExtras(c);
         startActivity(intent);
