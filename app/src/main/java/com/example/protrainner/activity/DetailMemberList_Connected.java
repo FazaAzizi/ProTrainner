@@ -14,15 +14,11 @@ import com.example.protrainner.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class DetailMemberListActivity extends AppCompatActivity {
+public class DetailMemberList_Connected extends AppCompatActivity {
 
     String uid,nm;
     TextView nL,tTL,gndr,addrsJgj,addrsAsal,outDada,outSendi,outCedera,outCacat,outRokok,outTidur;
@@ -36,7 +32,8 @@ public class DetailMemberListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_member_list);
+        setContentView(R.layout.activity_detail_member_list__connected);
+
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
@@ -137,36 +134,6 @@ public class DetailMemberListActivity extends AppCompatActivity {
             }
         });
 
-//        btFtl.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Bundle c = new Bundle();
-//                c.putString("nama",nm);
-//                c.putString("id",uid);
-//                Intent intent = new Intent(DetailMemberListActivity.this, FtlTrainer1Activity.class);
-//                intent.putExtras(c);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        btFtlCek.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Bundle c = new Bundle();
-//                c.putString("nama",nm);
-//                c.putString("id",uid);
-//                Intent intent = new Intent(DetailMemberListActivity.this, OutFtlActivity.class);
-//                intent.putExtras(c);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        btUkur.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//            }
-//        });
-
         ab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -177,21 +144,20 @@ public class DetailMemberListActivity extends AppCompatActivity {
         an.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseUser user = mAuth.getCurrentUser();
-                DocumentReference df = fStore.collection("Akun").document(user.getUid());
-                Map<String,Object> userinfo = new HashMap<>();
-                userinfo.put("nama",nm);
-                userinfo.put("id",uid);
-
-
-
+                Bundle c = new Bundle();
+                c.putString("nama",nm);
+                c.putString("id",uid);
+                Intent intent = new Intent(DetailMemberList_Connected.this, DetailMemberList2Activity.class);
+                intent.putExtras(c);
+                startActivity(intent);
             }
         });
     }
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(DetailMemberListActivity.this, MemberListActivity.class);
+        Intent intent = new Intent(DetailMemberList_Connected.this, MemberListActivity.class);
         startActivity(intent);
     }
+
 }

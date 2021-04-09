@@ -4,6 +4,7 @@ public class Akun {
     String email;
     String fullname;
     String isMember;
+    String isConnected;
     String alamatjogja;
     String alamatasal;
     String jeniskelamin;
@@ -15,12 +16,13 @@ public class Akun {
     public Akun() {
     }
 
-    public Akun(String email, String fullname, String isMember, String alamatjogja,
-                String alamatasal, String jeniskelamin, String pengalaman,
-                String namalengkap, String ttl, String usia) {
+    public Akun(String email, String fullname, String isMember, String isConnected,
+                String alamatjogja, String alamatasal, String jeniskelamin,
+                String pengalaman, String namalengkap, String ttl, String usia) {
         this.email = email;
         this.fullname = fullname;
         this.isMember = isMember;
+        this.isConnected = isConnected;
         this.alamatjogja = alamatjogja;
         this.alamatasal = alamatasal;
         this.jeniskelamin = jeniskelamin;
@@ -53,6 +55,14 @@ public class Akun {
 
     public void setIsMember(String isMember) {
         this.isMember = isMember;
+    }
+
+    public String getIsConnected() {
+        return isConnected;
+    }
+
+    public void setIsConnected(String isConnected) {
+        this.isConnected = isConnected;
     }
 
     public String getAlamatjogja() {

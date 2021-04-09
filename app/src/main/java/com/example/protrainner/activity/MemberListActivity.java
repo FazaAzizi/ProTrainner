@@ -63,12 +63,22 @@ public class MemberListActivity extends AppCompatActivity implements  ListTraine
             public void onItemClick(DocumentSnapshot dS, int position) {
                 Akun akun = dS.toObject(Akun.class);
                 String id = dS.getId();
-
+                String isConnected = akun.getIsConnected();
                 Bundle b = new Bundle();
                 b.putString("UID",id);
-                Intent intent = new Intent(MemberListActivity.this, DetailMemberListActivity.class);
-                intent.putExtras(b);
-                startActivity(intent);
+
+                if (isConnected.equals("0")) {
+                    Intent intent = new Intent(MemberListActivity.this, DetailMemberListActivity.class);
+                    intent.putExtras(b);
+                    startActivity(intent);
+                }
+
+                if (isConnected.equals("1")) {
+                    Intent intent2 = new Intent(MemberListActivity.this, DetailMemberList_Connected.class);
+                    intent2.putExtras(b);
+                    startActivity(intent2);
+                }
+
 
                 //Toast.makeText(MemberListActivity.this, "id = " + id,Toast.LENGTH_SHORT).show();
             }

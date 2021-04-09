@@ -132,6 +132,7 @@ public class RegisterActivity extends AppCompatActivity{
                                 userinfo.put("email",email);
                                 if(cb1.isChecked()){
                                     userinfo.put("isMember","1");
+                                    userinfo.put("isConnected","0");
                                 }
                                 if(cb2.isChecked()){
                                     userinfo.put("isMember","0");

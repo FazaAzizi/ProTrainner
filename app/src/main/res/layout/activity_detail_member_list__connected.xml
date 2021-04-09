@@ -5,92 +5,92 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".activity.DetailMemberList_Connected">
+    tools:context=".activity.DetailMemberListActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/pt2"
-        android:layout_marginTop="-40dp"
-        android:elevation="5dp"
-        app:cardCornerRadius="40dp">
-
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:layout_marginRight="32dp"
-            android:layout_margin="16dp"
-            android:orientation="vertical">
+            app:cardBackgroundColor="@color/pt2"
+            android:layout_marginTop="-40dp"
+            android:elevation="5dp"
+            app:cardCornerRadius="40dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="56dp"
-                android:orientation="horizontal">
-                <ImageView
-                    android:id="@+id/ab_memberlist"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="right"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginRight="32dp"
-                    android:background="@drawable/arrowputih" />
+                android:gravity="right"
+                android:layout_marginRight="32dp"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tvMl1"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="32dp"
-                    android:text="Faza Azizi"
+                    android:layout_marginTop="56dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/ab_memberlist"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginRight="32dp"
+                        android:background="@drawable/arrowputih" />
+
+                    <TextView
+                        android:id="@+id/tvMl1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="32dp"
+                        android:text="Faza Azizi"
+                        android:gravity="right"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="42sp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvMl2"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="130dp"
                     android:gravity="right"
-                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="42sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="TTL" />
+
+                <TextView
+                    android:id="@+id/tvMl3"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="130dp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="USIA" />
+
+                <TextView
+                    android:id="@+id/tvMl4"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="130dp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="GENDER" />
+
+
             </LinearLayout>
 
-
-            <TextView
-                android:id="@+id/tvMl2"
-                android:layout_width="match_parent"
-                android:layout_marginLeft="130dp"
-                android:gravity="right"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="TTL" />
-
-            <TextView
-                android:id="@+id/tvMl3"
-                android:layout_width="match_parent"
-                android:layout_marginLeft="130dp"
-                android:gravity="right"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="USIA" />
-
-            <TextView
-                android:id="@+id/tvMl4"
-                android:layout_width="match_parent"
-                android:layout_marginLeft="130dp"
-                android:gravity="right"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="GENDER" />
-
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
 
@@ -286,9 +286,7 @@
 
             </TableRow>
 
-            <TableRow
-                android:id="@+id/trTerakhir"
-                android:background="#74F4F9F9">
+            <TableRow android:background="#74F4F9F9">
 
                 <TextView
                     android:layout_width="0dp"
@@ -320,53 +318,50 @@
 
 
 
-<!--        <android.widget.Button-->
-<!--            android:id="@+id/inp_ftl"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="32dp"-->
-<!--            android:background="@drawable/button_bg"-->
-<!--            android:text="Isi data FTL" />-->
+        <!--        <android.widget.Button-->
+        <!--            android:id="@+id/inp_ftl"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="32dp"-->
+        <!--            android:background="@drawable/button_bg"-->
+        <!--            android:text="Isi data FTL" />-->
 
-<!--        <android.widget.Button-->
-<!--            android:id="@+id/cek_ftl"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="32dp"-->
-<!--            android:background="@drawable/button_bg"-->
-<!--            android:text="Cek data FTL" />-->
+        <!--        <android.widget.Button-->
+        <!--            android:id="@+id/cek_ftl"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="32dp"-->
+        <!--            android:background="@drawable/button_bg"-->
+        <!--            android:text="Cek data FTL" />-->
 
-<!--        <android.widget.Button-->
-<!--            android:id="@+id/inp_dataukur"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="16dp"-->
-<!--            android:background="@drawable/button_bg"-->
-<!--            android:text="Isi data Pengukuran" />-->
+        <!--        <android.widget.Button-->
+        <!--            android:id="@+id/inp_dataukur"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="16dp"-->
+        <!--            android:background="@drawable/button_bg"-->
+        <!--            android:text="Isi data Pengukuran" />-->
 
-<!--        <android.widget.Button-->
-<!--            android:id="@+id/cek_dataukur"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="32dp"-->
-<!--            android:background="@drawable/button_bg"-->
-<!--            android:text="Cek Data Pengukuran" />-->
+        <!--        <android.widget.Button-->
+        <!--            android:id="@+id/cek_dataukur"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="32dp"-->
+        <!--            android:background="@drawable/button_bg"-->
+        <!--            android:text="Cek Data Pengukuran" />-->
     </LinearLayout>
 
-    <android.widget.Button
-        android:background="@drawable/button_bg_abu"
-        android:id="@+id/KonfirmasiJadwal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:text="Tambahkan sebagai member anda"
+    <ImageView
+        android:id="@+id/an_memberlist"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/arroworen"
+        android:rotationY="180"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 
