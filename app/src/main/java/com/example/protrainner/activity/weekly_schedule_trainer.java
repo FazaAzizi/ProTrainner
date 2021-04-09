@@ -450,7 +450,28 @@ public class weekly_schedule_trainer extends AppCompatActivity {
             }
         });
 
+
+
+
     }
+
+//    public void date(){
+//        List<Date> disable = new ArrayList<>();
+//
+//        Calendar cal = Calendar.getInstance();
+//        cal.set(Calendar.DAY_OF_MONTH, 1);
+//        int month = cal.get(Calendar.MONTH);
+//        do {
+//            int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
+//            if (dayOfWeek == Calendar.SUNDAY)
+//                disable.add(cal.getTime());
+//            cal.add(Calendar.DAY_OF_MONTH, 1);
+//        } while (cal.get(Calendar.MONTH) == month);
+//    }
+//
+//    public void resetJadwal(){
+//
+//    }
 
     @Override
     public void onBackPressed() {

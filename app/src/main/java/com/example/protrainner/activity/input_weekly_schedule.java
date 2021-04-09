@@ -193,7 +193,7 @@ public class input_weekly_schedule extends AppCompatActivity {
                 Map<String, Object> userinfo = new HashMap<>();
 
                 if (!sen7.isChecked()) {
-                    if (!Ssen7.isEmpty()) {
+                    if (Ssen7.equals("1")) {
                         userinfo.put("senin7", "");
                     }
                 }
@@ -204,7 +204,7 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sen8.isChecked()) {
-                    if (!Ssen8.isEmpty()) {
+                    if (Ssen8.equals("1")) {
                         userinfo.put("senin8", "");
                     }
                 }
@@ -215,7 +215,7 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sen9.isChecked()) {
-                    if (!Ssen9.isEmpty()) {
+                    if (Ssen9.equals("1")) {
                         userinfo.put("senin9", "");
                     }
                 }
@@ -226,7 +226,7 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sen10.isChecked()) {
-                    if (!Ssen10.isEmpty()) {
+                    if (Ssen10.equals("1")) {
                         userinfo.put("senin10", "");
                     }
                 }
@@ -236,7 +236,7 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sen11.isChecked()){
-                    if (!Ssen11.isEmpty()) {
+                    if (Ssen11.equals("1")) {
                         userinfo.put("senin11", "");
                     }
                 }
@@ -245,7 +245,7 @@ public class input_weekly_schedule extends AppCompatActivity {
                 }
 
                 if (!sen12.isChecked()){
-                    if (!Ssen12.isEmpty()) {
+                    if (Ssen12.equals("1")) {
                         userinfo.put("senin12", "");
                     }
                 }
@@ -254,7 +254,7 @@ public class input_weekly_schedule extends AppCompatActivity {
                 }
 
                 if (!sen13.isChecked()){
-                    if (!Ssen13.isEmpty()) {
+                    if (Ssen13.equals("1")) {
                         userinfo.put("senin13", "");
                     }
                 }
@@ -264,7 +264,7 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sen14.isChecked()){
-                    if (!Ssen14.isEmpty()) {
+                    if (Ssen14.equals("1")) {
                         userinfo.put("senin14", "");
                     }
                 }
@@ -274,7 +274,7 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sen15.isChecked()){
-                    if (!Ssen15.isEmpty()) {
+                    if (Ssen15.equals("1")) {
                         userinfo.put("senin15", "");
                     }
                 }
@@ -283,7 +283,7 @@ public class input_weekly_schedule extends AppCompatActivity {
                 }
 
                 if (!sen16.isChecked()){
-                    if (!Ssen16.isEmpty()) {
+                    if (Ssen16.equals("1")) {
                         userinfo.put("senin16", "");
                     }
                 }
@@ -292,7 +292,7 @@ public class input_weekly_schedule extends AppCompatActivity {
                 }
 
                 if (!sen17.isChecked()){
-                    if (!Ssen17.isEmpty()) {
+                    if (Ssen17.equals("1")) {
                         userinfo.put("senin17", "");
                     }
                 }
@@ -302,7 +302,7 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sen18.isChecked()){
-                    if (!Ssen18.isEmpty()) {
+                    if (Ssen18.equals("1")) {
                         userinfo.put("senin18", "");
                     }
                 }
@@ -311,7 +311,7 @@ public class input_weekly_schedule extends AppCompatActivity {
                 }
 
                 if (!sen19.isChecked()){
-                    if (!Ssen19.isEmpty()) {
+                    if (Ssen19.equals("1")) {
                         userinfo.put("senin19", "");
                     }
                 }
@@ -320,7 +320,7 @@ public class input_weekly_schedule extends AppCompatActivity {
                 }
 
                 if (!sen20.isChecked()){
-                    if (!Ssen20.isEmpty()) {
+                    if (Ssen20.equals("1")) {
                         userinfo.put("senin20", "");
                     }
                 }
@@ -333,8 +333,8 @@ public class input_weekly_schedule extends AppCompatActivity {
                 Map<String, Object> userinfo2 = new HashMap<>();
 
                 if (!sel7.isChecked()) {
-                    if (!Ssel7.isEmpty()) {
-                        userinfo.put("selasa7", "");
+                    if (Ssel7.equals("1")) {
+                        userinfo2.put("selasa7", "");
                     }
                 }
                 if (sel7.isChecked()) {
@@ -343,8 +343,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sel8.isChecked()) {
-                    if (!Ssel8.isEmpty()) {
-                        userinfo.put("selasa8", "");
+                    if (Ssel8.equals("1")) {
+                        userinfo2.put("selasa8", "");
                     }
                 }
                 if (sel8.isChecked()) {
@@ -354,8 +354,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sel9.isChecked()) {
-                    if (!Ssel9.isEmpty()) {
-                        userinfo.put("selasa9", "");
+                    if (Ssel9.equals("1")) {
+                        userinfo2.put("selasa9", "");
                     }
                 }
                 if (sel9.isChecked()) {
@@ -365,8 +365,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sel10.isChecked()) {
-                    if (!Ssel10.isEmpty()) {
-                        userinfo.put("selasa10", "");
+                    if (Ssel10.equals("1")) {
+                        userinfo2.put("selasa10", "");
                     }
                 }
                 if (sel10.isChecked()) {
@@ -376,8 +376,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sel11.isChecked()) {
-                    if (!Ssel11.isEmpty()) {
-                        userinfo.put("selasa11", "");
+                    if (Ssel11.equals("1")) {
+                        userinfo2.put("selasa11", "");
                     }
                 }
                 if (sel11.isChecked()) {
@@ -387,8 +387,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sel12.isChecked()) {
-                    if (!Ssel12.isEmpty()) {
-                        userinfo.put("selasa12", "");
+                    if (Ssel12.equals("1")) {
+                        userinfo2.put("selasa12", "");
                     }
                 }
                 if (sel12.isChecked()) {
@@ -398,8 +398,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sel13.isChecked()) {
-                    if (!Ssel13.isEmpty()) {
-                        userinfo.put("selasa13", "");
+                    if (Ssel13.equals("1")) {
+                        userinfo2.put("selasa13", "");
                     }
                 }
                 if (sel13.isChecked()) {
@@ -409,8 +409,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sel14.isChecked()) {
-                    if (!Ssel14.isEmpty()) {
-                        userinfo.put("selasa14", "");
+                    if (Ssel14.equals("1")) {
+                        userinfo2.put("selasa14", "");
                     }
                 }
                 if (sel14.isChecked()) {
@@ -420,8 +420,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sel15.isChecked()) {
-                    if (!Ssel15.isEmpty()) {
-                        userinfo.put("selasa15", "");
+                    if (Ssel15.equals("1")) {
+                        userinfo2.put("selasa15", "");
                     }
                 }
                 if (sel15.isChecked()) {
@@ -431,8 +431,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sel16.isChecked()) {
-                    if (!Ssel16.isEmpty()) {
-                        userinfo.put("selasa16", "");
+                    if (Ssel16.equals("1")) {
+                        userinfo2.put("selasa16", "");
                     }
                 }
                 if (sel16.isChecked()) {
@@ -442,8 +442,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sel17.isChecked()) {
-                    if (!Ssel17.isEmpty()) {
-                        userinfo.put("selasa17", "");
+                    if (Ssel17.equals("1")) {
+                        userinfo2.put("selasa17", "");
                     }
                 }
                 if (sel17.isChecked()) {
@@ -453,8 +453,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sel18.isChecked()) {
-                    if (!Ssel18.isEmpty()) {
-                        userinfo.put("selasa18", "");
+                    if (Ssel18.equals("1")) {
+                        userinfo2.put("selasa18", "");
                     }
                 }
                 if (sel18.isChecked()) {
@@ -464,8 +464,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sel19.isChecked()) {
-                    if (!Ssel19.isEmpty()) {
-                        userinfo.put("selasa19", "");
+                    if (Ssel19.equals("1")) {
+                        userinfo2.put("selasa19", "");
                     }
                 }
                 if (sel19.isChecked()) {
@@ -475,8 +475,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sel20.isChecked()) {
-                    if (!Ssel20.isEmpty()) {
-                        userinfo.put("selasa20", "");
+                    if (Ssel20.equals("1")) {
+                        userinfo2.put("selasa20", "");
                     }
                 }
                 if (sel20.isChecked()) {
@@ -491,8 +491,8 @@ public class input_weekly_schedule extends AppCompatActivity {
                 Map<String, Object> userinfo3 = new HashMap<>();
 
                 if (!rab7.isChecked()) {
-                    if (!Srab7.isEmpty()) {
-                        userinfo.put("rabu7", "");
+                    if (Srab7.equals("1")) {
+                        userinfo3.put("rabu7", "");
                     }
                 }
                 if (rab7.isChecked()) {
@@ -502,8 +502,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab8.isChecked()) {
-                    if (!Srab8.isEmpty()) {
-                        userinfo.put("rabu8", "");
+                    if (Srab8.equals("1")) {
+                        userinfo3.put("rabu8", "");
                     }
                 }
                 if (rab8.isChecked()) {
@@ -513,8 +513,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab9.isChecked()) {
-                    if (!Srab9.isEmpty()) {
-                        userinfo.put("rabu9", "");
+                    if (Srab9.equals("1")) {
+                        userinfo3.put("rabu9", "");
                     }
                 }
                 if (rab9.isChecked()) {
@@ -524,8 +524,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab10.isChecked()) {
-                    if (!Srab10.isEmpty()) {
-                        userinfo.put("rabu10", "");
+                    if (Srab10.equals("1")) {
+                        userinfo3.put("rabu10", "");
                     }
                 }
                 if (rab10.isChecked()) {
@@ -535,8 +535,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab11.isChecked()) {
-                    if (!Srab11.isEmpty()) {
-                        userinfo.put("rabu11", "");
+                    if (Srab11.equals("1")) {
+                        userinfo3.put("rabu11", "");
                     }
                 }
                 if (rab11.isChecked()) {
@@ -546,8 +546,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab12.isChecked()) {
-                    if (!Srab12.isEmpty()) {
-                        userinfo.put("rabu12", "");
+                    if (Srab12.equals("1")) {
+                        userinfo3.put("rabu12", "");
                     }
                 }
                 if (rab12.isChecked()) {
@@ -557,8 +557,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab13.isChecked()) {
-                    if (!Srab13.isEmpty()) {
-                        userinfo.put("rabu13", "");
+                    if (Srab13.equals("1")) {
+                        userinfo3.put("rabu13", "");
                     }
                 }
                 if (rab13.isChecked()) {
@@ -568,8 +568,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab14.isChecked()) {
-                    if (!Srab14.isEmpty()) {
-                        userinfo.put("rabu14", "");
+                    if (Srab14.equals("1")) {
+                        userinfo3.put("rabu14", "");
                     }
                 }
                 if (rab14.isChecked()) {
@@ -579,8 +579,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab15.isChecked()) {
-                    if (!Srab15.isEmpty()) {
-                        userinfo.put("rabu15", "");
+                    if (Srab15.equals("1")) {
+                        userinfo3.put("rabu15", "");
                     }
                 }
                 if (rab15.isChecked()) {
@@ -590,8 +590,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab15.isChecked()) {
-                    if (!Srab15.isEmpty()) {
-                        userinfo.put("rabu15", "");
+                    if (Srab15.equals("1")) {
+                        userinfo3.put("rabu15", "");
                     }
                 }
                 if (rab15.isChecked()) {
@@ -601,8 +601,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab16.isChecked()) {
-                    if (!Srab16.isEmpty()) {
-                        userinfo.put("rabu16", "");
+                    if (Srab16.equals("1")) {
+                        userinfo3.put("rabu16", "");
                     }
                 }
                 if (rab16.isChecked()) {
@@ -612,8 +612,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab17.isChecked()) {
-                    if (!Srab17.isEmpty()) {
-                        userinfo.put("rabu17", "");
+                    if (Srab17.equals("1")) {
+                        userinfo3.put("rabu17", "");
                     }
                 }
                 if (rab17.isChecked()) {
@@ -623,8 +623,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab18.isChecked()) {
-                    if (!Srab18.isEmpty()) {
-                        userinfo.put("rabu18", "");
+                    if (Srab18.equals("1")) {
+                        userinfo3.put("rabu18", "");
                     }
                 }
                 if (rab18.isChecked()) {
@@ -634,8 +634,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab19.isChecked()) {
-                    if (!Srab19.isEmpty()) {
-                        userinfo.put("rabu19", "");
+                    if (Srab19.equals("1")) {
+                        userinfo3.put("rabu19", "");
                     }
                 }
                 if (rab10.isChecked()) {
@@ -645,8 +645,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!rab20.isChecked()) {
-                    if (!Srab20.isEmpty()) {
-                        userinfo.put("rabu20", "");
+                    if (Srab20.equals("1")) {
+                        userinfo3.put("rabu20", "");
                     }
                 }
                 if (rab20.isChecked()) {
@@ -661,154 +661,154 @@ public class input_weekly_schedule extends AppCompatActivity {
                 DocumentReference df4 = fStore.collection("Jadwal").document("kamis");
                 Map<String, Object> userinfo4 = new HashMap<>();
                 if (!kam7.isChecked()) {
-                    if (!Skam7.isEmpty()) {
-                        userinfo.put("kamis7", "");
+                    if (Skam7.equals("1")) {
+                        userinfo4.put("kamis7", "");
                     }
                 }
                 if (kam7.isChecked()) {
-                    userinfo3.put("kamis7", nm);
+                    userinfo4.put("kamis7", nm);
                 }
 
 
                 if (!kam8.isChecked()) {
-                    if (!Skam8.isEmpty()) {
-                        userinfo.put("kamis8", "");
+                    if (Skam8.equals("1")) {
+                        userinfo4.put("kamis8", "");
                     }
                 }
                 if (kam8.isChecked()) {
-                    userinfo3.put("kamis8", nm);
+                    userinfo4.put("kamis8", nm);
                 }
 
 
 
                 if (!kam9.isChecked()) {
-                    if (!Skam9.isEmpty()) {
+                    if (Skam9.equals("1")) {
                         userinfo.put("kamis9", "");
                     }
                 }
                 if (kam9.isChecked()) {
-                    userinfo3.put("kamis9", nm);
+                    userinfo4.put("kamis9", nm);
                 }
 
 
 
                 if (!kam10.isChecked()) {
-                    if (!Skam10.isEmpty()) {
-                        userinfo.put("kamis10", "");
+                    if (Skam10.equals("1")) {
+                        userinfo4.put("kamis10", "");
                     }
                 }
                 if (kam10.isChecked()) {
-                    userinfo3.put("kamis10", nm);
+                    userinfo4.put("kamis10", nm);
                 }
 
 
 
                 if (!kam11.isChecked()) {
-                    if (!Skam11.isEmpty()) {
-                        userinfo.put("kamis11", "");
+                    if (Skam11.equals("1")) {
+                        userinfo4.put("kamis11", "");
                     }
                 }
                 if (kam11.isChecked()) {
-                    userinfo3.put("kamis11", nm);
+                    userinfo4.put("kamis11", nm);
                 }
 
 
 
                 if (!kam12.isChecked()) {
-                    if (!Skam12.isEmpty()) {
-                        userinfo.put("kamis12", "");
+                    if (Skam12.equals("1")) {
+                        userinfo4.put("kamis12", "");
                     }
                 }
                 if (kam12.isChecked()) {
-                    userinfo3.put("kamis12", nm);
+                    userinfo4.put("kamis12", nm);
                 }
 
 
 
                 if (!kam13.isChecked()) {
-                    if (!Skam13.isEmpty()) {
-                        userinfo.put("kamis13", "");
+                    if (Skam13.equals("1")) {
+                        userinfo4.put("kamis13", "");
                     }
                 }
                 if (kam13.isChecked()) {
-                    userinfo3.put("kamis13", nm);
+                    userinfo4.put("kamis13", nm);
                 }
 
 
 
                 if (!kam14.isChecked()) {
-                    if (!Skam14.isEmpty()) {
-                        userinfo.put("kamis14", "");
+                    if (Skam14.equals("1")) {
+                        userinfo4.put("kamis14", "");
                     }
                 }
                 if (kam14.isChecked()) {
-                    userinfo3.put("kamis14", nm);
+                    userinfo4.put("kamis14", nm);
                 }
 
 
 
                 if (!kam15.isChecked()) {
-                    if (!Skam15.isEmpty()) {
-                        userinfo.put("kamis15", "");
+                    if (Skam15.equals("1")) {
+                        userinfo4.put("kamis15", "");
                     }
                 }
                 if (kam15.isChecked()) {
-                    userinfo3.put("kamis15", nm);
+                    userinfo4.put("kamis15", nm);
                 }
 
 
 
                 if (!kam16.isChecked()) {
-                    if (!Skam16.isEmpty()) {
-                        userinfo.put("kamis16", "");
+                    if (Skam16.equals("1")) {
+                        userinfo4.put("kamis16", "");
                     }
                 }
                 if (kam16.isChecked()) {
-                    userinfo3.put("kamis16", nm);
+                    userinfo4.put("kamis16", nm);
                 }
 
 
 
                 if (!kam17.isChecked()) {
-                    if (!Skam17.isEmpty()) {
-                        userinfo.put("kamis17", "");
+                    if (Skam17.equals("1")) {
+                        userinfo4.put("kamis17", "");
                     }
                 }
                 if (kam17.isChecked()) {
-                    userinfo3.put("kamis17", nm);
+                    userinfo4.put("kamis17", nm);
                 }
 
 
 
                 if (!kam18.isChecked()) {
-                    if (!Skam18.isEmpty()) {
-                        userinfo.put("kamis18", "");
+                    if (Skam18.equals("1")) {
+                        userinfo4.put("kamis18", "");
                     }
                 }
                 if (kam18.isChecked()) {
-                    userinfo3.put("kamis18", nm);
+                    userinfo4.put("kamis18", nm);
                 }
 
 
 
                 if (!kam19.isChecked()) {
-                    if (!Skam19.isEmpty()) {
-                        userinfo.put("kamis19", "");
+                    if (Skam19.equals("1")) {
+                        userinfo4.put("kamis19", "");
                     }
                 }
                 if (kam19.isChecked()) {
-                    userinfo3.put("kamis19", nm);
+                    userinfo4.put("kamis19", nm);
                 }
 
 
 
                 if (!kam20.isChecked()) {
-                    if (!Skam20.isEmpty()) {
-                        userinfo.put("kamis20", "");
+                    if (Skam20.equals("1")) {
+                        userinfo4.put("kamis20", "");
                     }
                 }
                 if (kam20.isChecked()) {
-                    userinfo3.put("kamis20", nm);
+                    userinfo4.put("kamis20", nm);
                 }
 
 
@@ -816,8 +816,8 @@ public class input_weekly_schedule extends AppCompatActivity {
                 DocumentReference df5 = fStore.collection("Jadwal").document("jumat");
                 Map<String, Object> userinfo5 = new HashMap<>();
                 if (!jum7.isChecked()) {
-                    if (!Sjum7.isEmpty()) {
-                        userinfo.put("jumat7", "");
+                    if (Sjum7.equals("1")) {
+                        userinfo5.put("jumat7", "");
                     }
                 }
                 if (jum7.isChecked()) {
@@ -827,8 +827,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!jum8.isChecked()) {
-                    if (!Sjum8.isEmpty()) {
-                        userinfo.put("jumat8", "");
+                    if (Sjum8.equals("1")) {
+                        userinfo5.put("jumat8", "");
                     }
                 }
                 if (jum8.isChecked()) {
@@ -838,8 +838,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!jum9.isChecked()) {
-                    if (!Sjum9.isEmpty()) {
-                        userinfo.put("jumat9", "");
+                    if (Sjum9.equals("1")) {
+                        userinfo5.put("jumat9", "");
                     }
                 }
                 if (jum9.isChecked()) {
@@ -849,8 +849,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!jum10.isChecked()) {
-                    if (!Sjum10.isEmpty()) {
-                        userinfo.put("jumat10", "");
+                    if (Sjum10.equals("1")) {
+                        userinfo5.put("jumat10", "");
                     }
                 }
                 if (jum10.isChecked()) {
@@ -860,8 +860,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!jum11.isChecked()) {
-                    if (!Sjum11.isEmpty()) {
-                        userinfo.put("jumat11", "");
+                    if (Sjum11.equals("1")) {
+                        userinfo5.put("jumat11", "");
                     }
                 }
                 if (jum11.isChecked()) {
@@ -871,8 +871,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!jum12.isChecked()) {
-                    if (!Sjum12.isEmpty()) {
-                        userinfo.put("jumat12", "");
+                    if (Sjum12.equals("1")) {
+                        userinfo5.put("jumat12", "");
                     }
                 }
                 if (jum12.isChecked()) {
@@ -882,8 +882,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!jum13.isChecked()) {
-                    if (!Sjum13.isEmpty()) {
-                        userinfo.put("jumat3", "");
+                    if (Sjum13.equals("1")) {
+                        userinfo5.put("jumat3", "");
                     }
                 }
                 if (jum13.isChecked()) {
@@ -893,8 +893,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!jum14.isChecked()) {
-                    if (!Sjum14.isEmpty()) {
-                        userinfo.put("jumat14", "");
+                    if (Sjum14.equals("1")) {
+                        userinfo5.put("jumat14", "");
                     }
                 }
                 if (jum14.isChecked()) {
@@ -904,8 +904,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!jum15.isChecked()) {
-                    if (!Sjum15.isEmpty()) {
-                        userinfo.put("jumat15", "");
+                    if (Sjum15.equals("1")) {
+                        userinfo5.put("jumat15", "");
                     }
                 }
                 if (jum15.isChecked()) {
@@ -915,8 +915,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!jum16.isChecked()) {
-                    if (!Sjum16.isEmpty()) {
-                        userinfo.put("jumat16", "");
+                    if (Sjum16.equals("1")) {
+                        userinfo5.put("jumat16", "");
                     }
                 }
                 if (jum16.isChecked()) {
@@ -926,8 +926,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!jum17.isChecked()) {
-                    if (!Sjum17.isEmpty()) {
-                        userinfo.put("jumat17", "");
+                    if (Sjum17.equals("1")) {
+                        userinfo5.put("jumat17", "");
                     }
                 }
                 if (jum17.isChecked()) {
@@ -937,8 +937,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!jum18.isChecked()) {
-                    if (!Sjum18.isEmpty()) {
-                        userinfo.put("jumat18", "");
+                    if (Sjum18.equals("1")) {
+                        userinfo5.put("jumat18", "");
                     }
                 }
                 if (jum18.isChecked()) {
@@ -948,8 +948,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!jum19.isChecked()) {
-                    if (!Sjum19.isEmpty()) {
-                        userinfo.put("jumat19", "");
+                    if (Sjum19.equals("1")) {
+                        userinfo5.put("jumat19", "");
                     }
                 }
                 if (jum19.isChecked()) {
@@ -959,8 +959,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!jum20.isChecked()) {
-                    if (!Sjum20.isEmpty()) {
-                        userinfo.put("jumat20", "");
+                    if (Sjum20.equals("1")) {
+                        userinfo5.put("jumat20", "");
                     }
                 }
                 if (jum20.isChecked()) {
@@ -971,8 +971,8 @@ public class input_weekly_schedule extends AppCompatActivity {
                 DocumentReference df6 = fStore.collection("Jadwal").document("sabtu");
                 Map<String, Object> userinfo6 = new HashMap<>();
                 if (!sab7.isChecked()) {
-                    if (!Ssab7.isEmpty()) {
-                        userinfo.put("sabtu7", "");
+                    if (Ssab7.equals("1")) {
+                        userinfo6.put("sabtu7", "");
                     }
                 }
                 if (sab7.isChecked()) {
@@ -982,8 +982,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sab8.isChecked()) {
-                    if (!Ssab8.isEmpty()) {
-                        userinfo.put("sabtu8", "");
+                    if (Ssab8.equals("1")) {
+                        userinfo6.put("sabtu8", "");
                     }
                 }
                 if (sab8.isChecked()) {
@@ -993,8 +993,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sab9.isChecked()) {
-                    if (!Ssab9.isEmpty()) {
-                        userinfo.put("sabtu9", "");
+                    if (Ssab9.equals("1")) {
+                        userinfo6.put("sabtu9", "");
                     }
                 }
                 if (sab9.isChecked()) {
@@ -1004,8 +1004,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sab10.isChecked()) {
-                    if (!Ssab10.isEmpty()) {
-                        userinfo.put("sabtu10", "");
+                    if (Ssab10.equals("1")) {
+                        userinfo6.put("sabtu10", "");
                     }
                 }
                 if (sab10.isChecked()) {
@@ -1015,8 +1015,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sab11.isChecked()) {
-                    if (!Ssab11.isEmpty()) {
-                        userinfo.put("sabtu11", "");
+                    if (Ssab11.equals("1")) {
+                        userinfo6.put("sabtu11", "");
                     }
                 }
                 if (sab11.isChecked()) {
@@ -1026,8 +1026,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sab12.isChecked()) {
-                    if (!Ssab12.isEmpty()) {
-                        userinfo.put("sabtu12", "");
+                    if (Ssab12.equals("1")) {
+                        userinfo6.put("sabtu12", "");
                     }
                 }
                 if (sab12.isChecked()) {
@@ -1037,8 +1037,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sab13.isChecked()) {
-                    if (!Ssab13.isEmpty()) {
-                        userinfo.put("sabtu13", "");
+                    if (Ssab13.equals("1")) {
+                        userinfo6.put("sabtu13", "");
                     }
                 }
                 if (sab13.isChecked()) {
@@ -1047,8 +1047,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sab14.isChecked()) {
-                    if (!Ssab14.isEmpty()) {
-                        userinfo.put("sabtu14", "");
+                    if (Ssab14.equals("1")) {
+                        userinfo6.put("sabtu14", "");
                     }
                 }
                 if (sab14.isChecked()) {
@@ -1058,8 +1058,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sab15.isChecked()) {
-                    if (!Ssab15.isEmpty()) {
-                        userinfo.put("sabtu15", "");
+                    if (Ssab15.equals("1")) {
+                        userinfo6.put("sabtu15", "");
                     }
                 }
                 if (sab15.isChecked()) {
@@ -1069,8 +1069,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sab16.isChecked()) {
-                    if (!Ssab16.isEmpty()) {
-                        userinfo.put("sabtu16", "");
+                    if (Ssab16.equals("1")) {
+                        userinfo6.put("sabtu16", "");
                     }
                 }
                 if (sab16.isChecked()) {
@@ -1080,8 +1080,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sab17.isChecked()) {
-                    if (!Ssab17.isEmpty()) {
-                        userinfo.put("sabtu17", "");
+                    if (Ssab17.equals("1")) {
+                        userinfo6.put("sabtu17", "");
                     }
                 }
                 if (sab17.isChecked()) {
@@ -1091,8 +1091,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sab18.isChecked()) {
-                    if (!Ssab18.isEmpty()) {
-                        userinfo.put("sabtu18", "");
+                    if (Ssab18.equals("1")) {
+                        userinfo6.put("sabtu18", "");
                     }
                 }
                 if (sab18.isChecked()) {
@@ -1102,8 +1102,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sab19.isChecked()) {
-                    if (!Ssab19.isEmpty()) {
-                        userinfo.put("sabtu19", "");
+                    if (Ssab19.equals("1")) {
+                        userinfo6.put("sabtu19", "");
                     }
                 }
                 if (sab19.isChecked()) {
@@ -1113,8 +1113,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!sab20.isChecked()) {
-                    if (!Ssab20.isEmpty()) {
-                        userinfo.put("sabtu20", "");
+                    if (Ssab20.equals("1")) {
+                        userinfo6.put("sabtu20", "");
                     }
                 }
                 if (sab20.isChecked()) {
@@ -1126,8 +1126,8 @@ public class input_weekly_schedule extends AppCompatActivity {
                 DocumentReference df7 = fStore.collection("Jadwal").document("minggu");
                 Map<String, Object> userinfo7 = new HashMap<>();
                 if (!ming7.isChecked()) {
-                    if (!Sming7.isEmpty()) {
-                        userinfo.put("minggu7", "");
+                    if (Sming7.equals("1")) {
+                        userinfo7.put("minggu7", "");
                     }
                 }
                 if (ming7.isChecked()) {
@@ -1136,8 +1136,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!ming8.isChecked()) {
-                    if (!Sming8.isEmpty()) {
-                        userinfo.put("minggu8", "");
+                    if (Sming8.equals("1")) {
+                        userinfo7.put("minggu8", "");
                     }
                 }
                 if (ming8.isChecked()) {
@@ -1147,8 +1147,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!ming9.isChecked()) {
-                    if (!Sming9.isEmpty()) {
-                        userinfo.put("minggu9", "");
+                    if (Sming9.equals("1")) {
+                        userinfo7.put("minggu9", "");
                     }
                 }
                 if (ming9.isChecked()) {
@@ -1158,8 +1158,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!ming10.isChecked()) {
-                    if (!Sming10.isEmpty()) {
-                        userinfo.put("minggu10", "");
+                    if (Sming10.equals("1")) {
+                        userinfo7.put("minggu10", "");
                     }
                 }
                 if (ming10.isChecked()) {
@@ -1169,8 +1169,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!ming11.isChecked()) {
-                    if (!Sming11.isEmpty()) {
-                        userinfo.put("minggu11", "");
+                    if (Sming11.equals("1")) {
+                        userinfo7.put("minggu11", "");
                     }
                 }
                 if (ming11.isChecked()) {
@@ -1180,8 +1180,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!ming12.isChecked()) {
-                    if (!Sming12.isEmpty()) {
-                        userinfo.put("minggu12", "");
+                    if (Sming12.equals("1")) {
+                        userinfo7.put("minggu12", "");
                     }
                 }
                 if (ming12.isChecked()) {
@@ -1192,8 +1192,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!ming13.isChecked()) {
-                    if (!Sming13.isEmpty()) {
-                        userinfo.put("minggu13", "");
+                    if (Sming13.equals("1")) {
+                        userinfo7.put("minggu13", "");
                     }
                 }
                 if (ming13.isChecked()) {
@@ -1203,8 +1203,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!ming14.isChecked()) {
-                    if (!Sming14.isEmpty()) {
-                        userinfo.put("minggu14", "");
+                    if (Sming14.equals("1")) {
+                        userinfo7.put("minggu14", "");
                     }
                 }
                 if (ming14.isChecked()) {
@@ -1214,8 +1214,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!ming15.isChecked()) {
-                    if (!Sming15.isEmpty()) {
-                        userinfo.put("minggu15", "");
+                    if (Sming15.equals("1")) {
+                        userinfo7.put("minggu15", "");
                     }
                 }
                 if (ming15.isChecked()) {
@@ -1225,8 +1225,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!ming16.isChecked()) {
-                    if (!Sming16.isEmpty()) {
-                        userinfo.put("minggu16", "");
+                    if (Sming16.equals("1")) {
+                        userinfo7.put("minggu16", "");
                     }
                 }
                 if (ming16.isChecked()) {
@@ -1236,8 +1236,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!ming17.isChecked()) {
-                    if (!Sming17.isEmpty()) {
-                        userinfo.put("minggu17", "");
+                    if (Sming17.equals("1")) {
+                        userinfo7.put("minggu17", "");
                     }
                 }
                 if (ming17.isChecked()) {
@@ -1247,8 +1247,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!ming18.isChecked()) {
-                    if (!Sming18.isEmpty()) {
-                        userinfo.put("minggu18", "");
+                    if (Sming18.equals("1")) {
+                        userinfo7.put("minggu18", "");
                     }
                 }
                 if (ming18.isChecked()) {
@@ -1258,8 +1258,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!ming19.isChecked()) {
-                    if (!Sming19.isEmpty()) {
-                        userinfo.put("minggu19", "");
+                    if (Sming19.equals("1")) {
+                        userinfo7.put("minggu19", "");
                     }
                 }
                 if (ming19.isChecked()) {
@@ -1269,8 +1269,8 @@ public class input_weekly_schedule extends AppCompatActivity {
 
 
                 if (!ming20.isChecked()) {
-                    if (!Sming20.isEmpty()) {
-                        userinfo.put("minggu20", "");
+                    if (Sming20.equals("1")) {
+                        userinfo7.put("minggu20", "");
                     }
                 }
                 if (ming20.isChecked()) {
@@ -1300,6 +1300,117 @@ public class input_weekly_schedule extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.getResult().exists()) {
+                    Ssen7=new String("0");
+                    Ssel7=new String("0");
+                    Srab7=new String("0");
+                    Skam7=new String("0");
+                    Sjum7=new String("0");
+                    Ssab7=new String("0");
+                    Sming7=new String("0");
+
+                            Ssen8=new String("0");
+                            Ssel8=new String("0");
+                            Srab8=new String("0");
+                            Skam8=new String("0");
+                            Sjum8=new String("0");
+                            Ssab8=new String("0");
+                            Sming8=new String("0");
+
+                            Ssen9=new String("0");
+                            Ssel9=new String("0");
+                            Srab9=new String("0");
+                            Skam9=new String("0");
+                            Sjum9=new String("0");
+                            Ssab9=new String("0");
+                            Sming9=new String("0");
+                            Ssen10=new String("0");
+                            Ssel10=new String("0");
+                            Srab10=new String("0");
+                            Skam10=new String("0");
+                            Sjum10=new String("0");
+                            Ssab10=new String("0");
+                            Sming10=new String("0");
+
+                            Ssen11=new String("0");
+                            Ssel11=new String("0");
+                            Srab11=new String("0");
+                            Skam11=new String("0");
+                            Sjum11=new String("0");
+                            Ssab11=new String("0");
+                            Sming11=new String("0");
+
+                            Ssen12=new String("0");
+                    Ssel12=new String("0");
+                    Srab12=new String("0");
+                    Skam12=new String("0");
+                    Sjum12=new String("0");
+                    Ssab12=new String("0");
+                    Sming12=new String("0");
+
+                    Ssen13=new String("0");
+                    Ssel13=new String("0");
+                    Srab13=new String("0");
+                    Skam13=new String("0");
+                    Sjum13=new String("0");
+                    Ssab13=new String("0");
+                    Sming13=new String("0");
+
+                    Ssen14=new String("0");
+                    Ssel14=new String("0");
+                    Srab14=new String("0");
+                    Skam14=new String("0");
+                    Sjum14=new String("0");
+                    Ssab14=new String("0");
+                    Sming14=new String("0");
+
+                    Ssen15=new String("0");
+                    Ssel15=new String("0");
+                    Srab15=new String("0");
+                    Skam15=new String("0");
+                    Sjum15=new String("0");
+                    Ssab15=new String("0");
+                    Sming15=new String("0");
+
+                    Ssen16=new String("0");
+                    Ssel16=new String("0");
+                    Srab16=new String("0");
+                    Skam16=new String("0");
+                    Sjum16=new String("0");
+                    Ssab16=new String("0");
+                    Sming16=new String("0");
+
+                    Ssen17=new String("0");
+                    Ssel17=new String("0");
+                    Srab17=new String("0");
+                    Skam17=new String("0");
+                    Sjum17=new String("0");
+                    Ssab17=new String("0");
+                    Sming17=new String("0");
+
+                    Ssen18=new String("0");
+                    Ssel18=new String("0");
+                    Srab18=new String("0");
+                    Skam18=new String("0");
+                    Sjum18=new String("0");
+                    Ssab18=new String("0");
+                    Sming18=new String("0");
+
+                    Ssen19=new String("0");
+                    Ssel19=new String("0");
+                    Srab19=new String("0");
+                    Skam19=new String("0");
+                    Sjum19=new String("0");
+                    Ssab19=new String("0");
+                    Sming19=new String("0");
+
+                    Ssen20=new String("0");
+                    Ssel20=new String("0");
+                    Srab20=new String("0");
+                    Skam20=new String("0");
+                    Sjum20=new String("0");
+                    Ssab20=new String("0");
+                    Sming20=new String("0");
+
 
                     String outSenin7 = task.getResult().getString("senin7");
                     String outSenin8 = task.getResult().getString("senin8");

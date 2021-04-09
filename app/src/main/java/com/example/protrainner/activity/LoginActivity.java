@@ -168,40 +168,7 @@ public class LoginActivity extends AppCompatActivity {
         //do nothing
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if (FirebaseAuth.getInstance().getCurrentUser()!=null){
-            DocumentReference df = FirebaseFirestore.getInstance().collection("Akun").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
-            df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                String id;
 
-                @Override
-                public void onSuccess(DocumentSnapshot documentSnapshot) {
-                    if(documentSnapshot.getString("isMember").equals("0")){
-                        Intent inthome =new Intent(LoginActivity.this, HomeTrainerActivity.class);
-                        startActivity(inthome);
-                    }
-                    if(documentSnapshot.getString("isMember").equals("1")){
-                        id = documentSnapshot.getId();
-                        Bundle b = new Bundle();
-                        b.putString("id",id);
-                        Intent inthome =new Intent(LoginActivity.this, MainActivity.class);
-                        inthome.putExtras(b);
-                        startActivity(inthome);
-                    }
-
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    FirebaseAuth.getInstance().signOut();
-                    Intent i = new Intent(LoginActivity.this, LoginActivity.class);
-                    startActivity(i);
-                }
-            });
-        }
-    }
 
     private void checkIfMember(String uid) {
         DocumentReference df = fStore.collection("Akun").document(uid);
