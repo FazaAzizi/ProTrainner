@@ -23,11 +23,11 @@ public class FtlTrainer1Activity extends AppCompatActivity {
     String id, nama;
     TextView tv1;
     ImageView ab,an;
-    EditText etSesi,etGt,etMg,etNote,etPemanasanNo,etPemanasanJp,etPemansanReps
+    EditText etSesi,etGt,etMg,etNote,etTanggal,etPemanasanNo,etPemanasanJp,etPemansanReps
             ,etPemanasanDurasi,etIntiNo,etIntiJp,etIntiLoad,etIntiReps,etIntiDurasi
             ,etIntiSet,etPendinginanNo,etPendinginanJp,etPendinginanReps,etPendinginanDurasi;
     Button buttonPemanasan,buttonInti,buttonPendinginan,buttonKonfirmasi;
-    String Sesi,Gt,Mg,Note,PemanasanJp,PemanasanReps
+    String Sesi,Gt,Mg,Note,Tanggal,PemanasanJp,PemanasanReps
             ,PemanasanDurasi,IntiJp,IntiLoad,IntiReps,IntiDurasi
             ,IntiSet,PendinginanJp,PendinginanReps,PendinginanDurasi;
     Integer noPemanasan,noPendinginan,noInti,noSesi;
@@ -55,6 +55,7 @@ public class FtlTrainer1Activity extends AppCompatActivity {
         etGt= findViewById(R.id.ftl_goalTraining);
         etMg= findViewById(R.id.ftl_muscleGroup);
         etNote= findViewById(R.id.ftl_notes);
+        etTanggal = findViewById(R.id.ftl_tanggal);
 
         ab = findViewById(R.id.ab_ftl1);
         an = findViewById(R.id.an_ftl1);
@@ -162,6 +163,7 @@ public class FtlTrainer1Activity extends AppCompatActivity {
                 userinfo.put("goalTraining", Gt);
                 userinfo.put("muscleGroup", Mg);
                 userinfo.put("notes", Note);
+                userinfo.put("tanggal",Tanggal);
                 df.set(userinfo);
 
                 Bundle c = new Bundle();

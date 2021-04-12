@@ -79,6 +79,7 @@
                         android:textStyle="bold" />
 
                     <android.widget.EditText
+                        android:inputType="number"
                         android:id="@+id/et_du_tb"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -118,6 +119,7 @@
 
                     <android.widget.EditText
                         android:id="@+id/et_du_bb"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="5dp"
@@ -146,6 +148,7 @@
             android:text="Body fat" />
 
         <EditText
+            android:inputType="number"
             android:id="@+id/et_du_bf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -165,6 +168,7 @@
             android:text="Body Mass Index" />
 
         <EditText
+            android:inputType="number"
             android:id="@+id/et_du_bmi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -184,6 +188,7 @@
             android:text="Visceral fat" />
 
         <EditText
+            android:inputType="number"
             android:id="@+id/et_du_vf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -203,6 +208,7 @@
             android:text="Body age" />
 
         <EditText
+            android:inputType="number"
             android:id="@+id/et_du_ba"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -222,6 +228,7 @@
             android:text="Lingkar lengan" />
 
         <EditText
+            android:inputType="number"
             android:id="@+id/et_du_ll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -241,6 +248,7 @@
             android:text="Lingkar dada" />
 
         <EditText
+            android:inputType="number"
             android:id="@+id/et_du_ld"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -260,6 +268,7 @@
             android:text="Lingkar pinggang" />
 
         <EditText
+            android:inputType="number"
             android:id="@+id/et_du_lgang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -279,6 +288,7 @@
             android:text="Lingkar pinggul" />
 
         <EditText
+            android:inputType="number"
             android:id="@+id/et_du_lgul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -298,6 +308,7 @@
             android:text="Lingkar paha" />
 
         <EditText
+            android:inputType="number"
             android:id="@+id/et_du_lp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -317,6 +328,7 @@
             android:text="Lingkar betis" />
 
         <EditText
+            android:inputType="number"
             android:id="@+id/et_du_lb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

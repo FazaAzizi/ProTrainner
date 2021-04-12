@@ -91,45 +91,45 @@ public class SplashActivity extends AppCompatActivity {
 //                        Intent i = new Intent(SplashActivity.this, LoginActivity.class);
 //                        startActivity(i);
 //                    }
-                    if(day.equals("Rabu")||day.equals("Wednesday")){
-                        DocumentReference df1 = fStore.collection("Jadwal").document("cek");
-                        df1.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                            @Override
-                            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                                ubah = task.getResult().getString("ubah");
-                                if(ubah.equals("0")){
-                                    DocumentReference df = fStore.collection("Jadwal").document("senin");
-                                    Map<String, Object> userinfo = new HashMap<>();
-                                    userinfo.put("senin7", "");
-                                    userinfo.put("senin8", "");
-                                    userinfo.put("senin9", "");
-                                    userinfo.put("senin10", "");
-                                    userinfo.put("senin11", "");
-                                    userinfo.put("senin12", "");
-                                    userinfo.put("senin13", "");
-                                    userinfo.put("senin14", "");
-                                    userinfo.put("senin15", "");
-                                    userinfo.put("senin16", "");
-                                    userinfo.put("senin17", "");
-                                    userinfo.put("senin18", "");
-                                    userinfo.put("senin19", "");
-                                    userinfo.put("senin20", "");
-                                    df.update(userinfo);
-                                    ubah = new String("1");
-                                    Map<String, Object> ubahcek = new HashMap<>();
-                                    ubahcek.put("ubah",ubah);
-                                    df1.update(ubahcek);
-                                }
-                            }
-                        });
-
-                    }
-                    if(day.equals("Kamis")||day.equals("Thursday")){
-                        DocumentReference df1 = fStore.collection("Jadwal").document("cek");
-                        Map<String, Object> ubahcek = new HashMap<>();
-                        ubahcek.put("ubah","0");
-                        df1.update(ubahcek);
-                    }
+//                    if(day.equals("Rabu")||day.equals("Wednesday")){
+//                        DocumentReference df1 = fStore.collection("Jadwal").document("cek");
+//                        df1.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+//                                ubah = task.getResult().getString("ubah");
+//                                if(ubah.equals("0")){
+//                                    DocumentReference df = fStore.collection("Jadwal").document("senin");
+//                                    Map<String, Object> userinfo = new HashMap<>();
+//                                    userinfo.put("senin7", "");
+//                                    userinfo.put("senin8", "");
+//                                    userinfo.put("senin9", "");
+//                                    userinfo.put("senin10", "");
+//                                    userinfo.put("senin11", "");
+//                                    userinfo.put("senin12", "");
+//                                    userinfo.put("senin13", "");
+//                                    userinfo.put("senin14", "");
+//                                    userinfo.put("senin15", "");
+//                                    userinfo.put("senin16", "");
+//                                    userinfo.put("senin17", "");
+//                                    userinfo.put("senin18", "");
+//                                    userinfo.put("senin19", "");
+//                                    userinfo.put("senin20", "");
+//                                    df.update(userinfo);
+//                                    ubah = new String("1");
+//                                    Map<String, Object> ubahcek = new HashMap<>();
+//                                    ubahcek.put("ubah",ubah);
+//                                    df1.update(ubahcek);
+//                                }
+//                            }
+//                        });
+//
+//                    }
+//                    if(day.equals("Kamis")||day.equals("Thursday")){
+//                        DocumentReference df1 = fStore.collection("Jadwal").document("cek");
+//                        Map<String, Object> ubahcek = new HashMap<>();
+//                        ubahcek.put("ubah","0");
+//                        df1.update(ubahcek);
+//                    }
                     finish();
                 }
             }
@@ -144,10 +144,10 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
-        Date d = new Date();
-        day = sdf.format(d);
-        Log.d("TAG","onSucces : "+ day);
+//        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+//        Date d = new Date();
+//        day = sdf.format(d);
+//        Log.d("TAG","onSucces : "+ day);
 
 
         if (FirebaseAuth.getInstance().getCurrentUser()!=null){

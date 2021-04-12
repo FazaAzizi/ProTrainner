@@ -26,7 +26,7 @@ public class OutFtlPendinginanActivity extends AppCompatActivity {
     private RecyclerView recyclerView1,recyclerView2,recyclerView3;
     private ListPendinginanAdapter adapterPendinginan;
     ImageView ab;
-    String sesi,uid,nama;
+    String sesi,uid,nama,cek;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     private CollectionReference cfPemanasan,cfInti,cfPendinginan;
@@ -40,6 +40,7 @@ public class OutFtlPendinginanActivity extends AppCompatActivity {
         sesi = b.getString("sesi");
         uid = b.getString("id");
         nama = b.getString("nama");
+        cek = b.getString("cek");
         ab = (ImageView)findViewById(R.id.ab_outftilpendinginan);
 
         recyclerView3 = findViewById(R.id.list_ftl_pendinginan);
@@ -86,6 +87,7 @@ public class OutFtlPendinginanActivity extends AppCompatActivity {
         c.putString("sesi",sesi);
         c.putString("id",uid);
         c.putString("nama",nama);
+        c.putString("cek",cek);
         Intent intent = new Intent(OutFtlPendinginanActivity.this, OutFtlDetailActivity.class);
         intent.putExtras(c);
         startActivity(intent);

@@ -77,7 +77,7 @@ public class DetailMemberList2Activity extends AppCompatActivity {
     public void onBackPressed() {
         Bundle c = new Bundle();
         c.putString("UID",id);
-        Intent intent = new Intent(DetailMemberList2Activity.this, DetailMemberListActivity.class);
+        Intent intent = new Intent(DetailMemberList2Activity.this, DetailMemberList_Connected.class);
         intent.putExtras(c);
         startActivity(intent);
     }

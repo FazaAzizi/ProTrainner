@@ -25,7 +25,7 @@ import com.google.firebase.firestore.Query;
 public class OutFtlIntiActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView1,recyclerView2,recyclerView3;
-    private ListIntiAdapter adapterInti;String sesi,uid,nama;
+    private ListIntiAdapter adapterInti;String sesi,uid,nama,cek;
     ImageView ab;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
@@ -40,6 +40,7 @@ public class OutFtlIntiActivity extends AppCompatActivity {
         sesi = b.getString("sesi");
         uid = b.getString("id");
         nama = b.getString("nama");
+        cek = b.getString("cek");
         ab = (ImageView)findViewById(R.id.ab_outftilinti);
 
         recyclerView2 = findViewById(R.id.list_ftl_inti);
@@ -92,6 +93,7 @@ public class OutFtlIntiActivity extends AppCompatActivity {
         c.putString("sesi",sesi);
         c.putString("id",uid);
         c.putString("nama",nama);
+        c.putString("cek",cek);
         Intent intent = new Intent(OutFtlIntiActivity.this, OutFtlDetailActivity.class);
         intent.putExtras(c);
         startActivity(intent);

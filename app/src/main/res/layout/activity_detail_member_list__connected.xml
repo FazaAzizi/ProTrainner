@@ -137,30 +137,30 @@
 
             </TableRow>
 
-            <TableRow android:background="#74F4F9F9">
+            <TableRow android:background="#B2F4F9F9">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:padding="6dp"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="8dp"
                     android:layout_weight="0.8"
-                    android:textColor="@color/black"
-                    android:text="Riwayat nyeri dada atau berdebar" />
+                    android:gravity="center_vertical"
+                    android:padding="6dp"
+                    android:paddingLeft="8dp"
+                    android:text="Riwayat nyeri dada atau berdebar"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/parq_out_dada"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:padding="6dp"
                     android:layout_weight="0.2"
-                    android:textColor="@color/black"
                     android:gravity="center"
-                    android:text="" />
+                    android:padding="6dp"
+                    android:text=""
+                    android:textColor="@color/black" />
             </TableRow>
 
-            <TableRow android:background="#74F4F9F9">
+            <TableRow android:background="#B2F4F9F9">
 
                 <TextView
                     android:layout_width="0dp"
@@ -185,7 +185,7 @@
 
             </TableRow>
 
-            <TableRow android:background="#74F4F9F9">
+            <TableRow android:background="#B2F4F9F9">
 
                 <TextView
                     android:layout_width="0dp"
@@ -211,7 +211,7 @@
 
             </TableRow>
 
-            <TableRow android:background="#74F4F9F9">
+            <TableRow android:background="#B2F4F9F9">
 
                 <TextView
                     android:layout_width="0dp"
@@ -235,7 +235,7 @@
 
             </TableRow>
 
-            <TableRow android:background="#74F4F9F9">
+            <TableRow android:background="#B2F4F9F9">
 
                 <TextView
 
@@ -261,7 +261,7 @@
 
             </TableRow>
 
-            <TableRow android:background="#74F4F9F9">
+            <TableRow android:background="#B2F4F9F9">
 
                 <TextView
                     android:layout_width="0dp"
@@ -286,7 +286,7 @@
 
             </TableRow>
 
-            <TableRow android:background="#74F4F9F9">
+            <TableRow android:background="#B2F4F9F9">
 
                 <TextView
                     android:layout_width="0dp"

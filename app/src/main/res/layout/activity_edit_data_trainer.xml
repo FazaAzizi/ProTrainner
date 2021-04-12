@@ -4,161 +4,131 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pt1"
+    android:background="@color/white"
     tools:context=".activity.EditDataTrainerActivity">
 
-    <androidx.cardview.widget.CardView
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical">
 
-        android:layout_margin="8dp"
-        app:cardCornerRadius="50dp">
+        <ImageView
+            android:id="@+id/ab_editdatatrainer"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/arroworen"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"/>
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:text="Ubah\nData Diri"
+            android:textColor="@color/black"
+            android:layout_marginLeft="16dp"
+            android:gravity="left"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="16dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Ubah Data Diri"
-                android:gravity="center"
-                android:textSize="26sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="32dp"
-                android:layout_marginTop="16dp"/>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama lengkap :"/>
+        <EditText
+            android:id="@+id/et_ubahdata_trainer_nl"
+            android:layout_width="match_parent"
+            app:backgroundTint="@color/pt1"
+            android:layout_height="wrap_content"
+            android:hint=""/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="wrap_content"
-                    android:text="Nama lengkap :"/>
-                <EditText
-                    android:id="@+id/et_ubahdata_trainer_nl"
-                    android:layout_width="0dp"
-                    android:layout_weight="10"
-                    android:layout_height="wrap_content"
-                    android:hint=""/>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            app:backgroundTint="@color/pt1"
+            android:layout_height="wrap_content"
+            android:text="Usia :"/>
+        <EditText
+            android:id="@+id/et_ubahdata_trainer_usia"
+            android:layout_width="match_parent"
+            app:backgroundTint="@color/pt1"
+            android:layout_height="wrap_content"
+            android:hint=""/>
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="wrap_content"
-                    android:text="Usia :"/>
-                <EditText
-                    android:id="@+id/et_ubahdata_trainer_usia"
-                    android:layout_width="0dp"
-                    android:layout_weight="10"
-                    android:layout_height="wrap_content"
-                    android:hint=""/>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis kelamin :"/>
+        <EditText
+            android:id="@+id/et_ubahdata_trainer_jk"
+            android:layout_width="match_parent"
+            app:backgroundTint="@color/pt1"
+            android:layout_height="wrap_content"
+            android:hint=""/>
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="wrap_content"
-                    android:text="Jenis kelamin :"/>
-                <EditText
-                    android:id="@+id/et_ubahdata_trainer_jk"
-                    android:layout_width="0dp"
-                    android:layout_weight="10"
-                    android:layout_height="wrap_content"
-                    android:hint=""/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="wrap_content"
-                    android:text="Ttl :"/>
-                <EditText
-                    android:id="@+id/et_ubahdata_trainer_ttl"
-                    android:layout_width="0dp"
-                    android:layout_weight="10"
-                    android:layout_height="wrap_content"
-                    android:hint=""/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="wrap_content"
-                    android:text="Pengalaman :"/>
-                <EditText
-                    android:id="@+id/et_ubahdata_trainer_pengalaman"
-                    android:layout_width="0dp"
-                    android:layout_weight="10"
-                    android:layout_height="wrap_content"
-                    android:hint=""/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="wrap_content"
-                    android:text="Alamat jogja :"/>
-                <EditText
-                    android:id="@+id/et_ubahdata_trainer_aj"
-                    android:layout_width="0dp"
-                    android:layout_weight="10"
-                    android:layout_height="wrap_content"
-                    android:hint=""/>
-
-            </LinearLayout>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ttl :"/>
+        <EditText
+            android:id="@+id/et_ubahdata_trainer_ttl"
+            android:layout_width="match_parent"
+            app:backgroundTint="@color/pt1"
+            android:layout_height="wrap_content"
+            android:hint=""/>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="32dp"
-                android:gravity="bottom"
-                android:orientation="vertical">
-                <Button
-                    android:id="@+id/btn_perubahan_trainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Simpan Perubahan"/>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pengalaman :"/>
+        <EditText
+            android:id="@+id/et_ubahdata_trainer_pengalaman"
+            android:layout_width="match_parent"
+            app:backgroundTint="@color/pt1"
+            android:layout_height="wrap_content"
+            android:hint=""/>
 
-            </LinearLayout>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat jogja :"/>
+        <EditText
+            android:id="@+id/et_ubahdata_trainer_aj"
+            android:layout_width="match_parent"
+            app:backgroundTint="@color/pt1"
+            android:layout_height="wrap_content"
+            android:hint=""/>
+
+
+        <android.widget.Button
+            android:id="@+id/btn_perubahan_trainer"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg_abu"
+            android:layout_marginBottom="16dp"
+            android:text="Simpan Perubahan"/>
 
 
 
 
-        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
 
-
-
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

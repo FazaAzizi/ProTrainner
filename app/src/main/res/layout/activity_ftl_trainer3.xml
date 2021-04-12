@@ -43,6 +43,7 @@
                         android:text="Nomor" />
 
                     <EditText
+                        android:inputType="number"
                         android:id="@+id/ftl_inti_no"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

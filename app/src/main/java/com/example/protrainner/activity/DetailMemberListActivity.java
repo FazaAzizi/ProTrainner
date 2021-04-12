@@ -24,12 +24,13 @@ import java.util.Map;
 
 public class DetailMemberListActivity extends AppCompatActivity {
 
-    String uid,nm;
+    String uid,nm,nmtrainer;
     TextView nL,tTL,gndr,addrsJgj,addrsAsal,outDada,outSendi,outCedera,outCacat,outRokok,outTidur;
 
     TextView outBatuk;
     Button btFtl,btUkur, btFtlCek, btUkurCek;
-    ImageView ab,an;
+    ImageView ab;
+    Button bt;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
 
@@ -45,7 +46,7 @@ public class DetailMemberListActivity extends AppCompatActivity {
         gndr = findViewById(R.id.tvMl3);
         addrsJgj = findViewById(R.id.tvMl4);
 
-        an = findViewById(R.id.an_memberlist);
+        bt = findViewById(R.id.bt_addmember_detailmemberlist);
         ab = findViewById(R.id.ab_memberlist);
 
 
@@ -60,8 +61,19 @@ public class DetailMemberListActivity extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
         uid = b.getString("UID");
+        DocumentReference df = fStore.collection("Akun").document(mAuth.getCurrentUser().getUid());
+        df.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.getResult().exists()){
+                    String nL1 = task.getResult().getString("namalengkap");
 
-        DocumentReference df = fStore.collection("Akun").document(uid);
+                    nmtrainer = nL1;
+                }
+            }
+        });
+
+        DocumentReference df3 = fStore.collection("Akun").document(uid);
         df.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -174,17 +186,14 @@ public class DetailMemberListActivity extends AppCompatActivity {
             }
         });
 
-        an.setOnClickListener(new View.OnClickListener() {
+        bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseUser user = mAuth.getCurrentUser();
-                DocumentReference df = fStore.collection("Akun").document(user.getUid());
+                DocumentReference df2 = fStore.collection("Akun").document(uid);
                 Map<String,Object> userinfo = new HashMap<>();
-                userinfo.put("nama",nm);
-                userinfo.put("id",uid);
-
-
-
+                userinfo.put("isWaiting","1");
+                userinfo.put("nameWaiting",nmtrainer);
+                df2.update(userinfo);
             }
         });
     }

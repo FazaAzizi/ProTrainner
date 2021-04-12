@@ -80,14 +80,14 @@ public class profileTrainerFragment extends Fragment {
         });
 
         cF = fStore1.collection("Akun").document(userId).collection("Harga");
-        Query query = cF;
+        Query query = cF.orderBy("noPaket", Query.Direction.ASCENDING);
         FirestoreRecyclerOptions<Harga> options = new FirestoreRecyclerOptions.Builder<Harga>()
                 .setQuery(query,Harga.class)
                 .build();
 
         adapter = new ListHargaTabelAdapter(options);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
 
 

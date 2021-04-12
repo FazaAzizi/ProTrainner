@@ -31,6 +31,20 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="8dp"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="Tanggal" />
+
+        <EditText
+            android:id="@+id/ftl_tanggal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:backgroundTint="@color/pt1" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -44,6 +58,7 @@
                 android:id="@+id/ftl_sesi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:backgroundTint="@color/pt1" />
 
             <TextView

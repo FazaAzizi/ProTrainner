@@ -26,7 +26,7 @@ public class OutFtlPemanasanActivity extends AppCompatActivity {
     private RecyclerView recyclerView1,recyclerView2,recyclerView3;
     private ListPemanasanAdapter adapterPemanasan;
     ImageView ab;
-    String sesi,uid,nama;
+    String sesi,uid,nama,cek;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     private CollectionReference cfPemanasan,cfInti,cfPendinginan;
@@ -40,6 +40,7 @@ public class OutFtlPemanasanActivity extends AppCompatActivity {
         sesi = b.getString("sesi");
         uid = b.getString("id");
         nama = b.getString("nama");
+        cek = b.getString("cek");
         ab = (ImageView)findViewById(R.id.ab_outftilpemanasan);
         recyclerView1 = findViewById(R.id.list_ftl_pemanasan);
         cfPemanasan = fStore.collection("Akun").document(uid)
@@ -89,6 +90,7 @@ public class OutFtlPemanasanActivity extends AppCompatActivity {
         c.putString("sesi",sesi);
         c.putString("id",uid);
         c.putString("nama",nama);
+        c.putString("cek",cek);
         Intent intent = new Intent(OutFtlPemanasanActivity.this, OutFtlDetailActivity.class);
         intent.putExtras(c);
         startActivity(intent);

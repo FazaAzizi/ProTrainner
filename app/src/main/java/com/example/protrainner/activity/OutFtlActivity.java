@@ -25,7 +25,7 @@ public class OutFtlActivity extends AppCompatActivity implements  ListTrainerAda
 
     private RecyclerView recyclerView;
     private ListFtlAdapter adapter;
-    String nama,id;
+    String nama,id,coba;
     ImageView ab,tmbh;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
@@ -39,6 +39,8 @@ public class OutFtlActivity extends AppCompatActivity implements  ListTrainerAda
         Bundle b = getIntent().getExtras();
         nama = b.getString("nama");
         id = b.getString("id");
+
+
 
         ab = findViewById(R.id.ab_outftl);
         tmbh = findViewById(R.id.tambah_outftl);
@@ -86,11 +88,13 @@ public class OutFtlActivity extends AppCompatActivity implements  ListTrainerAda
             public void onItemClick(DocumentSnapshot dS, int position) {
                 FTL ftl = dS.toObject(FTL.class);
                 String sesii = ftl.getNoSesi();
+                coba = new String("0");
 
                 Bundle b = new Bundle();
                 b.putString("sesi",sesii);
                 b.putString("id",id);
                 b.putString("nama",nama);
+                b.putString("cek",coba);
 
                 Intent intent = new Intent(OutFtlActivity.this, OutFtlDetailActivity.class);
                 intent.putExtras(b);

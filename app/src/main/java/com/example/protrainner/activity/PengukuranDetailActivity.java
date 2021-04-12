@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -83,6 +84,13 @@ public class PengukuranDetailActivity extends AppCompatActivity {
             }
         });
 
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
     }
 
     public  void  createContactDialog(){
@@ -114,5 +122,14 @@ public class PengukuranDetailActivity extends AppCompatActivity {
         dialogBuilder.setView(contactPopupView);
         dial = dialogBuilder.create();
         dial.show();
+    }
+    @Override
+    public void onBackPressed() {
+        Bundle c = new Bundle();
+        c.putString("nama",nama);
+        c.putString("id",id);
+        Intent intent = new Intent(PengukuranDetailActivity.this, PengukuranActivity.class);
+        intent.putExtras(c);
+        startActivity(intent);
     }
 }

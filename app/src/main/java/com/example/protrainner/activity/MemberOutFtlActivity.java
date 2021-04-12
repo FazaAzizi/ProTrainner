@@ -22,7 +22,7 @@ public class MemberOutFtlActivity extends AppCompatActivity implements  ListTrai
 
     private RecyclerView recyclerView;
     private ListFtlAdapter adapter;
-    String nama,id;
+    String nama,id,coba;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     private CollectionReference cF;
@@ -36,6 +36,7 @@ public class MemberOutFtlActivity extends AppCompatActivity implements  ListTrai
 
         Bundle b = getIntent().getExtras();
         id = b.getString("id");
+
 
         setUpRecyclerView();
     }
@@ -58,12 +59,13 @@ public class MemberOutFtlActivity extends AppCompatActivity implements  ListTrai
             public void onItemClick(DocumentSnapshot dS, int position) {
                 FTL ftl = dS.toObject(FTL.class);
                 String sesii = ftl.getNoSesi();
+                coba = new String("1");
 
                 Bundle b = new Bundle();
                 b.putString("sesi",sesii);
                 b.putString("id",id);
                 b.putString("nama",nama);
-
+                b.putString("cek",coba);
                 Intent intent = new Intent(MemberOutFtlActivity.this, OutFtlDetailActivity.class);
                 intent.putExtras(b);
                 startActivity(intent);

@@ -59,7 +59,7 @@ public class PengukuranInputActivity extends AppCompatActivity {
         ab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                onBackPressed();
             }
         });
 
@@ -106,5 +106,15 @@ public class PengukuranInputActivity extends AppCompatActivity {
                 startActivity(inthome);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Bundle c = new Bundle();
+        c.putString("nama",nama);
+        c.putString("id",id);
+        Intent intent = new Intent(PengukuranInputActivity.this, PengukuranActivity.class);
+        intent.putExtras(c);
+        startActivity(intent);
     }
 }

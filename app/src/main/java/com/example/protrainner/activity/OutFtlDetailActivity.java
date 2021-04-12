@@ -35,7 +35,7 @@ public class OutFtlDetailActivity extends AppCompatActivity {
 
     Button btPemanasan,btPendinginan,btInti;
     TextView nama_df,sesi_df,gt_df,mg_df,notes_df;
-    String sesi,uid,nama,mg,notes,gt;
+    String sesi,uid,nama,mg,notes,gt,cek;
     FirebaseAuth mAuth;
     ImageView ab;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
@@ -50,6 +50,8 @@ public class OutFtlDetailActivity extends AppCompatActivity {
         sesi = b.getString("sesi");
         uid = b.getString("id");
         nama = b.getString("nama");
+        cek = b.getString("cek");
+
         ab =(ImageView) findViewById(R.id.ab_outftldetail);
 
         sesi_df = findViewById(R.id.cek_ftl_sesi);
@@ -90,6 +92,7 @@ public class OutFtlDetailActivity extends AppCompatActivity {
                 b.putString("sesi",sesi);
                 b.putString("id",uid);
                 b.putString("nama",nama);
+                b.putString("cek",cek);
                 Intent intent = new Intent(OutFtlDetailActivity.this, OutFtlPemanasanActivity.class);
                 intent.putExtras(b);
                 startActivity(intent);
@@ -103,6 +106,7 @@ public class OutFtlDetailActivity extends AppCompatActivity {
                 b.putString("sesi",sesi);
                 b.putString("id",uid);
                 b.putString("nama",nama);
+                b.putString("cek",cek);
                 Intent intent = new Intent(OutFtlDetailActivity.this, OutFtlIntiActivity.class);
                 intent.putExtras(b);
                 startActivity(intent);
@@ -116,6 +120,7 @@ public class OutFtlDetailActivity extends AppCompatActivity {
                 b.putString("sesi",sesi);
                 b.putString("id",uid);
                 b.putString("nama",nama);
+                b.putString("cek",cek);
                 Intent intent = new Intent(OutFtlDetailActivity.this, OutFtlPendinginanActivity.class);
                 intent.putExtras(b);
                 startActivity(intent);
@@ -135,9 +140,17 @@ public class OutFtlDetailActivity extends AppCompatActivity {
         Bundle c = new Bundle();
         c.putString("nama",nama);
         c.putString("id",uid);
-        Intent intent = new Intent(OutFtlDetailActivity.this, OutFtlActivity.class);
-        intent.putExtras(c);
-        startActivity(intent);
+        if (cek.equals("0")){
+            Intent intent = new Intent(OutFtlDetailActivity.this, OutFtlActivity.class);
+            intent.putExtras(c);
+            startActivity(intent);
+        }
+        if (cek.equals("1")){
+            Intent intent = new Intent(OutFtlDetailActivity.this, MemberOutFtlActivity.class);
+            intent.putExtras(c);
+            startActivity(intent);
+        }
+
     }
 
 }

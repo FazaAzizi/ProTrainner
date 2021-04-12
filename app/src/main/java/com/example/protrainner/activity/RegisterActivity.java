@@ -133,6 +133,9 @@ public class RegisterActivity extends AppCompatActivity{
                                 if(cb1.isChecked()){
                                     userinfo.put("isMember","1");
                                     userinfo.put("isConnected","0");
+                                    userinfo.put("isWaiting","0");
+                                    userinfo.put("nameConnected","");
+                                    userinfo.put("nameWaiting","");
                                 }
                                 if(cb2.isChecked()){
                                     userinfo.put("isMember","0");

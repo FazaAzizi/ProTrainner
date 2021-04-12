@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProTrainner">
-        <activity android:name=".activity.DetailMemberList_Connected"></activity>
+        <activity android:name=".EditDataHargaActivity"></activity>
+        <activity android:name=".PermintaanActivity" />
+        <activity android:name=".activity.DetailMemberList_Connected" />
         <activity android:name=".activity.OutFtlPendinginanActivity" />
         <activity android:name=".activity.OutFtlIntiActivity" />
         <activity android:name=".activity.OutFtlPemanasanActivity" />
