@@ -115,7 +115,7 @@ public class DetailPriceMemberActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(DetailPriceMemberActivity.this, TrainerListActivity.class);
+        Intent intent = new Intent(DetailPriceMemberActivity.this, PriceListMemberActivity.class);
         startActivity(intent);
     }
 }

@@ -34,8 +34,8 @@ import com.google.firebase.firestore.Query;
 public class OutFtlDetailActivity extends AppCompatActivity {
 
     Button btPemanasan,btPendinginan,btInti;
-    TextView nama_df,sesi_df,gt_df,mg_df,notes_df;
-    String sesi,uid,nama,mg,notes,gt,cek;
+    TextView nama_df,sesi_df,gt_df,mg_df,notes_df,tanggal_df;
+    String sesi,uid,nama,mg,notes,gt,cek,tanggal;
     FirebaseAuth mAuth;
     ImageView ab;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
@@ -58,6 +58,7 @@ public class OutFtlDetailActivity extends AppCompatActivity {
         gt_df = findViewById(R.id.cek_ftl_gt);
         mg_df= findViewById(R.id.cek_ftl_mg);
         notes_df = findViewById(R.id.cek_ftl_note);
+        tanggal_df = findViewById(R.id.cek_ftl_tgl);
 
         btPemanasan = (Button) findViewById(R.id.bt_pemanasan_outftldetail);
         btInti = (Button) findViewById(R.id.bt_inti_outftldetail);
@@ -72,11 +73,13 @@ public class OutFtlDetailActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if(task.getResult().exists()){
+                    tanggal = task.getResult().getString("tanggal");
                     sesi = task.getResult().getString("noSesi");
                     gt = task.getResult().getString("goalTraining");
                     mg = task.getResult().getString("muscleGroup");
                     notes = task.getResult().getString("notes");
 
+                    tanggal_df.setText(tanggal);
                     sesi_df.setText(sesi);
                     gt_df.setText(gt);
                     mg_df.setText(mg);

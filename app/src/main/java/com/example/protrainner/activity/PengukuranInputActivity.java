@@ -99,8 +99,8 @@ public class PengukuranInputActivity extends AppCompatActivity {
                 df.set(userinfo);
 
                 Bundle c = new Bundle();
-                b.putString("id",id);
-                b.putString("nama",nama);
+                c.putString("nama",nama);
+                c.putString("id",id);
                 Intent inthome =new Intent(PengukuranInputActivity.this, DetailMemberList2Activity.class);
                 inthome.putExtras(c);
                 startActivity(inthome);

@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.protrainner.R;
 import com.example.protrainner.adapter.ListFtlAdapter;
@@ -23,6 +25,7 @@ public class MemberOutFtlActivity extends AppCompatActivity implements  ListTrai
     private RecyclerView recyclerView;
     private ListFtlAdapter adapter;
     String nama,id,coba;
+    ImageView ab;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     private CollectionReference cF;
@@ -37,8 +40,15 @@ public class MemberOutFtlActivity extends AppCompatActivity implements  ListTrai
         Bundle b = getIntent().getExtras();
         id = b.getString("id");
 
+        ab = (ImageView)findViewById(R.id.ab_memberoutftl);
 
         setUpRecyclerView();
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     private void setUpRecyclerView() {

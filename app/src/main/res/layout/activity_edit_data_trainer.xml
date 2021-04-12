@@ -16,6 +16,7 @@
         android:layout_height="match_parent"
         android:paddingTop="16dp"
         android:paddingLeft="16dp"
+        android:elevation="10dp"
         android:paddingRight="16dp"
         android:orientation="vertical">
 
@@ -120,6 +121,8 @@
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:elevation="10dp"
             android:background="@drawable/button_bg_abu"
             android:layout_marginBottom="16dp"
             android:text="Simpan Perubahan"/>
@@ -129,6 +132,13 @@
 
     </LinearLayout>
 </ScrollView>
-
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:src="@drawable/backgroundprofile"
+        android:scaleType="centerCrop"
+        android:elevation="-10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,7 +43,6 @@
             android:id="@+id/ftl_tanggal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
             android:backgroundTint="@color/pt1" />
 
             <TextView

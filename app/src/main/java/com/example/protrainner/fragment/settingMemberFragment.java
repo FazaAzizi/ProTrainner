@@ -10,7 +10,7 @@ import android.widget.Button;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.example.protrainner.PermintaanActivity;
+import com.example.protrainner.activity.PermintaanActivity;
 import com.example.protrainner.activity.EditDataMemberActivity;
 import com.example.protrainner.R;
 import com.example.protrainner.activity.EditDataParQMemberActivity;

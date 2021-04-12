@@ -123,11 +123,11 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView4"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/pt1"
             android:layout_marginRight="32dp"
             android:layout_marginLeft="32dp"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="40dp"
             app:cardElevation="20dp"
             android:layout_marginTop="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -136,28 +136,20 @@
 
             <LinearLayout
                 android:paddingLeft="16dp"
-                android:paddingTop="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="32dp"
-                    android:text="ParQ"
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pemohonan Personal\nTrainer"
                     android:textColor="@color/white"
-                    android:textSize="32dp"
+                    android:gravity="center"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="5"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/iconparq"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -167,18 +159,18 @@
             android:id="@+id/logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_bg_abu2"
-            android:padding="16dp"
-            android:text="Logout"
-            android:textSize="18sp"
-            android:elevation="20dp"
-            android:layout_marginBottom="32dp"
-            android:translationZ="2dp"
-            android:stateListAnimator="@null"
-            android:textColor="@color/white"
-            android:textStyle="bold"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/button_bg_abu2"
+            android:elevation="20dp"
+            android:padding="16dp"
+            android:stateListAnimator="@null"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:translationZ="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

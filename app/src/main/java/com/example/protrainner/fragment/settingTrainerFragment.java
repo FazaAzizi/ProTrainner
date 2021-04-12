@@ -11,11 +11,13 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.protrainner.R;
+import com.example.protrainner.activity.EditDataMemberActivity;
+import com.example.protrainner.activity.EditDataTrainerActivity;
 import com.example.protrainner.activity.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class settingTrainerFragment extends Fragment {
-    CardView cv1,cv2;
+    CardView cv1, cv2;
     Button logout;
 
     @Override
@@ -23,10 +25,18 @@ public class settingTrainerFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_setting_trainer, container, false);
         Button logout = (Button) view.findViewById(R.id.logout);
-        cv1 = (CardView)view.findViewById(R.id.cardView2);
-        cv2 = (CardView)view.findViewById(R.id.cardView3);
+        cv1 = (CardView) view.findViewById(R.id.cardView2);
+        cv2 = (CardView) view.findViewById(R.id.cardView3);
 
-                logout.setOnClickListener(new View.OnClickListener() {
+        cv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), EditDataTrainerActivity.class);
+                startActivity(i);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();

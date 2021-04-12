@@ -155,6 +155,7 @@ public class FtlTrainer1Activity extends AppCompatActivity {
                 Gt= etGt.getText().toString();
                 Mg= etMg.getText().toString();
                 Note= etNote.getText().toString();
+                Tanggal = etTanggal.getText().toString();
 
                 DocumentReference df = fStore.collection("Akun").document(id).
                         collection("FTL").document(Sesi);

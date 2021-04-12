@@ -1,8 +1,10 @@
-package com.example.protrainner;
+package com.example.protrainner.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.protrainner.R;
 
 public class EditDataHargaActivity extends AppCompatActivity {
 

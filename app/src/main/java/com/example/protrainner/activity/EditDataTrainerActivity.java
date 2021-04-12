@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.example.protrainner.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,6 +28,7 @@ public class EditDataTrainerActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
     String userId;
+    ImageView ab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,9 @@ public class EditDataTrainerActivity extends AppCompatActivity {
         etJk = (EditText)findViewById(R.id.et_ubahdata_trainer_jk);
         etPengalaman = (EditText)findViewById(R.id.et_ubahdata_trainer_pengalaman);
         etAj = (EditText)findViewById(R.id.et_ubahdata_trainer_aj);
+
+        ab = (ImageView)findViewById(R.id.ab_editdatatrainer);
+        accperubahan = (Button) findViewById(R.id.btn_perubahan_trainer);
 
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -54,8 +59,8 @@ public class EditDataTrainerActivity extends AppCompatActivity {
                     String ttl1 = task.getResult().getString("ttl");
                     String gndr1 = task.getResult().getString("jeniskelamin");
                     String addr1 = task.getResult().getString("alamatjogja");
-                    String usia = task.getResult().getString("alamatasal");
-                    String pengalaman = task.getResult().getString("alamatasal");
+                    String usia = task.getResult().getString("usia");
+                    String pengalaman = task.getResult().getString("pengalaman");
 
                     etTtl.setText(ttl1);
                     etJk.setText(gndr1);
@@ -64,7 +69,6 @@ public class EditDataTrainerActivity extends AppCompatActivity {
                     etPengalaman.setText(pengalaman);
                     etNl.setText(nL1);
                 }
-
             }
         });
 
@@ -94,11 +98,24 @@ public class EditDataTrainerActivity extends AppCompatActivity {
 
 
 
-                    Intent inthome =new Intent(EditDataTrainerActivity.this, MainActivity.class);
+                    Intent inthome =new Intent(EditDataTrainerActivity.this, HomeTrainerActivity.class);
                     startActivity(inthome);
                 }
 
             }
         });
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(EditDataTrainerActivity.this, HomeTrainerActivity.class);
+        startActivity(intent);
+    }
+
 }

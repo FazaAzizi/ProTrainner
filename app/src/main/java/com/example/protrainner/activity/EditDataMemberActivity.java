@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.example.protrainner.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,6 +25,7 @@ import java.util.Map;
 public class EditDataMemberActivity extends AppCompatActivity {
 
     EditText etNl,etTtl,etJk,etAa,etAj;
+    ImageView ab;
     Button accperubahan;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
@@ -40,6 +42,7 @@ public class EditDataMemberActivity extends AppCompatActivity {
         etAa = (EditText)findViewById(R.id.et_ubahdata_member_aa);
         etAj = (EditText)findViewById(R.id.et_ubahdata_member_aj);
         accperubahan = (Button)findViewById(R.id.btn_perubahan_member);
+        ab = (ImageView)findViewById(R.id.ab_editdatamember);
 
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -91,5 +94,18 @@ public class EditDataMemberActivity extends AppCompatActivity {
 
             }
         });
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+    }
+
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(EditDataMemberActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 }

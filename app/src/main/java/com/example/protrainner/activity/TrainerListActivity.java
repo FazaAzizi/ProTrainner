@@ -70,7 +70,7 @@ public class TrainerListActivity extends AppCompatActivity implements  ListTrain
 
                 Bundle b = new Bundle();
                 b.putString("UID",id);
-                Intent intent = new Intent(TrainerListActivity.this, DetailPriceMemberActivity.class);
+                Intent intent = new Intent(TrainerListActivity.this, DetailTrainerListActivity.class);
                 intent.putExtras(b);
                 startActivity(intent);
 

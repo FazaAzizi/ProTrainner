@@ -55,7 +55,7 @@ public class SplashActivity extends AppCompatActivity {
         imageView = findViewById(R.id.gmbrdepan);
 
         //textView2.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fade));
-        imageView.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fade));
+        //imageView.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fade));
 
         Window window = getWindow();
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
