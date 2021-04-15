@@ -273,6 +273,7 @@
                     android:background="@color/pt1" />
 
                 <TableLayout
+                    android:id="@+id/TableLayout1"
                     android:layout_marginTop="32dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -322,6 +323,13 @@
                             android:layout_height="wrap_content"
                             android:text="Harga" />
                     </TableRow>
+
+                    <TableRow>
+                        <LinearLayout>
+
+                        </LinearLayout>
+                    </TableRow>
+
                 </TableLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
