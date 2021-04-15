@@ -61,7 +61,11 @@ public class homeTrainerFragment extends Fragment {
         cvBp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle b = new Bundle();
+                b.putString("nama",nama);
+                b.putString("id",id);
                 Intent i = new Intent(getActivity(), BusinessPlanActivity.class);
+                i.putExtras(b);
                 startActivity(i);
             }
         });
