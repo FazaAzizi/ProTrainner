@@ -47,6 +47,7 @@ public class EditDataMemberActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         userId =mAuth.getCurrentUser().getUid();
+
         DocumentReference df = fStore.collection("Akun").document(userId);
         df.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override

@@ -41,6 +41,7 @@
         <activity android:name=".activity.WsMemberActivity" />
         <activity android:name=".activity.WsTrainerActivity" />
         <activity android:name=".activity.BusinessPlanActivity" />
+        <activity android:name=".activity.BusinessPlanInputActivity" />
         <activity android:name=".activity.MemberListActivity" />
         <activity android:name=".activity.WelcomeActivity" />
         <activity android:name=".activity.weekly_schedule_member" />

@@ -72,7 +72,7 @@ public class SettingTambahHargaTrainerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 tambah_hargaNoPaket = input_tambahNoPaket.getText().toString();
-                tambah_hargaDurasiLat = input_tambahHarga.getText().toString();
+                tambah_hargaDurasiLat = input_tambahDurasiLat.getText().toString();
                 tambah_hargaHarga = input_tambahHarga.getText().toString();
 
                 DocumentReference df = fStore.collection("Akun").document(user.getUid()).

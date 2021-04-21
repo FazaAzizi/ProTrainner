@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -17,12 +18,14 @@ import com.example.protrainner.R;
 import com.example.protrainner.activity.DetailPriceMemberActivity;
 import com.example.protrainner.activity.HomeTrainerActivity;
 import com.example.protrainner.adapter.ListHargaAdapter;
+import com.example.protrainner.adapter.ListTrainerAdapter;
 import com.example.protrainner.model.Akun;
 import com.example.protrainner.model.Harga;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -35,9 +38,10 @@ import java.util.List;
 
 import io.grpc.InternalNotifyOnServerBuild;
 
-public class SettingHargaTrainerActivity extends AppCompatActivity {
+public class SettingHargaTrainerActivity extends AppCompatActivity implements  ListHargaAdapter.OnItemClickListener {
 
-    String uid;
+    String uid, userId;
+    TextView no, durasilatihan, harga;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
     ImageView ab, ac;
@@ -58,11 +62,10 @@ public class SettingHargaTrainerActivity extends AppCompatActivity {
         ac = (ImageView)findViewById(R.id.icon_tambah_SettingHarga);
         recyclerView = findViewById(R.id.rv_edit_harga_paket);
 
-        Bundle b = getIntent().getExtras();
-        uid = b.getString("UID");
 
-        setUpRecyclerView();
+        userId = mAuth.getCurrentUser().getUid();
 
+        //Log.d("TAG","onSucces : "+ userId);
         //back pressed
         ab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,11 +83,15 @@ public class SettingHargaTrainerActivity extends AppCompatActivity {
             }
         });
 
+        setUpRecyclerView();
     }
 
+
+
+
     private void setUpRecyclerView() {
-        cF = getfStore1.collection("Akun").document(uid).collection("Harga");
-        Query query = cF.orderBy("NoPaket", Query.Direction.ASCENDING);
+        cF = fStore.collection("Akun").document(userId).collection("Harga");
+        Query query = cF;
         FirestoreRecyclerOptions<Harga> options = new FirestoreRecyclerOptions.Builder<Harga>()
                 .setQuery(query,Harga.class)
                 .build();
@@ -98,12 +105,11 @@ public class SettingHargaTrainerActivity extends AppCompatActivity {
         adapter.setOnItemClickListener(new ListHargaAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(DocumentSnapshot dS, int position) {
-                Akun akun = dS.toObject(Akun.class);
-                String id = dS.getId();
-                String isConnected = akun.getIsConnected();
-                Bundle b = new Bundle();
-                b.putString("UID",id);
+                Harga harga = dS.toObject(Harga.class);
+                String id = dS.getString("harga");
 
+                Bundle b = new Bundle();
+                b.putString("harga",id);
                 Intent intent = new Intent(SettingHargaTrainerActivity.this, EditDataHargaActivity.class);
                 intent.putExtras(b);
                 startActivity(intent);
@@ -123,6 +129,11 @@ public class SettingHargaTrainerActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         adapter.stopListening();
+    }
+
+    @Override
+    public void onItemClick(DocumentSnapshot dS, int position) {
+
     }
 
     @Override

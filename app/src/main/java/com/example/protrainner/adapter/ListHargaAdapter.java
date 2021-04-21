@@ -63,20 +63,26 @@ public class ListHargaAdapter extends FirestoreRecyclerAdapter<Harga, ListHargaA
 
     }
 
-    public static class OnItemClickListener {
-        public void onItemClick(DocumentSnapshot dS, int position){
-            Akun akun = dS.toObject(Akun.class);
-            String id = dS.getId();
-            String isConnected = akun.getIsConnected();
-            Bundle b = new Bundle();
-            b.putString("UID",id);
+//    public static class OnItemClickListener {
+//        public void onItemClick(DocumentSnapshot dS, int position){
+//            Akun akun = dS.toObject(Akun.class);
+//            String id = dS.getId();
+//            String isConnected = akun.getIsConnected();
+//            Bundle b = new Bundle();
+//            b.putString("UID",id);
+//
+//
+//        }
+//    }
+//    public void setOnItemClickListener(ListHargaAdapter.OnItemClickListener listener){
+//        this.listener=listener;
+//    }
 
-
-        }
+    public interface OnItemClickListener{
+        void onItemClick(DocumentSnapshot dS, int position);
     }
     public void setOnItemClickListener(ListHargaAdapter.OnItemClickListener listener){
         this.listener=listener;
     }
-
 
 }

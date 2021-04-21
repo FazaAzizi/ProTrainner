@@ -43,12 +43,13 @@ public class EditDataHargaActivity extends AppCompatActivity {
         accHargaBaru = (Button)findViewById(R.id.btn_perubahan_dataHarga);
         ab = (ImageView)findViewById(R.id.ab_editdataharga);
 
-        Bundle b = getIntent().getExtras();
-        hargaa = b.getString("harga");
-
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         userId = mAuth.getCurrentUser().getUid();
+
+        Bundle a = getIntent().getExtras();
+        hargaa = a.getString("harga");
+
         DocumentReference df = fStore.collection("Akun").document(userId).
                 collection("Harga").document(hargaa);
         df.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -83,6 +84,7 @@ public class EditDataHargaActivity extends AppCompatActivity {
                     priceinfo1.put("harga",harpak);
                     df.update(priceinfo1);
                     Intent intback = new Intent(EditDataHargaActivity.this, SettingHargaTrainerActivity.class);
+                    startActivity(intback);
 
                 }
             }
