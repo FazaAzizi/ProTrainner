@@ -21,7 +21,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
-public class MemberListActivity extends AppCompatActivity implements  ListTrainerAdapter.OnItemClickListener {
+public class  MemberListActivity extends AppCompatActivity implements  ListTrainerAdapter.OnItemClickListener {
 
     private RecyclerView recyclerView;
     private ListMemberAdapter adapter;

@@ -115,6 +115,7 @@ public class SettingTambahHargaTrainerActivity extends AppCompatActivity {
                     data+= "No. Paket\t: " +noPaket+ "\nDurasi\t: " +durasiLatihan+ "\nHarga Paket\t: "  +hargaPkt+ "\n\n";
 
                 }
+                tvOutPaket1.setText(data);
             }
         });
     }
