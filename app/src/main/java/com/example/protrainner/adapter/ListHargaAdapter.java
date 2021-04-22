@@ -19,7 +19,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
 public class ListHargaAdapter extends FirestoreRecyclerAdapter<Harga, ListHargaAdapter.ListHargaHolder> {
-    private ListHargaAdapter.OnItemClickListener listener;
+    private OnItemClickListener listener;
 
     public ListHargaAdapter(@NonNull FirestoreRecyclerOptions<Harga> options) {
         super(options);
@@ -54,7 +54,7 @@ public class ListHargaAdapter extends FirestoreRecyclerAdapter<Harga, ListHargaA
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     if (position != RecyclerView.NO_POSITION && listener != null){
-
+                        listener.onItemClick(getSnapshots().getSnapshot(position), position);
                     }
                 }
             });
@@ -62,21 +62,6 @@ public class ListHargaAdapter extends FirestoreRecyclerAdapter<Harga, ListHargaA
         }
 
     }
-
-//    public static class OnItemClickListener {
-//        public void onItemClick(DocumentSnapshot dS, int position){
-//            Akun akun = dS.toObject(Akun.class);
-//            String id = dS.getId();
-//            String isConnected = akun.getIsConnected();
-//            Bundle b = new Bundle();
-//            b.putString("UID",id);
-//
-//
-//        }
-//    }
-//    public void setOnItemClickListener(ListHargaAdapter.OnItemClickListener listener){
-//        this.listener=listener;
-//    }
 
     public interface OnItemClickListener{
         void onItemClick(DocumentSnapshot dS, int position);

@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.protrainner.R;
 import com.example.protrainner.activity.DetailPriceMemberActivity;
@@ -107,7 +108,9 @@ public class SettingHargaTrainerActivity extends AppCompatActivity implements  L
             public void onItemClick(DocumentSnapshot dS, int position) {
                 Harga harga = dS.toObject(Harga.class);
                 String id = dS.getString("harga");
+                String path = dS.getReference().getPath();
 
+                //Toast.makeText(SettingHargaTrainerActivity.this, "ID"+ id +"\nPathnya " + path , Toast.LENGTH_SHORT).show();
                 Bundle b = new Bundle();
                 b.putString("harga",id);
                 Intent intent = new Intent(SettingHargaTrainerActivity.this, EditDataHargaActivity.class);
@@ -133,7 +136,6 @@ public class SettingHargaTrainerActivity extends AppCompatActivity implements  L
 
     @Override
     public void onItemClick(DocumentSnapshot dS, int position) {
-
     }
 
     @Override
