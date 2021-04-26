@@ -1347,7 +1347,7 @@ public class input_weekly_schedule extends AppCompatActivity {
                             Ssab11=new String("0");
                             Sming11=new String("0");
                             Ssen12=new String("0");
-                            
+
                     Ssel12=new String("0");
                     Srab12=new String("0");
                     Skam12=new String("0");

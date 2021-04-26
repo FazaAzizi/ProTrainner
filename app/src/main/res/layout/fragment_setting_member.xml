@@ -61,7 +61,7 @@
                     android:layout_weight="5"
                     android:layout_height="wrap_content"
                     android:text="PROFILE"
-                    android:textSize="32dp"
+                    android:textSize="28dp"
 
                     android:layout_marginBottom="32dp"
                     android:textStyle="bold"
@@ -107,7 +107,7 @@
                     android:layout_marginBottom="32dp"
                     android:text="ParQ"
                     android:textColor="@color/white"
-                    android:textSize="32dp"
+                    android:textSize="28dp"
                     android:textStyle="bold" />
 
 
