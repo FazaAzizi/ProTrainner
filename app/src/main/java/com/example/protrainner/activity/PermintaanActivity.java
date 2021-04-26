@@ -3,9 +3,11 @@ package com.example.protrainner.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +24,7 @@ import java.util.Map;
 
 public class PermintaanActivity extends AppCompatActivity {
 
+    ImageView ab;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
     String userId,namaT;
@@ -35,6 +38,8 @@ public class PermintaanActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
+
+        ab = (ImageView) findViewById(R.id.ab_permintaan);
 
         acc = (Button)findViewById(R.id.bt_accpermintaan);
         tolak = (Button)findViewById(R.id.bt_tolakpermintaan);
@@ -80,5 +85,18 @@ public class PermintaanActivity extends AppCompatActivity {
                 namaTrainer.setText("");
             }
         });
+
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
+
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(PermintaanActivity.this, MainActivity.class);
+    }
+
 }

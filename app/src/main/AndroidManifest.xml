@@ -12,7 +12,7 @@
         <activity android:name=".activity.SettingTambahHargaTrainerActivity"></activity>
         <activity android:name=".activity.SettingHargaTrainerActivity" />
         <activity android:name=".activity.EditDataHargaActivity" />
-        <activity android:name=".PermintaanActivity" />
+        <activity android:name=".activity.PermintaanActivity" />
         <activity android:name=".activity.DetailMemberList_Connected" />
         <activity android:name=".activity.OutFtlPendinginanActivity" />
         <activity android:name=".activity.OutFtlIntiActivity" />
